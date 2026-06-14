@@ -3,9 +3,7 @@
     margin: 0px;
     box-sizing: border-box;
 }
-h1{
-    text-align: center;
-}
+
 
 :root {
     --azul-escuro: #0E1B2B;
@@ -20,11 +18,17 @@ h1{
     --cinza-escuro: #54575D;
 
     --texto-principal: #293347;
+
+}
+
+
+h1{
+    text-align: center;
 }
 body {
     padding: 10px;
-    background-color: var(--cinza-medio);
-    max-width: 1150px;
+    background-color: var(--cinza-claro);
+    max-width: 1300px;
     width: 100%;
     margin: 0 auto;
     margin-top: -10px;
@@ -82,12 +86,6 @@ nav p {
     font-size: 20px;
     margin-left: 10px;
 }
-footer {
-    background-color: var(--azul-escuro);
-    color: var(--branco);
-    max-height: 110px;
-    
-}
 
 .luzolo {
     color: var(--branco);
@@ -95,4 +93,63 @@ footer {
 
 .mampassi {
     color: var(--azul-principal);
+}
+main{
+    
+    max-width: 1450px;
+}
+.titulo{
+
+    text-align: center;
+}
+.cards{
+    margin-top: 80px;
+    display: flex;
+    max-height: 600px;
+    height: 480px;
+    min-height: 300px;
+    width: 100%;
+    gap: 15px;
+    
+   
+}
+.card{
+    padding: 20px;
+    border-radius: 15px;
+    background-color: var(--branco);
+    width: 600px;
+    
+
+}
+.card h2{
+    color: var(--azul-principal);
+    font-weight: bold;
+}
+
+.card > .icone > p{
+    margin-bottom: 15px;
+    border-bottom-style:solid ;
+    border-color: rgba(0, 0, 0, 0.036);
+    line-height: 25px;
+}
+.icone {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+}
+
+.icone h3 {
+    margin: 0;
+    flex: 1;
+}
+
+.icone p {
+    width: 100%;
+}
+.mensagem{
+    padding: 20px;
+    border-radius: 15px;
+    background-color: var(--branco);
+    width: 100%;
 }

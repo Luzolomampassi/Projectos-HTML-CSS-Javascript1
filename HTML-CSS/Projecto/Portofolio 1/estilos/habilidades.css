@@ -28,7 +28,13 @@
         flex-direction: column;
         align-content: center;
         justify-content: center;
-
+        width: 100%;
+    }
+    .desenvolvimento{
+        width: 100%;
+    }
+    .main{
+        width: 100%;
     }
 
     body {
@@ -148,9 +154,9 @@ footer {
     background-color: var(--branco);
     width: 100%;
     max-width: 400px;
-    padding: 12px;
+    padding: 40px;
     margin-left: 20px;
-    height: 400px;
+    height: auto;
     text-align: justify;
     flex-wrap: wrap;
     border-radius: 8px;
@@ -179,10 +185,16 @@ img{
 .progresso{
     width: 100%;
     padding: 10px;
-}
-.habilidades span{
-    font-weight: bold;
+    pointer-events: none;
 
+}
+.ferramentas{
+    padding: 10px;
+    
+}
+.infor-ferramentas{
+    display: flex;
+    
 }
 
 

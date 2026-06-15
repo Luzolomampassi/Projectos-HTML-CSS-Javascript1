@@ -1,12 +1,51 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+:root {
+    --azul-escuro: #0E1B2B;
+    --azul-principal: #1F68CA;
+    --azul-secundario: #284D9C;
+
+    --branco: #FFFFFF;
+
+    --cinza-fundo: #F0F1F3;
+    --cinza-claro: #E5E7EB;
+    --cinza-medio: #A1A4A9;
+    --cinza-escuro: #54575D;
+
+    --texto-principal: #293347;
+}
+@media (max-width: 768px) {
+    
+    nav ul {
+        flex-direction: row;
+        
+    }
+    .cards{
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+
+    }
+
+    body {
+        width: 100%;
+    }
+
+}
 body {
     padding: 10px;
-    background-color: var(--cinza-medio);
-    max-width: 1150px;
+    background-color: var(--cinza-claro);
+    max-width: 1500px;
     width: 100%;
     margin: 0 auto;
     margin-top: 10px;
     font-family: system-ui, Arial, sans-serif;
     line-height: 1.2;
+    height: auto;
    
 }
 
@@ -33,6 +72,7 @@ nav {
     width: 100%;
     padding: 10px;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 nav ul {
@@ -60,4 +100,132 @@ nav p {
     font-weight: bold;
     font-size: 20px;
     margin-left: 10px;
+}
+footer {
+    background-color: var(--azul-escuro);
+    color: var(--branco);
+    max-height: 110px;
+    padding: 12px;
+    margin-top: 15px;
+    
+}
+
+.icones {
+    display: flex;
+    justify-content: center;
+    padding-top:15px ;
+}
+
+.luzolo {
+    color: var(--branco);
+}
+
+.mampassi {
+    color: var(--azul-principal);
+}
+.main{
+    background-color: var(--cinza-claro);
+    width: 100%;
+}
+.inicio{
+    text-align: center;
+}
+.inicio h3{
+    color: var(--azul-principal);
+}
+.inicio h1{
+    font-size: 3em;
+    font-weight: bolder;
+}
+.cards{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.card{
+    background-color: var(--branco);
+    width: 100%;
+    max-width: 400px;
+    padding: 12px;
+    margin-left: 20px;
+    height: 400px;
+    text-align: justify;
+    flex-wrap: wrap;
+    border-radius: 8px;
+}
+.card h2{
+    margin-bottom: 10px;
+}
+.card p{
+    border-bottom-color: #1f69ca1e;
+    width: 100%;
+    border-bottom-style:solid ;
+    padding: 5px;
+    padding-bottom: 10px;
+}
+.icone{
+    color: #1F68CA;
+    background-color: #7295c37d;
+    border-radius: 8px;
+    padding: 8px;
+}
+img{
+    height: 40px;
+    width: 40px;
+}
+
+.progresso{
+    width: 100%;
+    padding: 10px;
+}
+.habilidades span{
+    font-weight: bold;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.copyright {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
 }

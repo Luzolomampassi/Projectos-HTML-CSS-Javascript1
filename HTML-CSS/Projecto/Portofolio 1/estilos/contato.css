@@ -234,6 +234,31 @@ padding: 10px 0px 10px 0px
     background-color: #1a58a9;
     transform: scale(1.05);
 }
+.icone i{
+    color: #ffffff;
+    background-color: #1a58a9;
+    padding: 8px;border-radius: 20px;
+    
+}
+.animacao-1 {
+    animation-duration: 1s !important;
+    animation-delay: 3s;
+}
+
+.animacao-2 {
+    animation-duration: 2s !important;
+    animation-delay: 3s;
+}
+
+.animacao-3 {
+    animation-duration: 3s !important;
+    animation-delay: 3s;
+}
+
+.animacao-5 {
+    animation-duration: 5s !important;
+    animation-delay: 3s;
+}
 footer{
     
     padding: 20px;

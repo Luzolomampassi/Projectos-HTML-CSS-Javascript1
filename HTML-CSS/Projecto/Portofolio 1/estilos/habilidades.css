@@ -18,6 +18,7 @@
 
     --texto-principal: #293347;
 }
+
 @media (max-width: 768px) {
     
     nav ul {
@@ -40,6 +41,36 @@
     body {
         width: 100%;
     }
+    .habilidades_complementares{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+
+    }
+    .habilidades-interpessoais{
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .mini-tema{
+        justify-items: center;
+        text-align: center;
+    }
+    .mini-card{
+        text-align: center;
+        justify-items: center;
+        margin:10px 0px ;
+    }
+
+    
+    .ferramentas{
+        justify-content: space-around;
+         padding: 20px 50px;
+   
+    }
+    
+
 
 }
 body {
@@ -221,24 +252,82 @@ footer {
     border-radius: 10px;
 }
 .ferramentas{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
+    display: grid;
+    gap: 25px;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     
 }
 .ferramentas img{
     height: 50px;
 }
+
 .icones_ferramentas{
     padding: 20px 50px;
     border-radius: 10px;
-    border-style: groove;
-    border-color:rgba(0, 0, 0, 0.095) ;
+    flex-direction: column;
+    cursor: pointer;
+    width: 220px;
+    height: 150px;
+
+    display: flex;
+   
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 10px;
+    border: 2px solid rgba(0,0,0,.08);
+
+    transition: .3s ease;
+
+}
+.icones_ferramentas:hover{
+    transform: scale(1.05);
+}
+.icone_ferramenta_node:hover .icones_ferramentas{
+    box-shadow: 0 0 20px rgba(51,153,51,.5); 
+}
+
+.icone_ferramenta_vscode:hover .icones_ferramentas{
+    box-shadow: 0 0 20px rgba(0,122,204,.5);  
+}
+.icone_ferramenta_git:hover .icones_ferramentas{
+    box-shadow: 0 0 20px rgba(240,80,50,.5);  
+}
+.icone_ferramenta_github:hover .icones_ferramentas{
+    box-shadow: 0 0 20px rgba(70,70,70,.5);
     
 }
+.icone_ferramenta_canva:hover .icones_ferramentas{
+    box-shadow: 0 0 20px rgba(0, 196, 204, .5);   
+}
+.icone_ferramenta_figma:hover .icones_ferramentas{
+    box-shadow: 0 0 20px rgba(242, 78, 30, .5);   
+}
+.area-icone{
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.area_icone_vscode {
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .icones_ferramentas p {
     color: black;
     font-size: 1.1em;
+    text-align: center;
+    font-weight: 600;
     
 }
 
@@ -247,26 +336,42 @@ img{
     
 }
 
+.habilidades-interpessoais{
+    display: flex;
+    max-width: 1230px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 50px 15px 15px 15px;
+    
+    
+}
+.habilidades_complementares{
+    display: flex;
+    margin: auto;
+    background-color: white;
+    max-width: 1235px;
+    border-radius: 15px;
+    padding-top:45px;
+    height: auto;
+}
+.habilidades-interpessoais p{
+    font-size: 1em;
+    padding-right:10px;
+}
+.mini-tema{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.mini-icon{
+    color: white;
+    background-color: #1F68CA;
+    border-radius: 900px;
+    padding: 10px;
+}
 
 
 

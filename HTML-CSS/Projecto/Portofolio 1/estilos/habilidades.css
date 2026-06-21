@@ -93,6 +93,7 @@ nav p{
 
 .inicio{
     text-align:center;
+     margin-bottom:50px;
 }
 
 .inicio h3{
@@ -102,7 +103,11 @@ nav p{
 .inicio h1{
     font-size:3em;
     font-weight:bold;
+    position: relative;
+    transition: 0.9s;
 }
+
+
 
 /* ================= CARDS ================= */
 
@@ -112,6 +117,7 @@ nav p{
     gap:20px;
     flex-wrap:wrap;
     margin:20px 0;
+     margin-bottom:40px;
 }
 
 .cards{
@@ -120,8 +126,12 @@ nav p{
     max-width:600px;
     padding:15px 20px 20px;
     border-radius:10px;
-    box-shadow:5px 5px 5px rgba(0,0,0,.15);
+   
+    box-shadow: 0 4px 15px rgba(0,0,0,.08);
 }
+
+    
+
 
 .tema{
     display:flex;
@@ -208,7 +218,7 @@ nav p{
 }
 
 .icones_ferramentas:hover{
-    transform:scale(1.05);
+    transform: translateY(-8px) scale(1.03);
 }
 
 .ferramentas img{
@@ -256,6 +266,7 @@ nav p{
     margin:auto;
     border-radius:15px;
     padding-top:45px;
+     margin-top:40px;
 }
 
 .habilidades-interpessoais{
@@ -285,12 +296,21 @@ footer{
     color:white;
     padding:12px;
     margin-top:15px;
+    text-align:center;
 }
 
 .icones{
     display:flex;
     justify-content:center;
     padding-top:15px;
+}
+.icones a{
+    margin:0 15px;
+    transition:.3s;
+}
+
+.icones a:hover{
+    transform:translateY(-5px);
 }
 
 .copyright{
@@ -303,8 +323,16 @@ footer{
 
 @media (max-width:768px){
 
+
+     nav{
+        flex-direction:column;
+        gap:20px;
+    }
+
     nav ul{
-        flex-direction:row;
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:15px;
     }
 
     .cards{
@@ -347,4 +375,35 @@ footer{
         height:40px;
     }
 
+}
+.cards{
+    animation: surgir .8s ease;
+}
+
+@keyframes surgir{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+nav a {
+    position: relative;
+}
+nav a::after{
+    content: " ";
+    position: absolute;
+    left: 0;
+    width: 0%;
+    bottom: -5px;
+    height:2px;
+    background:var(--azul-principal);
+    transition:.4s;
+}
+nav a:hover::after{
+    width: 100%;
 }

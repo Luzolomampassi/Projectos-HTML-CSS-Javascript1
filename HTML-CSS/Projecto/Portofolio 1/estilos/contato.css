@@ -27,11 +27,10 @@ h1{
     font-family: "Poppins", sans-serif;
 }
 body {
-    padding: 10px;
+    
     background-color: var(--cinza-claro);
     width: 100%;
     margin: 0 auto;
-    margin:0;
     font-family: "Inter", system-ui, sans-serif;
     line-height: 1.2;
     transition: 0.5s;

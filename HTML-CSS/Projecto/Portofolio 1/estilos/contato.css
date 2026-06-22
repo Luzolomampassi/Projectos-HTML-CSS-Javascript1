@@ -33,11 +33,10 @@ body {
     margin:0;
     font-family: system-ui, Arial, sans-serif;
     line-height: 1.2;
-    
-   
-    
+    animation: surgir .8s ease;
    
 }
+
 @keyframes surgir{
     from{
         opacity: 0;
@@ -140,7 +139,7 @@ main{
     margin: 0 auto;
     padding-bottom: 50px;
     padding: 20px 20px 60px;
-    animation: surgir .8s ease;
+    
     
 }
 .titulo{
@@ -295,4 +294,6 @@ footer{
     color: var(--branco);
 }
 
-
+@view-transition {
+    navigation: auto;
+}

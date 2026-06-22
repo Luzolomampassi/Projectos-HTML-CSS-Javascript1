@@ -28,6 +28,7 @@ body{
     margin-top:10px;
     font-family:system-ui,Arial,sans-serif;
     line-height:1.2;
+    animation: surgir .8s ease;
 }
 
 /* ================= HEADER ================= */
@@ -68,7 +69,22 @@ nav a{
     padding:8px;
     transition:.6s;
 }
-
+nav a {
+    position: relative;
+}
+nav a::after{
+    content: " ";
+    position: absolute;
+    left: 0;
+    width: 0%;
+    bottom: -5px;
+    height:2px;
+    background:var(--azul-principal);
+    transition:.4s;
+}
+nav a:hover::after{
+    width: 100%;
+}
 nav a:hover{
     color:var(--azul-secundario);
 }
@@ -101,10 +117,25 @@ nav p{
 }
 
 .inicio h1{
+    display: flex;
     font-size:3em;
     font-weight:bold;
     position: relative;
     transition: 0.9s;
+    justify-content: center;
+}
+.inicio h1::after{
+    content: '';
+    position: absolute;
+    bottom: -0px;
+    left: 50%;
+    width: 160px;
+    height: 4px;
+    border-radius: 30px;
+    background:var(--azul-principal);
+    transform: translateX(-50%);
+    
+    
 }
 
 
@@ -391,19 +422,7 @@ footer{
         transform:translateY(0);
     }
 }
-nav a {
-    position: relative;
-}
-nav a::after{
-    content: " ";
-    position: absolute;
-    left: 0;
-    width: 0%;
-    bottom: -5px;
-    height:2px;
-    background:var(--azul-principal);
-    transition:.4s;
-}
-nav a:hover::after{
-    width: 100%;
+
+@view-transition {
+    navigation: auto;
 }

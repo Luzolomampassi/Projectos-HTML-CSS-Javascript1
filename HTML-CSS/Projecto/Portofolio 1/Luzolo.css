@@ -32,6 +32,18 @@
         width: 100%;
     }
 }
+@keyframes surgir-card{
+    from{
+        opacity:0;
+        transform:translateY(50px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
 body {
     padding: 10px;
     background-color: var(--cinza-medio);
@@ -43,6 +55,7 @@ body {
     line-height: 1.2;
     transition: 0.5s;
     animation: surgir 1s ease-in;
+    animation: surgir-card 0.8s ease-in;
    
 }
 
@@ -118,6 +131,7 @@ nav p {
     display: flex;
     background-color: var(--cinza-claro);
     padding: 20px;
+    
 }
 
 .intro{
@@ -166,6 +180,7 @@ main {
 }
 
 .botoes2 {
+    
     text-decoration: none;
     background-color: var(--branco);
     color: var(--azul-principal);
@@ -183,6 +198,7 @@ main {
 }
 .botoes2:hover{
     transform: translateY(-8px);
+    
     
 }
 

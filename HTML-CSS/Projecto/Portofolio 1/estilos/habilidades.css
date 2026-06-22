@@ -28,7 +28,8 @@ body{
     margin-top:10px;
     font-family:system-ui,Arial,sans-serif;
     line-height:1.2;
-    animation: surgir .8s ease;
+    transition: 0.5s;
+    animation: surgir 0.8s ease-in;
 }
 
 /* ================= HEADER ================= */
@@ -415,6 +416,17 @@ footer{
     from{
         opacity:0;
         transform:translateY(30px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+@keyframes surgir-card{
+    from{
+        opacity:0;
+        transform:translateY(50px);
     }
 
     to{

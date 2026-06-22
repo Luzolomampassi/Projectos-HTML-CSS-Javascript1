@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portofolio</title>
+    <title>Portfólio</title>
     <link rel="stylesheet" href="estilos/contato.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
 </head>
 <body>
@@ -63,32 +64,39 @@
                 </article>
 
                 <article class="mensagem">
-                    <h2>Envie uma mensagem</h2>
-                    <div class="endereco">
-                        <div >
-                            <h3>Nome</h3>
-                            <input type="text" placeholder="Seu nome">
-                        </div>
+    <h2>Envie uma mensagem</h2>
 
-                        <div >
-                            <h3>Email</h3>
-                            <input type="email" placeholder="Seu@email.com">
-                        </div>
-                        
-                    </div>
-                    <div class="assunto">
-                             <h3>Assunto</h3>
-                            <input type="text" placeholder="Assunto da mensagem">
-                    </div>
-                    <div class="conteudo">
-                        <h3>Mensagem</h3>
-                        <textarea name="text" rows="5" cols="40" placeholder="Digite a sua mensagem aqui" ></textarea>
-                    </div>
-                    <button type="submit"><i class="fa-solid fa-paper-plane" style="color: #ffffff;"></i> Enviar mensagem</button>
-                        
+    <form action="#" method="post">
 
-                    
-                </article>
+        <div class="endereco">
+            <div>
+                <h3>Nome</h3>
+                <input type="text" name="nome" placeholder="Seu nome" required>
+            </div>
+
+            <div>
+                <h3>Email</h3>
+                <input type="email" name="email" placeholder="Seu@email.com" required>
+            </div>
+        </div>
+
+        <div class="assunto">
+            <h3>Assunto</h3>
+            <input type="text" name="assunto" placeholder="Assunto da mensagem" required>
+        </div>
+
+        <div class="conteudo">
+            <h3>Mensagem</h3>
+            <textarea name="mensagem" rows="5" placeholder="Digite a sua mensagem aqui" required></textarea>
+        </div>
+
+        <button type="submit">
+            <i class="fa-solid fa-paper-plane"></i>
+            Enviar mensagem
+        </button>
+
+    </form>
+</article>
                 
             </div>
         </section>

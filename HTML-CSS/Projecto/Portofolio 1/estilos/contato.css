@@ -24,6 +24,7 @@
 
 h1{
     text-align: center;
+    font-family: "Poppins", sans-serif;
 }
 body {
     padding: 10px;
@@ -31,7 +32,7 @@ body {
     width: 100%;
     margin: 0 auto;
     margin:0;
-    font-family: system-ui, Arial, sans-serif;
+    font-family: "Inter", system-ui, sans-serif;
     line-height: 1.2;
     animation: surgir .8s ease;
    
@@ -286,12 +287,32 @@ padding: 10px 0px 10px 0px
     animation-delay: 3s;
 }
 footer{
-    
-    padding: 20px;
-    width: 100%;
-    background-color: var(--azul-escuro);
-    text-align: center;
-    color: var(--branco);
+    background:var(--azul-escuro);
+    color:white;
+    padding:12px;
+    margin-top:0px;
+    text-align:center;
+    padding-bottom: 20px;
+}
+
+.icones{
+    display:flex;
+    justify-content:center;
+    padding-top:15px;
+}
+.icones a{
+    margin:0 15px;
+    transition:.3s;
+}
+
+.icones a:hover{
+    transform:translateY(-5px);
+}
+
+.copyright{
+    margin-top:20px;
+    display:flex;
+    justify-content:center;
 }
 
 @view-transition {

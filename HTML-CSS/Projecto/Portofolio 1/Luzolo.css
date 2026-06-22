@@ -186,12 +186,7 @@ main {
     
 }
 
-footer {
-    background-color: var(--azul-escuro);
-    color: var(--branco);
-    max-height: 110px;
-    
-}
+
 
 .icones {
     display: flex;
@@ -320,11 +315,7 @@ footer {
     display: block;
 }
 
-.copyright {
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-}
+
 
 @keyframes surgir{
     from{
@@ -337,4 +328,31 @@ footer {
     }
 }
 
+footer{
+    background:var(--azul-escuro);
+    color:white;
+    padding:12px;
+    margin-top:0px;
+    text-align:center;
+    padding-bottom: 20px;
+}
 
+.icones{
+    display:flex;
+    justify-content:center;
+    padding-top:15px;
+}
+.icones a{
+    margin:0 15px;
+    transition:.3s;
+}
+
+.icones a:hover{
+    transform:translateY(-5px);
+}
+
+.copyright{
+    margin-top:20px;
+    display:flex;
+    justify-content:center;
+}

@@ -1,0 +1,182 @@
+/* =========================
+   RESET GLOBAL
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =========================
+   VARIÁVEIS (DESIGN SYSTEM)
+========================= */
+:root {
+    --azul-escuro: #0E1B2B;
+    --azul-principal: #1F68CA;
+    --azul-secundario: #284D9C;
+
+    --branco: #FFFFFF;
+
+    --cinza-fundo: #F0F1F3;
+    --cinza-claro: #E5E7EB;
+    --cinza-medio: #A1A4A9;
+    --cinza-escuro: #54575D;
+
+    --texto-principal: #293347;
+}
+
+/* =========================
+   BASE DO DOCUMENTO
+========================= */
+body {
+    font-family: system-ui, Arial, sans-serif;
+    line-height: 1.4;
+    background-color: var(--cinza-claro);
+    color: var(--texto-principal);
+    max-width: 1500px;
+    margin: 0 auto;
+    transition: 0.3s ease;
+}
+
+/* =========================
+   LINKS PADRÃO
+========================= */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    color: var(--azul-secundario);
+}
+
+/* =========================
+   HEADER / NAV GLOBAL
+========================= */
+header {
+    background-color: var(--azul-escuro);
+    padding: 10px 15px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    padding: 8px;
+    position: relative;
+    transition: 0.3s;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    height: 2px;
+    width: 0;
+    background: var(--azul-principal);
+    transition: 0.3s;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* Nome do logo */
+.luzolo {
+    color: var(--branco);
+    font-weight: bold;
+}
+
+.mampassi {
+    color: var(--azul-principal);
+    font-weight: bold;
+}
+
+/* =========================
+   MAIN BASE
+========================= */
+main {
+    background-color: var(--cinza-fundo);
+    padding: 20px;
+}
+
+/* =========================
+   BOTÕES PADRÃO
+========================= */
+button,
+.btn {
+    background-color: var(--azul-principal);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover,
+.btn:hover {
+    background-color: var(--azul-secundario);
+    transform: translateY(-3px);
+}
+
+/* =========================
+   FOOTER GLOBAL
+========================= */
+footer {
+    background: var(--azul-escuro);
+    color: white;
+    text-align: center;
+    padding: 20px 10px;
+    margin-top: 20px;
+}
+
+.icones {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding-top: 10px;
+}
+
+.icones a {
+    transition: 0.3s;
+}
+
+.icones a:hover {
+    transform: translateY(-5px);
+}
+
+.copyright {
+    margin-top: 15px;
+    font-size: 0.9rem;
+}
+
+/* =========================
+   RESPONSIVO BASE
+========================= */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+}

@@ -3,7 +3,16 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+@keyframes surgir{
+    from{
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 :root {
     --azul-escuro: #0E1B2B;
     --azul-principal: #1F68CA;
@@ -22,6 +31,7 @@ body {
     font-family: system-ui, Arial;
     background: var(--cinza);
     color: var(--texto);
+    animation: surgir .8 ease-in;
 }
 
 /* HEADER (podes copiar do teu CSS principal) */

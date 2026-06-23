@@ -31,6 +31,11 @@
     body {
         width: 100%;
     }
+    .banner{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
 }
 @keyframes surgir-card{
     from{
@@ -54,14 +59,14 @@ body {
     font-family: system-ui, Arial, sans-serif;
     line-height: 1.2;
     transition: 0.5s;
-    animation: surgir 1s ease-in;
+    animation: surgir 0.8s ease-in;
     animation: surgir-card 0.8s ease-in;
    
 }
 
 header {
     background-color: var(--azul-escuro);
-    padding: 10px 15px;
+    padding: 10px 15px 10px 15px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
@@ -130,7 +135,10 @@ nav p {
 .banner {
     display: flex;
     background-color: var(--cinza-claro);
-    padding: 20px;
+    
+    padding: 50px 20px 20px 20px;
+    justify-content: space-between;
+    flex-wrap: nowrap;
     
 }
 
@@ -148,14 +156,81 @@ nav p {
 
 .intro h2{
     color: var(--azul-escuro);
-    font-size: 3em;
     font-weight: bolder;
+    font-size: 4.5rem;
+    line-height: 1;
 }
 
 #profissao {
     color: var(--azul-principal);
     font-size: 1.5em;
     font-weight: 500;
+}
+#profissao::after{
+    content:"|";
+    animation: piscar .8s infinite;
+}
+
+@keyframes piscar{
+    50%{
+        opacity:0;
+    }
+}
+.profile-image{
+    padding: 0px 20px 20px 20px;
+}
+.profile-image img{
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 6px solid white;
+    transform: translateY(8px);
+    box-shadow:
+    0 15px 30px rgba(0,0,0,.25);
+}
+.profile-image-content{
+    position: relative;
+    width: 420px;
+    height: 420px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(135deg, var(--azul-principal), var(--azul-escuro)
+    );
+
+    border-radius: 50%;
+
+    box-shadow: 0 20px 40px rgba(31,104,202,.3);
+}
+
+.codigo{
+    position:absolute;
+    right:-10px;
+    bottom:20px;
+
+    width:90px;
+    height:90px;
+
+    border-radius:50%;
+
+    background:var(--azul-escuro);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    color:white;
+    font-size:2rem;
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,.25);
+}
+
+.profile-image img:hover{
+    transform: scale(1.03);
 }
 
 main {
@@ -164,7 +239,7 @@ main {
 
 .buttons {
     display: flex;
-    padding: 20px;
+    padding: 20px 20px 20px 0px;
     gap: 17px;
 }
 
@@ -202,7 +277,11 @@ main {
     
 }
 
-
+.icones1{
+    display: flex;
+    gap: 20px;
+    padding-top:20px ;
+}
 
 .icones {
     display: flex;

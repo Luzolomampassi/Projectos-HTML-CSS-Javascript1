@@ -4,6 +4,89 @@
     box-sizing:border-box;
 }
 
+@media (max-width:768px){
+
+
+     nav{
+        flex-direction:column;
+        gap:20px;
+    }
+
+    nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:15px;
+    }
+
+    .cards{
+        width:100%;
+    }
+
+    .ferramentas{
+        grid-template-columns:repeat(2,1fr);
+        gap:20px;
+    }
+
+    .habilidades-interpessoais{
+        flex-direction:column;
+    }
+
+    .mini-card{
+        text-align:center;
+        margin:10px 0;
+    }
+
+    .mini-tema{
+        justify-content:center;
+    }
+
+}
+
+@media (max-width:480px){
+
+    .tema h2{
+        font-size:20px;
+    }
+
+    .icones_ferramentas{
+        height:130px;
+        padding:15px;
+    }
+
+    .ferramentas img{
+        width:40px;
+        height:40px;
+    }
+
+}
+
+@keyframes surgir{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+@keyframes surgir-card{
+    from{
+        opacity:0;
+        transform:translateY(50px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+@keyframes piscar{
+    50%{
+        opacity: 0;
+    }
+}
 :root{
     --azul-escuro:#0E1B2B;
     --azul-principal:#1F68CA;
@@ -81,6 +164,7 @@ nav a::after{
     height:2px;
     background:var(--azul-principal);
     transition:.4s;
+
 }
 nav a:hover::after{
     width: 100%;
@@ -105,7 +189,7 @@ nav p{
     color:var(--azul-principal);
 }
 
-/* ================= INÍCIO ================= */
+
 
 .inicio{
     text-align:center;
@@ -134,13 +218,14 @@ nav p{
     border-radius: 30px;
     background:var(--azul-principal);
     transform: translateX(-50%);
+    animation: piscar 1.5s ease infinite;
     
     
 }
 
 
 
-/* ================= CARDS ================= */
+
 
 .conteiner{
     display:flex;
@@ -157,7 +242,7 @@ nav p{
     max-width:600px;
     padding:15px 20px 20px;
     border-radius:10px;
-   
+     animation: surgir .8s ease;
     box-shadow: 0 4px 15px rgba(0,0,0,.08);
 }
 
@@ -182,7 +267,7 @@ nav p{
     border-radius:10px;
 }
 
-/* ================= HABILIDADES ================= */
+
 
 .habilidades > div{
     display:flex;
@@ -222,7 +307,7 @@ nav p{
     border-radius:10px;
 }
 
-/* ================= FERRAMENTAS ================= */
+
 
 .ferramentas{
     display:grid;
@@ -263,7 +348,7 @@ nav p{
     font-weight:600;
 }
 
-/* ================= EFEITOS ================= */
+
 
 .icone_ferramenta_node:hover .icones_ferramentas{
     box-shadow:0 0 20px rgba(51,153,51,.5);
@@ -289,7 +374,7 @@ nav p{
     box-shadow:0 0 20px rgba(242,78,30,.5);
 }
 
-/* ================= COMPLEMENTARES ================= */
+
 
 .habilidades_complementares{
     background:white;
@@ -320,7 +405,7 @@ nav p{
     border-radius:50%;
 }
 
-/* ================= FOOTER ================= */
+
 
 footer{
     background:var(--azul-escuro);
@@ -350,87 +435,6 @@ footer{
     justify-content:center;
 }
 
-/* ================= RESPONSIVO ================= */
-
-@media (max-width:768px){
 
 
-     nav{
-        flex-direction:column;
-        gap:20px;
-    }
-
-    nav ul{
-        flex-wrap:wrap;
-        justify-content:center;
-        gap:15px;
-    }
-
-    .cards{
-        width:100%;
-    }
-
-    .ferramentas{
-        grid-template-columns:repeat(2,1fr);
-        gap:20px;
-    }
-
-    .habilidades-interpessoais{
-        flex-direction:column;
-    }
-
-    .mini-card{
-        text-align:center;
-        margin:10px 0;
-    }
-
-    .mini-tema{
-        justify-content:center;
-    }
-
-}
-
-@media (max-width:480px){
-
-    .tema h2{
-        font-size:20px;
-    }
-
-    .icones_ferramentas{
-        height:130px;
-        padding:15px;
-    }
-
-    .ferramentas img{
-        width:40px;
-        height:40px;
-    }
-
-}
-.cards{
-    animation: surgir .8s ease;
-}
-
-@keyframes surgir{
-    from{
-        opacity:0;
-        transform:translateY(30px);
-    }
-
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
-}
-@keyframes surgir-card{
-    from{
-        opacity:0;
-        transform:translateY(50px);
-    }
-
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
-}
 

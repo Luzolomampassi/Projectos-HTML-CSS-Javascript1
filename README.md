@@ -14,5 +14,5 @@ Projeto de portfólio desenvolvido com HTML e CSS.
 Criar uma página pessoal responsiva para apresentar projetos.
 
 ## Link
- https://luzolomampassi.github.io/Projectos-HTML-CSS-Javascript1/HTML-CSS/Projecto/Portofolio 1/inicio.html
+ https://luzolomampassi.github.io/Projetos-HTML-CSS-Javascript1/HTML-CSS/Projecto/Portofolio/inicio.html
  

@@ -188,6 +188,7 @@ nav p {
     transform: translateY(8px);
     box-shadow:
     0 15px 30px rgba(0,0,0,.25);
+    transition: 0.8s ease;
 }
 .profile-image-content{
     position: relative;

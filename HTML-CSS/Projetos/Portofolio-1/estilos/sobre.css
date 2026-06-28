@@ -76,6 +76,7 @@ body {
     line-height: 1.2;
     transition: 0.5s;
     animation: surgir 0.8s ease-in;
+  
    
 }
 header {
@@ -181,8 +182,8 @@ main{
 }
 
 .about-text{
-    max-width: 600px;
-    text-align: justify;
+    max-width: 440px;
+    
 }
 .about-text p{
     padding-bottom: 20px;
@@ -198,7 +199,7 @@ main{
 
 .about-highlights{
     display: flex;
-    padding-top: 20px;
+    
     justify-content: space-between;
     gap: 10px;
 }
@@ -213,6 +214,7 @@ main{
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.087);
     max-width: 400px;
     width: 100%;
+    height: 430px;
 }
 .personal-info-content {
     display: block;
@@ -227,6 +229,7 @@ main{
     color: var(--branco);
     background-color: var(--azul-principal);
     border-radius: 5px;
+    transform: translateY(40px);
 }
 .personal-info-content a:hover{
     background-color: #284D9C;
@@ -236,6 +239,7 @@ main{
 }
 .card{
     padding-bottom: 20px;
+    transform: translateY(30px);
 }
 .icon-text{
     color: var(--azul-principal);
@@ -248,7 +252,6 @@ footer{
     padding:12px;
     margin-top:0px;
     text-align:center;
-    padding-bottom: 20px;
 }
 
 .icones{

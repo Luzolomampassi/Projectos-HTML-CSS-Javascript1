@@ -13,6 +13,25 @@
         transform: translateY(0);
     }
 }
+@media (max-width:768px){
+
+
+     nav{
+        flex-direction:column;
+        gap:20px;
+    }
+
+    nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:15px;
+    }
+
+    
+
+}
+
+
 :root {
     --azul-escuro: #0E1B2B;
     --azul-principal: #1F68CA;
@@ -32,9 +51,10 @@ body {
     background: var(--cinza);
     color: var(--texto);
     animation: surgir .8 ease-in;
+    height: 100vh;
 }
 
-/* HEADER (podes copiar do teu CSS principal) */
+
 body {
     background-color: var(--cinza-medio);
     max-width: 1500px;

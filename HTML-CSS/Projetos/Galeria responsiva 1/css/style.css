@@ -67,19 +67,23 @@ nav  a:hover{
     color: var(--cor-texto2);
     margin-bottom: 20px;
 }
+
 #text h1{
     color: var(--cor-texto);
     position: relative;
     padding: 30px;
+    
 }
 #text > h1::after{
+    
     content: '';
     position: absolute;
     border-radius: 5px;
     width: 65px;
     height: 3px;
     bottom: 10px;
-    left: 48%;
+    left:50%;
+    transform:translateX(-50%);
     background-color: cornflowerblue;
 }
 /*----------Imagens----------*/
@@ -103,11 +107,18 @@ nav  a:hover{
 
 @media (max-width: 992px) {
     #cards { grid-template-columns: repeat(3, 1fr); }
+   
 }
 
 @media (max-width: 768px) {
-    #cards { grid-template-columns: repeat(2, 1fr); }
+    #cards { grid-template-columns: repeat(2, 1fr);
+     }
+    nav h2{margin: auto;}
+    nav ul{margin: auto;
+    }
+
 }
+ 
 
 @media (max-width: 480px) {
     #cards { grid-template-columns: 1fr; }
@@ -116,20 +127,22 @@ nav  a:hover{
 
 
 .card{
-    height: 300px;
+    min-height: 300px;
+    padding-bottom: 7px;
     border-radius: 10px;
     border: 1px solid darkgrey;
     background-color: rgb(92, 92, 92);
     transition:0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
+    
    
 }
 .card:hover{
-    transform: scale(1.05);
+    transform: translateY(-10px);
     box-shadow: 0 10px 20px rgba(0,0,0,0.3);
 }
 .card.ativo {
-    transform: scale(1.2);
+    transform: scale(1.08);
     border: 1px solid var(--cor-principal);
     outline: 2px solid var(--cor-secundaria);
 }
@@ -145,6 +158,22 @@ img{
     border-top-left-radius:10px;
     image-rendering: 150;
 }
+.sem-imagem{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #2b2b2b;
+    color: #bdbdbd;
+    font-size: 1.2rem;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    transition: 1s;
+}
+.sem-imagem:hover{
+    filter: frost(#0148ab);
+}
 
 
 /*----------Footer----------*/
@@ -156,3 +185,4 @@ footer{
     padding: 40px;
 
 }
+

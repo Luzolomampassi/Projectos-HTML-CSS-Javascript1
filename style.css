@@ -112,16 +112,26 @@ nav a:hover::after{
 }
 
 /*<!--==============================Banner==============================-->*/
-.banner{
-    background-color:var(--color-header);
-    max-height: 500px;
-    border: 1px solid var(--color-border);
-    padding: 10px 10px 25px 10px;
-    width: 100%;
-    display: flex;
-    gap: 50px;
-    justify-content: space-around;
+@media(max-width:769px){
+   .banner{
+    flex-direction: column;
+   }
 }
+
+.banner{
+    width:100%;
+    max-height:510px;
+    
+    display:flex;
+    flex-wrap: wrap;
+    justify-content:space-between;
+    align-items:center;
+    padding:40px 90px;
+    background:var(--color-header);
+    border:1px solid var(--color-border);
+    overflow:hidden;
+}
+/* ===========Texto de boas vinda ========== */
 #boas-vinda{
     display: inline-flex;
     padding: 10px;
@@ -129,8 +139,13 @@ nav a:hover::after{
     border-radius: 30px;
     color: var(--color-primary);
     background-color: #270278be}
+
+/* ===========Conteúdo========== */
+
 .banner-conteiner{
-    margin: 40px 0px 0px 80px;
+    width:45%;
+    margin:0;
+    z-index:2;
 }
 .banner-content{
     font-size: 1.4em;
@@ -144,6 +159,7 @@ nav a:hover::after{
 #banner-text-mark{
     color: var(--color-primary);
 }
+/* ===========Botões========== */
 .banner-buttons{
     display: flex;
     justify-content: space-between;
@@ -153,7 +169,7 @@ nav a:hover::after{
     
    
 }
-/* ===========Botões========== */
+
 #btn-projetos{
     background-image:linear-gradient(to right , #443cb1,#601cd5);
     width: 180px;
@@ -190,142 +206,319 @@ nav a:hover::after{
     color: white;
     font-size: 1.1em;
 }
-/* ===========Banner-hero========== */
-/* ================= HERO ================= */
+
+/*============================== HERO ==============================*/
 
 .hero{
-    position: relative;
-    width: 560px;
-    height: 420px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    position:relative;
+    width:50%;
+    height:500px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:visible;
+    flex-shrink:0;
+    transform: translateX(-30px);
+    transform: translateY(-20px);
 }
 
-/* Janela */
+/* Brilho ao fundo */
+
+.hero::before{
+    content:"";
+    position:absolute;
+    width:650px;
+    height:500px;
+    right:-120px;
+    top:-90px;
+    background:radial-gradient(circle,
+    rgba(139,92,246,.28) 0%,
+    rgba(139,92,246,.15) 35%,
+    transparent 75%);
+    z-index:0;
+   
+}
+
+/* Fundo */
+
+.hero-bg{
+    position:absolute;
+    inset:0;
+    overflow:visible;
+    z-index:0;
+
+}
+
+/* Linhas */
+
+.hero-bg::before,
+.hero-bg::after{
+    content:"";
+    position:absolute;
+    border:1px solid rgba(139,92,246,.18);
+    border-radius:50%;
+}
+
+.hero-bg::before{
+    width:500px;
+    height:320px;
+    left:-100px;
+    top:40px;
+}
+
+.hero-bg::after{
+    width:290px;
+    height:290px;
+    right:-60px;
+    top:25px;
+}
+
+/* Pontos */
+
+.hero-bg span{
+    position:absolute;
+    width:5px;
+    height:5px;
+    border-radius:50%;
+    background:#8B5CF6;
+}
+
+.hero-bg span:nth-child(1){
+    left:35px;
+    top:75px;
+}
+
+.hero-bg span:nth-child(2){
+    left:120px;
+    top:270px;
+}
+
+.hero-bg span:nth-child(3){
+    left:260px;
+    top:40px;
+}
+
+.hero-bg span:nth-child(4){
+    right:105px;
+    top:35px;
+}
+
+.hero-bg span:nth-child(5){
+    right:30px;
+    top:175px;
+}
+.hero-bg span:nth-child(6){
+    right:400px;
+    top:47px;
+}
+.hero-bg span:nth-child(7){
+    right:30px;
+    top:175px;
+}
+.hero-bg span:nth-child(8){
+    right:40px;
+    top:175px;
+}
+.hero-bg span:nth-child(9){
+    right:30px;
+    top:45px;
+}
+.hero-bg span:nth-child(10){
+    right:30px;
+    top:75px;
+    border:1px solid #5a1ea8
+}
+.hero-bg span:nth-child(11){
+    right:-300px;
+    top:175px;
+}
+
+/*============================== JANELA ==============================*/
 
 .window{
-    width: 450px;
-    height: 290px;
-    background: #111827;
-    border: 2px solid var(--color-primary);
-    border-radius: 20px;
-    box-shadow: 0 0 30px rgba(108,99,255,.25);
-    overflow: hidden;
-    z-index: 1;
+    position:relative;
+    width:520px;
+    height:325px;
+    background:#111827;
+    border:2px solid #6C63FF;
+    border-radius:22px;
+    box-shadow:0 0 35px rgba(108,99,255,.20);
+    overflow:hidden;
+    z-index:2;
 }
 
 .top-bar{
-    height: 42px;
-    background: #1A2236;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 0 20px;
+    height:42px;
+    background:#1A2236;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    padding:0 20px;
 }
 
 .dot{
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
+    width:12px;
+    height:12px;
+    border-radius:50%;
 }
 
-.red{background:#FF5F57;}
-.yellow{background:#FEBC2E;}
-.green{background:#28C840;}
+.red{
+    background:#FF5F57;
+}
 
-/* Editor */
+.yellow{
+    background:#FEBC2E;
+}
+
+.green{
+    background:#28C840;
+}
+
+/*============================== EDITOR ==============================*/
 
 .editor{
-    padding: 25px;
+    padding:25px;
 }
 
 .line{
-    height: 8px;
-    border-radius: 10px;
-    margin-bottom: 16px;
-    background: #374151;
+    height:8px;
+    border-radius:20px;
+    margin-bottom:16px;
+    background:#374151;
 }
 
 .line:nth-child(1){
-    width: 160px;
+    width:170px;
     background:#8B5CF6;
 }
 
 .line:nth-child(2){
-    width: 280px;
+    width:290px;
     background:#4F8DF7;
 }
 
 .line:nth-child(3){
-    width: 140px;
+    width:150px;
 }
 
 .line:nth-child(4){
-    width: 240px;
+    width:240px;
     background:#EC4899;
 }
 
 .line:nth-child(5){
-    width: 100px;
+    width:100px;
     background:#10B981;
 }
 
 .line:nth-child(6){
-    width: 220px;
+    width:230px;
     background:#4F8DF7;
 }
 
 .line:nth-child(7){
-    width: 130px;
+    width:140px;
 }
 
-/* Cards */
+/*==============================Hero-CARDS ==============================*/
 
-.card{
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #28144F;
-    border: 2px solid var(--color-primary);
-    border-radius: 18px;
-    color: white;
-    box-shadow: 0 0 20px rgba(108,99,255,.35);
-    z-index: 2;
+.hero-card{
+    position:absolute;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#28144F;
+    border:2px solid #6C63FF;
+    border-radius:18px;
+    color:white;
+    box-shadow:0 0 20px rgba(108,99,255,.30);
+    z-index:3;
 }
 
-/* Código */
 
 .code-card{
-    width: 78px;
-    height: 78px;
-    left: 0;
-    top: 125px;
-    font-size: 34px;
+    width:87px;
+    height:78px;
+    left:87px;
+    top:165px;
+    font-size:34px;
+    transform: translateX(-50px);
+  
 }
-
-/* Imagem */
 
 .image-card{
-    width: 180px;
-    height: 120px;
-    right: 0;
-    bottom: 35px;
-    font-size: 58px;
+    width:185px;
+    height:125px;
+    right:50px;
+    bottom:100px;
+    font-size:58px;
+    background: transparent;
+    
 }
-
-/* CSS */
+.image-card img{
+    width:100%;
+    height: 100%;
+    background:#28144F;
+    box-shadow:0 0 20px rgba(108,99,255,.30);
+    z-index:3;
+    border-radius:18px;
+}
 
 .css-card{
-    width: 72px;
-    height: 72px;
-    right: -30px;
-    bottom: -5px;
+    width:72px;
+    height:72px;
+    right:20px;
+    bottom:100px;
+    border:none;
+    box-shadow:none;
+    background-color: transparent;
+    
 }
 
-.css-card svg{
-    width: 42px;
-    height: 42px;
-    fill: white;
+.css-card img{
+    width:90px;
+    height:50px;
+}
+/*============================== Secção Projetos ==============================*/
+.projetos{
+    width: 100vw;
+}
+#projetos-tema{
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+#projetos-tema h1{
+    text-align: center;
+    position: relative;
+
+}
+#projetos-tema h1::after{
+    content: '';
+    position: absolute;
+    background-color: var(--color-primary);
+    left: 35%;
+    border-radius: 10px;
+    width: 70px;
+    height: 4px;
+    bottom: -9px;
+}
+.icones-projetos{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+
+}
+.card-project{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    max-height: 400px;
+    width: 100%;
+}
+.icones-projetos a{
+    text-decoration: none;
+    border-radius: 10px;
+    padding: 10px;
+    border: 1px solid var(--color-accent);
+    text-align: center;
 }

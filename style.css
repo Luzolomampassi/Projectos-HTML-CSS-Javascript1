@@ -35,13 +35,17 @@
         #1E1B4B 0%,
         #7C3AED 100%
     );
-   
+    --gradient-herobody:radial-gradient(
+    circle at top right,#5a1ea8,#090a1d 60%);
 }
+   
+
 body{
     width: 100vw;
     background-color: var(--color-bg);
     color: var(--color-text);
 }
+/*<!--==============================Cabeçalho==============================-->*/
 /* ==========Cabeçalho========== */
 
 header{
@@ -95,6 +99,9 @@ nav a:hover::after{
     margin-left: 100px;
     gap: 20px;
 }
+.icone-bar a{
+     color: white;
+}
 @media(max-width:769px){
     nav h1{
         text-align: center;
@@ -104,14 +111,36 @@ nav a:hover::after{
     }
 }
 
-/* ==========Corpo========== */
+/*<!--==============================Banner==============================-->*/
 .banner{
     background-color:var(--color-header);
-    height: 500px;
+    max-height: 500px;
     border: 1px solid var(--color-border);
-    padding: 10px;
+    padding: 10px 10px 25px 10px;
     width: 100%;
+    display: flex;
+    gap: 50px;
+    justify-content: space-around;
 }
+#boas-vinda{
+    display: inline-flex;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 30px;
+    color: var(--color-primary);
+    background-color: #270278be}
+.banner-conteiner{
+    margin: 40px 0px 0px 80px;
+}
+.banner-content{
+    font-size: 1.4em;
+    padding-bottom: 25px;
+}
+.banner-content h1{
+    color: white;
+    padding-bottom: 15px;
+}
+
 #banner-text-mark{
     color: var(--color-primary);
 }
@@ -121,17 +150,21 @@ nav a:hover::after{
     gap: 20px;
     flex-wrap: wrap;
     width:390px;
+    
    
 }
+/* ===========Botões========== */
 #btn-projetos{
     background-image:linear-gradient(to right , #443cb1,#601cd5);
     width: 180px;
     height: 50px;
+    font-size: 1.1em;
     outline: none;
     border: none;
     padding: 5px;
     border-radius: 8px;
     cursor: pointer;
+    border: 1px solid var(--color-border);
   
 }
 #btn-projetos a{
@@ -148,10 +181,151 @@ nav a:hover::after{
     padding: 5px;
     border-radius: 8px;
     cursor: pointer;
+    border: 1px solid var(--color-border);
+    font-size: 1.1em;
 }
 
 #btn-sobre a{
     text-decoration: none;
     color: white;
     font-size: 1.1em;
+}
+/* ===========Banner-hero========== */
+/* ================= HERO ================= */
+
+.hero{
+    position: relative;
+    width: 560px;
+    height: 420px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Janela */
+
+.window{
+    width: 450px;
+    height: 290px;
+    background: #111827;
+    border: 2px solid var(--color-primary);
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(108,99,255,.25);
+    overflow: hidden;
+    z-index: 1;
+}
+
+.top-bar{
+    height: 42px;
+    background: #1A2236;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0 20px;
+}
+
+.dot{
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.red{background:#FF5F57;}
+.yellow{background:#FEBC2E;}
+.green{background:#28C840;}
+
+/* Editor */
+
+.editor{
+    padding: 25px;
+}
+
+.line{
+    height: 8px;
+    border-radius: 10px;
+    margin-bottom: 16px;
+    background: #374151;
+}
+
+.line:nth-child(1){
+    width: 160px;
+    background:#8B5CF6;
+}
+
+.line:nth-child(2){
+    width: 280px;
+    background:#4F8DF7;
+}
+
+.line:nth-child(3){
+    width: 140px;
+}
+
+.line:nth-child(4){
+    width: 240px;
+    background:#EC4899;
+}
+
+.line:nth-child(5){
+    width: 100px;
+    background:#10B981;
+}
+
+.line:nth-child(6){
+    width: 220px;
+    background:#4F8DF7;
+}
+
+.line:nth-child(7){
+    width: 130px;
+}
+
+/* Cards */
+
+.card{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #28144F;
+    border: 2px solid var(--color-primary);
+    border-radius: 18px;
+    color: white;
+    box-shadow: 0 0 20px rgba(108,99,255,.35);
+    z-index: 2;
+}
+
+/* Código */
+
+.code-card{
+    width: 78px;
+    height: 78px;
+    left: 0;
+    top: 125px;
+    font-size: 34px;
+}
+
+/* Imagem */
+
+.image-card{
+    width: 180px;
+    height: 120px;
+    right: 0;
+    bottom: 35px;
+    font-size: 58px;
+}
+
+/* CSS */
+
+.css-card{
+    width: 72px;
+    height: 72px;
+    right: -30px;
+    bottom: -5px;
+}
+
+.css-card svg{
+    width: 42px;
+    height: 42px;
+    fill: white;
 }

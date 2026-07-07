@@ -1,0 +1,157 @@
+*{padding: 0;margin: 0;box-sizing: border-box;font-family: sans-serif;}
+
+:root {
+    /* Cores primárias */
+    --color-primary: #8B5CF6;
+    --color-primary-hover: #A78BFA;
+    --color-secondary: #3B82F6;
+    --color-accent: #6366F1;
+
+    /* Cores neutras */
+    --color-header: #000413;
+    --color-banner: #000c35;
+    --color-bg: #0B0F19;
+    --color-surface: #111827;
+    --color-surface-2: #1F2937;
+    --color-border: #2D3748;
+    --color-text: #E5E7EB;
+    --color-text-muted: #9CA3AF;
+
+    /* Cores semânticas */
+    --color-success: #10B981;
+    --color-warning: #F59E0B;
+    --color-error: #EF4444;
+    --color-info: #3B82F6;
+
+    /* Gradientes */
+    --gradient-primary: linear-gradient(
+        135deg,
+        #8B5CF6 0%,
+        #6366F1 100%
+    );
+
+    --gradient-hero: linear-gradient(
+        135deg,
+        #1E1B4B 0%,
+        #7C3AED 100%
+    );
+   
+}
+body{
+    width: 100vw;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+}
+/* ==========Cabeçalho========== */
+
+header{
+    padding: 19px;
+    background-color: var(--color-header);
+    border: 1px solid var(--color-border);
+
+}
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    
+}
+nav ul{
+    list-style: none;
+    display: flex;
+    gap: 40px;
+    font-size: 1.2em;
+    
+}
+nav a{color: var(--color-text-muted);
+    text-decoration: none;
+    position: relative;
+    transition: 0.4s;
+}
+
+nav a:hover{
+    color: var(--color-primary);
+}
+nav a::after{
+    content: ' ';
+    background-color: var(--color-primary);
+    position: absolute;
+    left: 0;
+    width: 0px;
+    height: 2.5px;
+    bottom: -25px;
+    transition: 0.4s;
+}
+
+nav a:hover::after{
+    width: 100%;
+}
+.fa-code{
+    color: var(--color-primary);
+    font-weight:bolder;
+}
+.icone-bar{display: flex;
+    margin-left: 100px;
+    gap: 20px;
+}
+@media(max-width:769px){
+    nav h1{
+        text-align: center;
+    }
+    .icone-bar{
+        margin:0px auto;
+    }
+}
+
+/* ==========Corpo========== */
+.banner{
+    background-color:var(--color-header);
+    height: 500px;
+    border: 1px solid var(--color-border);
+    padding: 10px;
+    width: 100%;
+}
+#banner-text-mark{
+    color: var(--color-primary);
+}
+.banner-buttons{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    width:390px;
+   
+}
+#btn-projetos{
+    background-image:linear-gradient(to right , #443cb1,#601cd5);
+    width: 180px;
+    height: 50px;
+    outline: none;
+    border: none;
+    padding: 5px;
+    border-radius: 8px;
+    cursor: pointer;
+  
+}
+#btn-projetos a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.1em;
+}
+#btn-sobre{
+    background-color: var(--color-surface-2);
+    width: 180px;
+    height: 50px;
+    outline: none;
+    border: none;
+    padding: 5px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+#btn-sobre a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.1em;
+}

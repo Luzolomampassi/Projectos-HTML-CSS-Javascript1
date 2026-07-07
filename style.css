@@ -2,15 +2,15 @@
 
 :root {
     /* Cores primárias */
-    --color-primary: #8B5CF6;
+    --color-primary: #7F35F0;
     --color-primary-hover: #A78BFA;
     --color-secondary: #3B82F6;
     --color-accent: #6366F1;
 
     /* Cores neutras */
-    --color-header: #000413;
-    --color-banner: #000c35;
-    --color-bg: #0B0F19;
+    --color-header: #000619;
+    --color-banner: #00071A;
+    --color-bg: #030B1E;
     --color-surface: #111827;
     --color-surface-2: #1F2937;
     --color-border: #2D3748;
@@ -44,6 +44,7 @@ body{
     width: 100vw;
     background-color: var(--color-bg);
     color: var(--color-text);
+    overflow-x:hidden;
 }
 /*<!--==============================Cabeçalho==============================-->*/
 /* ==========Cabeçalho========== */
@@ -51,7 +52,7 @@ body{
 header{
     padding: 19px;
     background-color: var(--color-header);
-    border: 1px solid var(--color-border);
+    
 
 }
 nav{
@@ -117,6 +118,9 @@ nav a:hover::after{
     flex-direction: column;
    }
 }
+main{
+    padding-bottom:25px;
+}
 
 .banner{
     width:100%;
@@ -128,7 +132,8 @@ nav a:hover::after{
     align-items:center;
     padding:40px 90px;
     background:var(--color-header);
-    border:1px solid var(--color-border);
+    border-top:1px solid var(--color-border);
+    border-bottom:1px solid var(--color-border);
     overflow:hidden;
 }
 /* ===========Texto de boas vinda ========== */
@@ -505,20 +510,75 @@ nav a:hover::after{
 }
 .icones-projetos{
     display: grid;
-    grid-template-columns: repeat(4,1fr);
-
+    grid-template-columns: repeat(4, 1fr);
+   
 }
-.card-project{
+/* Badges */
+.badges{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+#badge-html{
+    background-color: #5A1C0A;
+    color: #DF874F;
+    border-radius: 5px;
+    padding: 5px;
+}
+#badge-css{
+    background-color: #00398B;
+    border-radius: 5px;
+    padding: 5px 5px 0px 5px;
+}
+.card-project{ 
     display: flex;
     flex-direction: column;
+    gap: 10px;
     padding: 10px;
     max-height: 400px;
+    max-width: 300px;
     width: 100%;
+    text-align: center;
+    border-radius: 10px;
+
+   
 }
-.icones-projetos a{
+
+.card-project a{
+    color: #8152e8;
     text-decoration: none;
     border-radius: 10px;
     padding: 10px;
-    border: 1px solid var(--color-accent);
+    border: 1px solid var(--color-primary);
     text-align: center;
+    font-weight: bold;
+    font-size: 1.12em;
+
+}
+.card-project img{
+    object-fit: cover;
+    width: 100%;
+}
+
+.portfolio{
+    border: 1px solid var(--color-primary);
+    background-color: #0F0F36;
+}
+.calculadora{
+    background-color: #061B22;
+    border: 1px solid green;
+}
+.landing{
+    background-color: #031438;
+    border: 1px solid #1c1c6c;
+}
+.task-list{
+    background-color: #181A1E;
+    border: 1px solid #41392b;
+}
+
+footer{display: flex;
+    justify-content: space-around;
+    padding:15px;
+    border: 1px solid var(--color-border);
 }

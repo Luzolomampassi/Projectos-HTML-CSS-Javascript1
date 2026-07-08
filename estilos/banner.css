@@ -72,9 +72,17 @@
 }
 .btn-primary:hover{
     background-image:linear-gradient(to right , #675fd4,#7b3de7);
-    box-shadow: inset 1px 1px 1px 1px rgba(0, 0, 0, 0.505);
     transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(127,53,240,.3);
 }
+.btn-primary:active{
+    transform: translateY(0);
+}
+.btn-primary:focus{
+    outline: 2px solid var(--color-primary);
+    outline-offset: 3px;
+}
+
 .btn-primary a{
     text-decoration: none;
     color: white;
@@ -88,8 +96,16 @@
    
 }
 .btn-secundary:hover{
-    box-shadow: inset 1px 1px 1px 1px rgba(0, 0, 0, 0.505);
+
     transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.579);
+}
+.btn-secundary:active{
+    transform: translateY(0);
+}
+.btn-secundary:focus{
+    outline: 2px solid black;
+    outline-offset: 3px;
 }
 
 .btn-secundary a{

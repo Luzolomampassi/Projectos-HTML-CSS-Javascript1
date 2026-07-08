@@ -30,6 +30,7 @@
     grid-template-columns: repeat(4, 1fr);
     justify-items: center;
     gap: 20px;
+    animation: surgir 1s;
    
 }
 /* Badges */
@@ -108,4 +109,18 @@
 .task-list{
     background-color: #181A1E;
     border: 1px solid #41392b;
+}
+
+
+
+@keyframes surgir{
+    from{
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(-10px);
+    }
+    
 }

@@ -1,0 +1,54 @@
+/*<!--==============================Cabeçalho==============================-->*/
+
+header{
+    padding: 19px;
+    background-color: var(--color-header);
+}
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    
+}
+nav ul{
+    list-style: none;
+    display: flex;
+    gap: 40px;
+    font-size: 1.2em;
+    
+}
+nav a{color: var(--color-text-muted);
+    text-decoration: none;
+    position: relative;
+    transition: 0.4s;
+}
+
+nav a:hover{
+    color: var(--color-primary);
+}
+nav a::after{
+    content: ' ';
+    background-color: var(--color-primary);
+    position: absolute;
+    left: 0;
+    width: 0px;
+    height: 2.5px;
+    bottom: -25px;
+    transition: 0.4s;
+}
+
+nav a:hover::after{
+    width: 100%;
+}
+.fa-code{
+    color: var(--color-primary);
+    font-weight:bolder;
+}
+.icone-bar{display: flex;
+    margin-left: 100px;
+    gap: 20px;
+}
+.icone-bar a{
+     color: white;
+}

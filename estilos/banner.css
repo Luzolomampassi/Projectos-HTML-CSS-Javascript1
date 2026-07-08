@@ -1,0 +1,99 @@
+.banner{
+    width:100%;
+    min-height: 450px;
+    max-height: 680px;  
+    display:flex;
+    flex-wrap: wrap;
+    justify-content:space-between;
+    align-items:center;
+    background:var(--color-header);
+    border-top:1px solid var(--color-border);
+    border-bottom:1px solid var(--color-border);
+    overflow:hidden;
+}
+/* ===========Texto de boas vinda ========== */
+#boas-vinda{
+    display: inline-flex;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 30px;
+    color: var(--color-primary);
+    background-color: #270278be}
+
+/* ===========Conteúdo========== */
+
+.banner-conteiner{
+    width:50%;
+    margin-left:70px;
+    z-index:2;
+   
+}
+.banner-content{
+    font-size: 1.4em;
+    padding-bottom: 25px;
+}
+.banner-content h1{
+    color: white;
+    padding-bottom: 15px;
+}
+
+#banner-text-mark{
+    color: var(--color-primary);
+}
+/* ===========Botões========== */
+.banner-buttons{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    width:390px;  
+}
+.banner-buttons button{
+    width:180px;
+    height:50px;
+    border-radius:8px;
+    cursor:pointer;
+    transition:.4s;
+    border: 1px groove var(--color-border);
+    outline: none;
+    border: none;
+    padding: 5px;
+      font-size: 1.1em;
+}
+
+.btn-primary{
+    background-image:linear-gradient(to right , #443cb1,#601cd5);  
+}
+.btn-primary:hover{
+    background-image:linear-gradient(to right , #675fd4,#7b3de7);
+    box-shadow: inset 1px 1px 1px 1px rgba(0, 0, 0, 0.505);
+    transform: translateY(-10px);
+}
+.btn-primary a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.1em;
+    transition: 0.4s;
+}
+
+
+.btn-secundary{
+    background-color: var(--color-surface-2);
+  
+   
+}
+.btn-secundary:hover{
+    box-shadow: inset 1px 1px 1px 1px rgba(0, 0, 0, 0.505);
+    transform: translateY(-10px);
+}
+
+.btn-secundary a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.1em;
+}
+button:focus-visible,
+a:focus-visible{
+    outline:2px solid var(--color-primary);
+    outline-offset:4px;
+}

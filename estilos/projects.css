@@ -1,0 +1,111 @@
+.projetos{
+    width: 100%;
+}
+#projetos-tema{
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+#projetos-tema h1{
+    text-align: center;
+    position: relative;
+    padding: 15px;
+    margin-bottom: 20px;
+
+}
+#projetos-tema h1::after{
+    content: '';
+    position: absolute;
+    background-color: var(--color-primary);
+    left: 35%;
+    border-radius: 10px;
+    width: 70px;
+    height: 4px;
+    bottom: -9px;
+}
+.projects-grid{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    gap: 20px;
+   
+}
+/* Badges */
+.badges{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+#badge-html{
+    background-color: #5A1C0A;
+    color: #DF874F;
+    border-radius: 5px;
+    padding: 5px;
+}
+#badge-css{
+    background-color: #00398B;
+    border-radius: 5px;
+    padding: 5px 5px 0px 5px;
+}
+.card-project{ 
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+    text-align: center;
+    width:100%;
+    max-width:300px;
+
+    padding:18px;
+
+    border-radius:12px;
+
+    transition: transform .3s, box-shadow .3s;
+
+   
+}
+.card-project:hover{
+    transform:translateY(-8px);
+    box-shadow:0 15px 35px rgba(0,0,0,.35);
+}
+
+.card-project a{
+    margin-top:auto;
+    color: #8152e8;
+    text-decoration: none;
+    border-radius: 10px;
+    padding: 10px;
+    border: 1px solid var(--color-primary);
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.12em;
+    transition: 0.4s;
+}
+.card-project a:hover{
+    transform: scale(1.1);
+}
+.card-project img{
+    width:100%;
+    aspect-ratio:16/9;
+    object-fit:cover;
+    border-radius:8px;
+
+}
+
+.portfolio{
+    border: 1px solid var(--color-primary);
+    background-color: #0F0F36;
+}
+.calculadora{
+    background-color: #061B22;
+    border: 1px solid green;
+}
+.landing{
+    background-color: #031438;
+    border: 1px solid #1c1c6c;
+}
+.task-list{
+    background-color: #181A1E;
+    border: 1px solid #41392b;
+}

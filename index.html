@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projetos</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="estilos/banner.css">
+    <link rel="stylesheet" href="estilos/footer.css">
+    <link rel="stylesheet" href="estilos/header.css">
+    <link rel="stylesheet" href="estilos/responsive.css">
+    <link rel="stylesheet" href="estilos/projects.css">
+    <link rel="stylesheet" href="estilos/hero.css">
+
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <script src="https://kit.fontawesome.com/f6a9b3f1e7.js" crossorigin="anonymous"></script>
 </head>
@@ -19,15 +27,16 @@
                 <li><a href="#">Contato</a></li>
             </ul>
             <div class="icone-bar">
-                <a href="https://github.com/Luzolomampassi" target="_blank"><i class="fa-brands fa-github fa-xl"></i></a>
+                <a href="https://github.com/Luzolomampassi" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github fa-xl"></i></a>
                 <i class="fa-brands fa-linkedin fa-xl"></i>
-                <a href="mailto:Luzolomampassi8@gmail.com"><i class="fa-regular fa-envelope fa-xl"></i></a>
+                <a href="mailto:Luzolomampassi8@gmail.com" rel="noopener noreferrer"><i class="fa-regular fa-envelope fa-xl"></i></a>
             </div>   
         </nav>
     </header>
     <main>
         <!--==============================Banner==============================-->
         <section class="banner">
+
         <!--==============================Banner-content==============================-->
             <article class="banner-conteiner">
                 <div id="boas-vinda"><p>✋Bem-vindo ao meu portfólio</p></div>
@@ -38,68 +47,63 @@
                 </div>
 
                 <div class="banner-buttons">
-                    <button id="btn-projetos"><a href="#"><i class="bi bi-folder-fill"></i> Ver projetos</a></button>
+                    <button class="btn-primary"><a href="#"><i class="bi bi-folder-fill"></i> Ver projetos</a></button>
 
-                    <button id="btn-sobre"><a href="#"><i class="fa-regular fa-user"></i> Sobre mim</a></button>
+                    <button class="btn-secundary"><a href="#"><i class="fa-regular fa-user"></i> Sobre mim</a></button>
                 </div>
             </article>
             <!--==============================Banner-Hero==============================-->
-                <article class="hero">
-                 <div class="hero-bg">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span><span></span><span></span><span></span><span></span>
-                </div>
+              <!-- <article class="hero">
+                            <div class="hero-bg">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
 
-                <div class="window">
+                            <div class="window">
 
-                    <div class="top-bar">
-                        <span class="dot red"></span>
-                        <span class="dot yellow"></span>
-                        <span class="dot green"></span>
-                    </div>
+                                <img src="icones/janela-recorte 700x400.png" alt="Janela">
 
-                    <div class="editor">
+                                <div class="hero-card code-card">
+                                    <img src="icones/code-img 100x100.png" alt="">
+                                </div>
 
-                        <div class="line w200 purple"></div>
-                        <div class="line w300 blue"></div>
-                        <div class="line w180"></div>
-                        <div class="line w260 pink"></div>
-                        <div class="line w120 green"></div>
-                        <div class="line w240 blue"></div>
-                        <div class="line w170"></div>
+                                <div class="hero-card image-card">
+                                    <img src="icones/foto 1024x1024.png" alt="">
+                                </div>
 
-                    </div>
+                                <div class="hero-card css-card">
+                                    <img src="icones/css3-original.svg" alt="">
+                                </div>
 
-                </div>
+                            </div>
 
-                <div class="hero-card code-card">
-                    <i class="fa-solid fa-code" style="color: rgb(255, 255, 255);"></i>
-                </div>
-
-                <div class="hero-card image-card">
-                    <img src="icones/foto-600x400.png" alt="">
-                  <!--<i class="fa-regular fa-image"></i>-->  
-                </div>
-
-                <div class="hero-card css-card">
-                    <img src="icones/css3-original.svg" alt="">
-                </div>
-            </article>
+                    </article>
+                        -->
         </section>
+
+
+
+
             <!--==============================Projetos==============================-->
+
+
         <section class="projetos">
             <div id="projetos-tema">
                 <h1>Meus Projetos</h1>
             </div>
 
-            <article class="icones-projetos">
+            <article class="projects-grid">
 
                 <div class="card-project portfolio">
-                    <img src="icones/img-portofolio 600x400.png" alt="">
+                    <img src="icones/img-portofolio 600x400.png" alt="Imagem do projeto Portfólio">
                     <h1>Portfólio Simples</h1>
                     <p>Meu primeiro portfólio responsivo <br>
                     feito com HTML e CSS + JavaScript</p>
@@ -111,29 +115,29 @@
                 </div> 
 
                <div class="card-project calculadora">
-                    <img src="icones/img-calculadora 600x400.png" alt="">
+                    <img src="icones/img-calculadora 600x400.png" alt="Captura da calculadora">
                     <h1>Calculadora</h1>
                     <p>Calculadora básica com operações<br>matemáticas simples</p>
                      <div class="badges">
                         <span id="badge-html">HTML</span>
                         <span id="badge-css">CSS</span>
                     </div>
-                    <a href="#" target="_blank">Ver projetos <i class="bi bi-box-arrow-up-right"></i></a>
+                    <a href="#" target="_blank">Indisponível <i class="bi bi-box-arrow-up-right"></i></a>
                 </div>
 
                 <div class="card-project landing">
-                    <img src="icones/img-pagina 600x400.png" alt="">
+                    <img src="icones/img-pagina 600x400.png" alt="Landing Page">
                     <h1>Landing Page</h1>
                     <p>Página de apresentação de um <br>produto fictício</p>
                      <div class="badges">
                         <span id="badge-html">HTML</span>
                         <span id="badge-css">CSS</span>
                     </div>
-                    <a href="#" target="_blank">Ver projetos <i class="bi bi-box-arrow-up-right"></i></a>
+                    <a href="#" target="_blank">Indisponível <i class="bi bi-box-arrow-up-right"></i></a>
                 </div>
 
                 <div class="card-project task-list">
-                    <img src="icones/img-prancha 600x400.png" alt="">
+                    <img src="icones/img-prancha 600x400.png" alt="Lista de tarefa">
                     <h1>Lista de tarefas</h1>
                     <p>Página de lista de tarefas com design<br>
                     limpo e responsivo</p>
@@ -141,16 +145,19 @@
                         <span id="badge-html">HTML</span>
                         <span id="badge-css">CSS</span>
                     </div>
-                    <a href="#" target="_blank">Ver projetos <i class="bi bi-box-arrow-up-right"></i></a>
+                    <a href="#" target="_blank" >Indisponível <i class="bi bi-box-arrow-up-right"></i></a>
                 </div>
 
             </article>
         </section>
     </main>
+
+     <!--==============================Footer==============================-->
+
     <footer>
-        <p>&copy 2026 Luzolo Mampassi.Todos os direitos reservados.</p>
-        <p>Feito com dedicação para aprender e evoluir.</p>
-         <a href="https://github.com/Luzolomampassi" target="_blank"><i class="fa-brands fa-github fa-xl"></i><i class="bi bi-box-arrow-up-right"></i></a>
+        <p><i class="fa-regular fa-copyright" style="color: rgb(255, 255, 255);"></i> 2026 Luzolo Mampassi.Todos os direitos reservados.</p>
+        <p><i class="fa-solid fa-heart fa-lg" style="color: rgb(255, 0, 0);"></i>Feito com dedicação para aprender e evoluir.</p>
+         <a href="https://github.com/Luzolomampassi" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github fa-xl"></i><i class="bi bi-box-arrow-up-right"></i></a>
     </footer>
 
   

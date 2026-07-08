@@ -52,3 +52,62 @@ nav a:hover::after{
 .icone-bar a{
      color: white;
 }
+
+#menu {
+    display: flex;
+    align-items: center;
+}
+
+#menu-btn{
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+
+#menu.ativo {
+  display: block;
+}
+
+#menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+#menu li {
+  margin: 10px 0;
+}
+
+#menu a {
+  color: white;
+  text-decoration: none;
+}
+@media (max-width: 768px) {
+
+    #menu-btn {
+        display: block;
+    }
+
+    #menu {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+    }
+
+    #menu.ativo {
+        display: flex;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .icone-bar {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+}

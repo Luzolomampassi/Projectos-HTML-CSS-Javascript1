@@ -52,7 +52,7 @@ nav a:hover::after{
 .icone-bar a{
      color: white;
 }
-
+/*Menu responsivo*/
 #menu {
     display: flex;
     align-items: center;
@@ -67,25 +67,20 @@ nav a:hover::after{
     cursor: pointer;
 }
 
-
 #menu.ativo {
   display: block;
 }
+/*Responsividade*/
 
-#menu ul {
-  list-style: none;
-  padding: 0;
-}
-
-#menu li {
-  margin: 10px 0;
-}
-
-#menu a {
-  color: white;
-  text-decoration: none;
-}
-@media (max-width: 768px) {
+@media (max-width:768px) {
+    nav h1{
+        text-align: center;
+    }
+    .icone-bar{
+        margin:0px auto;
+        margin-top: 20px;
+        
+    }
 
     #menu-btn {
         display: block;
@@ -101,13 +96,9 @@ nav a:hover::after{
         display: flex;
     }
 
-    nav ul {
+     nav ul {
         flex-direction: column;
         gap: 20px;
     }
 
-    .icone-bar {
-        margin-left: 0;
-        margin-top: 20px;
-    }
 }

@@ -111,9 +111,16 @@
     background-color: #181A1E;
     border: 1px solid #41392b;
 }
+/*Responsividade*/
+@media (max-width:640px){
+   .icones-projetos{
+    flex-direction: column;
+    
+    align-items: center;
+   }
+}
 
-
-
+/*Animation*/
 @keyframes surgir{
     from{
         opacity: 0;

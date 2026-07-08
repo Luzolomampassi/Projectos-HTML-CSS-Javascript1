@@ -1,6 +1,6 @@
 .banner{
     width:100%;
-    min-height: 450px;
+    min-height: 480px;
     max-height: 680px;  
     display:flex;
     flex-wrap: wrap;
@@ -118,4 +118,11 @@ button:focus-visible,
 a:focus-visible{
     outline:2px solid var(--color-primary);
     outline-offset:4px;
+}
+
+
+@media(max-width:768px){
+   .banner{
+    flex-direction: column;
+   }
 }

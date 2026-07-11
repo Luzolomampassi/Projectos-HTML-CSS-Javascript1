@@ -1,0 +1,17 @@
+html{
+    scroll-behavior: smooth;
+}
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+:root{
+    --primary: #692BCC;
+    --secondary: #692CC8;
+    --background: #00040E;
+    --background-form:#060E1C;
+    --background-hero:#00081A;
+    --card-color:#050E1F;
+    --text: #FFFFFF;
+}

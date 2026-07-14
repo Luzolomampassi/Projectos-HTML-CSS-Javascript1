@@ -1,0 +1,197 @@
+*{padding: 0;margin: 0;box-sizing: border-box;font-family: sans-serif;}
+
+:root {
+    /* Cores primárias */
+    --color-primary: #7F35F0;
+    --color-primary-hover: #A78BFA;
+    --color-secondary: #3B82F6;
+    --color-accent: #6366F1;
+
+    /* Cores neutras */
+    --color-header: #000619;
+    --color-banner: #00071A;
+    --color-bg: #000415;
+    --color-card: #010B22;
+    --color-border: #2D3748;
+    --color-text: #E5E7EB;
+    --color-text-muted: #9CA3AF;
+
+    /* Cores semânticas */
+    --color-success: #10B981;
+    --color-warning: #F59E0B;
+    --color-error: #EF4444;
+    --color-info: #3B82F6;
+
+    /* Gradientes */
+    --gradient-primary: linear-gradient(
+        135deg,
+        #8B5CF6 0%,
+        #4012CE 100%
+    );
+
+    --gradient-hero: linear-gradient(
+        135deg,
+        #5E1FE6,
+        #7C3AED
+    );
+    --gradient-herobody:radial-gradient(
+    circle at top right,#5a1ea8,#090a1d 60%);
+}
+body{
+    width: 100%;
+    height: 100vh;
+    background-color: var(--color-bg);
+}
+/*Formulário*/
+
+.banner_contato{
+    padding: 30px;
+}
+/*======================Formulário======================*/
+
+
+.contato{
+    display: flex;
+    width: 100%;
+    max-height:700px ;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+
+}
+.cards{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    border-radius: 10px;
+    padding: 30px;
+    background-color: var(--color-card);
+    border: 1px solid var(--color-border);
+}
+/*===========Campos de formulário===========*/
+
+
+.card_contato{
+    width: 60%;
+
+}
+.card_contato input{
+    outline: none;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius:7px;
+    color: white;
+    border: 1px solid var(--color-border);
+    background-color: var(--color-banner);
+}
+.card_contato input::placeholder{
+    color: white;
+    font-weight: bold;
+}
+form{
+    width: 100%;
+}
+
+/*===========Informações===========*/
+
+.linha{
+    justify-content: center;
+    display: flex;
+    gap: 20px;
+  
+}
+
+#campo_nome,
+#campo_email{
+    flex: 1;
+}
+
+#nome,
+#email{
+    width: 100%;
+}
+/*===========Assunto===========*/
+
+#assunto{
+  width: 100%;
+}
+/*===========Textarea===========*/
+#mensagem{
+    color: var(--color-text);
+    background: none;
+    margin-top: 20px;
+    border-radius: 10px;
+    width: 100%;
+    min-height: 150px;
+    max-height: 300px;
+    min-width: 50%;
+    max-width: 100%;
+    padding: 10px;
+    border: 1px solid var(--color-border);
+    background-color: var(--color-banner);
+}
+@media (max-width:768px){
+    .cards{
+        justify-content: center;
+  
+        align-content: center;
+        flex-direction: column;
+    }
+    .card_contato{
+        display: block;
+        width: 100%;
+    }
+    .card-infor{
+        
+        width: 100%;
+    
+}
+}
+/*Botão de submit*/
+
+#submit{
+    margin-top: 20px;
+    border-radius: 5px;
+    border: none;
+    padding: 10px;
+    outline: none;
+    width: 190px;
+    color: var(--color-text);
+    background-image: var(--gradient-primary);
+    font-weight: bold; 
+    transition: box-shadow .3s , transform .4s;
+}
+#submit:hover{
+    transform: translateY(-10px);
+    box-shadow: 1px 2px 3px var(--color-accent);
+}
+#submit:active{
+    transform: translateY(0px);
+    box-shadow: .5px 1px 2px var(--color-accent);
+}
+#submit:focus-visible{
+    outline: 3px;
+    outline-offset: 4px solid rgb(255, 242, 242);
+}
+
+/*=====Informações de contato=====*/
+.card-infor{
+    
+    width: 30%;
+    max-height: 300px;
+
+}
+.card-infor h2{
+    padding: 10px;
+}
+.card-infor-conteiner{
+     width: 100%;
+}
+.card-infor div{
+    padding: 10px;
+}
+.card-infor div > p{
+  color: var(--color-text-muted);
+}
+
+

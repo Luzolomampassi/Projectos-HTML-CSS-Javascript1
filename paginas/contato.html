@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio</title>
+    <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <script src="https://kit.fontawesome.com/f6a9b3f1e7.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../estilos/header.css">
+    <link rel="stylesheet" href="../estilos/banner.css">
+    <link rel="stylesheet" href="../estilos/contato.css">
+    <link rel="stylesheet" href="../estilos/footer.css">
+   
+</head>
+<body>
+<header>
+        <nav>
+            <h1><i class="fa-solid fa-code"></i><a href="contato.html">Luzolo Mampassi</a></h1>
+            <button id="menu-btn">☰</button>
+
+            <div id="menu">
+                
+                <ul>
+                    <li><a href="../index.html">Início</a></li>
+                    <li><a href="projetos.html">Projetos</a></li>
+                    <li><a href="sobreMim.html">Sobre mim</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+
+                <div class="icone-bar">
+                    <a href="https://github.com/Luzolomampassi"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        <i class="fa-brands fa-github fa-xl"></i>
+                    </a>
+
+                    <i class="fa-brands fa-linkedin fa-xl"></i>
+
+                    <a href="mailto:Luzolomampassi8@gmail.com"
+                        rel="noopener noreferrer">
+                        <i class="fa-regular fa-envelope fa-xl"></i>
+                    </a>
+                    <a href="https://www.instagram.com/luzolomampassi8/"target="_blank"
+                        rel="noopener noreferrer"><i class="fa-brands fa-instagram fa-xl"></i></a>
+                </div>
+             
+            </div>
+        </nav>
+</header>
+<main>
+    <section class="banner_contato">
+        
+            <!--============================== Banner Content ==============================-->
+
+            <article class="banner-conteiner" >
+
+                <div id="boas-vinda">
+                    <p>Vamos conversar ?</p>
+                </div>
+
+                <div class="banner-content">
+                    <h1>
+                        Tem um projeto,<br>
+                        em mente?
+                        <br><span id="banner-text-mark">Vamos construir
+                        <br>algo incrível juntos.</span>
+                    </h1>
+
+                    <p>
+                       Estou sempre aberto para novas oportunidades , colaborações
+                        <br>e desafios interessantes.Entre em contato e vamos tirar
+                        <br>Sua ideia do papel
+                    </p>
+                </div>
+        </article>
+    </section>
+
+    <section class="contato">
+        <article class="card_contato cards">
+            <form action="formulário.php" autocomplete="on" method="post">
+                <h2>Envie uma mensagem</h2>
+                <div class="linha">
+                    <div id="campo_nome">
+                    <input type="text" name="nome" id="nome" placeholder="Nome" autocomplete="name" minlength="4" required>
+                </div>
+                <div id="campo_email">
+                     <input type="email" name="email" id="email" placeholder="Seu@email.com" autocomplete="email"  required>
+                </div>
+                   
+                   
+                </div>
+                </div>
+                
+                <div id="campo_assunto">
+                    <label for="assunto"></label>
+                    <input type="text" name="assunto" id="assunto" placeholder="Assunto" required>
+                </div>
+                <div id="campo_mensagem">
+                    <textarea name="mensagem" id="mensagem" placeholder="mensagem" required></textarea>
+                </div>
+                <div>
+                    <button type="submit" id="submit"><i class="fa-regular fa-paper-plane"> </i>Enviar Mensagem</button>
+                   
+                </div>
+            </form>
+        </article>
+
+        <article class="card-infor cards">
+            <div class="card-infor-conteiner">  
+                 <h2>Informações de contato</h2>
+            <div>
+                
+                <h3><i class="fa-solid fa-location-dot"></i>Localização</h3>
+                <p>Luanda , Angola</p></div>
+            <div>
+                <h3><i class="fa-regular fa-envelope"></i>Email</h3>
+                <p>luzolomampassi8@gmail.com</p></div>
+            <div>
+                <h3><i class="fa-regular fa-calendar"></i>Disponibilidade</h3>
+                <p>Disponível para novos contatos</p></div>
+            </div>
+        </article>
+    </section>
+</main>
+
+    <footer>
+
+        <p>
+            <i class="fa-regular fa-copyright" style="color: rgb(255, 255, 255);"></i>
+            2026 Luzolo Mampassi. Todos os direitos reservados.
+        </p>
+
+        <p>
+            <i class="fa-solid fa-heart fa-lg" style="color: rgb(255, 0, 0);"></i>
+            Feito com dedicação para aprender e evoluir.
+        </p>
+
+        <a href="https://github.com/Luzolomampassi"
+            target="_blank"
+            rel="noopener noreferrer">
+            <i class="fa-brands fa-github fa-xl"></i>
+            <i class="bi bi-box-arrow-up-right"></i>
+        </a>
+
+    </footer>
+</body>
+</html>

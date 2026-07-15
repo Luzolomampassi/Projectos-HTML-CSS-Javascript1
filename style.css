@@ -53,3 +53,40 @@ body{
 main{
     padding-bottom:25px;
 }
+@view-transition {
+    navigation: auto;
+}
+
+::view-transition-old(root) {
+    animation: fade-out 0.3s;
+}
+
+::view-transition-new(root) {
+    animation: fade-in 0.3s;
+}
+@keyframes fade-out {
+   
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+  
+
+}
+@keyframes surgir{
+    from{
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(-10px);
+    }
+    
+}
+

@@ -23,17 +23,7 @@
     height: 4px;
     bottom: -9px;
 }
-/*
-.projects-grid{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    grid-template-columns: repeat(4, 1fr);
-    justify-items: center;
-    gap: 20px;
-    animation: surgir 1s;
-    cursor: pointer;
-}*/
+
 .projects-grid{
     display: grid;
     grid-template-columns: repeat(4, 1fr);

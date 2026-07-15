@@ -18,7 +18,8 @@
     margin-bottom: 15px;
     border-radius: 30px;
     color: var(--color-primary);
-    background-color: #270278be}
+    background-color: #270278be;
+    }
 
 /* ===========Conteúdo========== */
 
@@ -39,6 +40,7 @@
 
 #banner-text-mark{
     color: var(--color-primary);
+    text-shadow: 4px 5px 3px #0000005d;
 }
 /* ===========Botões========== */
 .banner-buttons{
@@ -125,3 +127,4 @@ a:focus-visible{
     flex-direction: column;
    }
 }
+

@@ -38,6 +38,7 @@
     --gradient-herobody:radial-gradient(
     circle at top right,#5a1ea8,#090a1d 60%);
 }
+
    
 
 body{
@@ -58,11 +59,11 @@ main{
 }
 
 ::view-transition-old(root) {
-    animation: fade-out 0.4s;
+    animation: fade-out 2s;
 }
 
 ::view-transition-new(root) {
-    animation: fade-in 0.4s;
+    animation: fade-in 2s;
 }
 @keyframes fade-out {
    

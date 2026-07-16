@@ -1,5 +1,48 @@
 /*<!--==============================Cabeçalho==============================-->*/
+:root {
+    /* Cores primárias */
+    --color-primary: #551eae;
+    --color-secondary: #A78BFA;
+  
+    --color-accent: #6366F1;
 
+    /* Cores neutras */
+    --color-header: #000619;
+    --color-banner: #00071A;
+    --color-bg: #000415;
+    --color-card: #010B22;
+    --color-border: #2D3748;
+    --color-text: #E5E7EB;
+    --color-text-muted: #9CA3AF;
+    --color-surface: #18105A;
+    --color-surface2: #831c9f;
+
+    /* Gradientes */
+    --gradient-primary: linear-gradient(
+        135deg,
+        #8B5CF6 0%,
+        #4012CE 100%
+    );
+
+    --gradient-secundary: linear-gradient(
+        135deg,
+        #5E1FE6,
+        #7C3AED
+    );
+    --gradient-herobody:radial-gradient(
+    circle at top right,#5a1ea8,#090a1d 60%);
+}
+[data-theme="light"] {
+
+    --color-header: #FFFFFF;
+    --color-banner: #F8FAFC;
+    --color-bg: #F1F5F9;
+    --color-card: #FFFFFF;
+    --color-border: #CBD5E1;
+    --color-text: #0F172A;
+    --color-text-muted: #64748B;
+
+}
 header{
     padding: 19px;
     background-color: var(--color-header);
@@ -14,14 +57,13 @@ nav{
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
+    gap: 30px;
 }
 nav ul{
     list-style: none;
     display: flex;
     gap: 40px;
-    font-size: 1.2em;
-   
-    
+    font-size: 1.2em;    
 }
 nav a{color: var(--color-text-muted);
     text-decoration: none;
@@ -77,6 +119,20 @@ nav a:hover::after{
 #menu.ativo {
   display: block;
 }
+
+#theme-toggle {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: var(--color-text);
+    transition: 0.3s;
+}
+
+#theme-toggle:hover {
+    transform: rotate(20deg);
+}
+
 /*Responsividade*/
 @media (max-width:768px){
 

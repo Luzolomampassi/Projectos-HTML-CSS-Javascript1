@@ -1,0 +1,105 @@
+*,
+*::before,
+*::after{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+:root {
+    /* Cores primárias */
+    --color-primary: #551eae;
+    --color-secondary: #A78BFA;
+  
+    --color-accent: #6366F1;
+
+    /* Cores neutras */
+    --color-header: #000619;
+    --color-banner: #00071A;
+    --color-bg: #000415;
+    --color-card: #010B22;
+    --color-border: #2D3748;
+    --color-text: #E5E7EB;
+    --color-text-muted: #9CA3AF;
+    --color-surface: #18105A;
+    --color-surface2: #831c9f;
+    --color-icon-bg:#0C0B3C;
+
+    /* Gradientes */
+    --gradient-primary: linear-gradient(
+        135deg,
+        #8B5CF6 0%,
+        #4012CE 100%
+    );
+
+    --gradient-secundary: linear-gradient(
+        135deg,
+        #5E1FE6,
+        #7C3AED
+    );
+    --gradient-herobody:radial-gradient(
+    circle at top right,#5a1ea8,#090a1d 60%);
+}
+.banner-sobre{
+    padding: 10px;
+    margin-top: 40px;
+}
+.highlights{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+}
+.highlight{
+    background-color: var(--color-icon-bg);
+    padding: 10px;
+    color:var(--color-primary);
+    border: 1px solid var(--color-surface);
+    border-radius: 7px;
+   
+  
+}
+.highlights-conteiner{
+    display: flex;
+    gap: 20px;
+}
+.highlight-txt{
+    display: block;
+}
+@view-transition {
+    navigation: auto;
+}
+
+::view-transition-old(root) {
+    animation: fade-out .4s;
+}
+
+::view-transition-new(root) {
+    animation: fade-in .4s;
+}
+@keyframes fade-out {
+   
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+  
+
+}
+@keyframes surgir{
+    from{
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(-10px);
+    }
+    
+}
+

@@ -14,7 +14,8 @@
     <script src="https://kit.fontawesome.com/f6a9b3f1e7.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="../estilos/Estilos das páginas/headerExperi.css">
-    <link rel="stylesheet" href="../estilos/banner.css">
+    <link rel="stylesheet" href="../estilos/Estilos das páginas/Banner-projetos.css">
+    
    
 
     <link rel="stylesheet"
@@ -24,46 +25,78 @@
 </head>
 
 <body>
-    <header>
-        <nav>
-            <h1><i class="fa-solid fa-code"></i><a href="../index.html"> Luzolo Mampassi</a></h1>
+<header>
+    <nav>
+        <h1><i class="fa-solid fa-code"></i><a href="../index.html"> Luzolo Mampassi</a></h1>
 
+    
+        <div id="menu">
+            
+            <ul>
+                <li><a href="../index.html">Início</a></li>
+                <li><a href="projetos.html">Projetos</a></li>
+                <li><a href="sobreMim.html">Sobre mim</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+            
+
+            <div class="icone-bar">
+                <a href="https://github.com/Luzolomampassi"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    <i class="fa-brands fa-github fa-xl"></i>
+                </a>
+
+                <i class="fa-brands fa-linkedin fa-xl"></i>
+
+                <a href="mailto:Luzolomampassi8@gmail.com"
+                    rel="noopener noreferrer">
+                    <i class="fa-regular fa-envelope fa-xl"></i>
+                </a>
+                <a href="https://www.instagram.com/luzolomampassi8/"target="_blank"
+                    rel="noopener noreferrer"><i class="fa-brands fa-instagram fa-xl"></i></a>
+            </div>
+            
+        </div>
+            <div class="btns-menu">
+                <button id="theme-toggle" aria-label="Alternar tema"><i class="fa-solid fa-moon"></i></button>   
+                <button id="menu-btn"><i class="fa-solid fa-bars"></i></button>
+        </div>
+            
+    </nav>
+</header>
+<main>
+    <section class="banner-projetos">
        
-            <div id="menu">
-                
-                <ul>
-                    <li><a href="../index.html">Início</a></li>
-                    <li><a href="projetos.html">Projetos</a></li>
-                    <li><a href="sobreMim.html">Sobre mim</a></li>
-                    <li><a href="contato.html">Contato</a></li>
-                </ul>
-               
-
-                <div class="icone-bar">
-                    <a href="https://github.com/Luzolomampassi"
-                        target="_blank"
-                        rel="noopener noreferrer">
-                        <i class="fa-brands fa-github fa-xl"></i>
-                    </a>
-
-                    <i class="fa-brands fa-linkedin fa-xl"></i>
-
-                    <a href="mailto:Luzolomampassi8@gmail.com"
-                        rel="noopener noreferrer">
-                        <i class="fa-regular fa-envelope fa-xl"></i>
-                    </a>
-                    <a href="https://www.instagram.com/luzolomampassi8/"target="_blank"
-                        rel="noopener noreferrer"><i class="fa-brands fa-instagram fa-xl"></i></a>
+        <div class="banner-conteiner">
+            <p id="txt-mark">Meus trabalhos</p>
+        <h1>Meus <span id="txt-mark">projetos</span></h1>
+        <p>Alguns projetos que desenvolvi aplicando minhas <br>
+        habilidades em desenvolvimento front-end e criando<br>
+        experiências incríveis.</p>
+        </div>
+        <div class="banner-cards">
+            <div class="banner-card">
+                <div class="txt-card">
+                    <h2>4+</h2>
+                    <p>Projetos concluídos</p>
                 </div>
-             
             </div>
-                <div class="btns-menu">
-                    <button id="theme-toggle" aria-label="Alternar tema"><i class="fa-solid fa-moon"></i></button>   
-                    <button id="menu-btn"><i class="fa-solid fa-bars"></i></button>
-                    <a href="#" download="#" class="download-cv">Download CV <i class="bi bi-download"></i></a>
+            <div class="banner-card">
+                 <div class="txt-card">
+                    <h2>8</h2>
+                    <p>Tecnologias Utilizadas</p>
+                 </div>
             </div>
-             
-        </nav>
-    </header>
+            <div class="banner-card">
+                 <div class="txt-card">
+                    <h2>-1</h2>
+                    <p>Anos de Jornada</p>
+                 </div>
+            </div>
+        </div>
+       
+    </section>
+</main>
     <script src="../interacoes.js"></script>
 </body>

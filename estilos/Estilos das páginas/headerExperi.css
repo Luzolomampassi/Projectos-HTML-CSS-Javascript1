@@ -15,6 +15,7 @@
     --color-banner: #00071A;
     --color-bg: #000415;
     --color-card: #010B22;
+    --color-card2:#01061B;
     --color-border: #2D3748;
     --color-text: #eef2f9;
     --color-text-muted: #9CA3AF;
@@ -49,17 +50,16 @@ nav{
     flex-wrap: wrap;
     text-align: center;
     position: relative;
-
 }
-/*Icones do menu*/
+/*====Icones do menu====*/
 
 nav a{
     color: var(--color-text-muted);
-   
     text-decoration: none;
     position: relative;
     transition: 0.3s;
 }
+/*Efeito dos icones do  menu*/
 nav a:hover{
     color: var(--color-text);
 }
@@ -79,13 +79,14 @@ nav a:hover::before{
 }
 
 
-/*botões do menu*/
+/*====botões do menu====*/
 
 .btns-menu{
     display: flex;
     align-items: center;
     gap: 20px;
     padding: 10px 20px;
+   
   
 
 }
@@ -109,8 +110,7 @@ nav a:hover::before{
 
 #menu{
     display: none;
-    position: absolute;
-    
+    position: absolute;  
     top: 100%;
     right: 0;
     width: 240px;
@@ -138,6 +138,7 @@ nav a:hover::before{
     font-size: 1.1em;
     text-decoration: none;
     transition: transform 0.3s ease, text-shadow 0.3s ease;
+   
 }
 
 #menu a:hover{
@@ -148,9 +149,7 @@ nav a:hover::before{
 #menu a:active{
     transform: translateY(16px);
 }
-.download-cv{
-    
-}
+
 
 
 @media (min-width:768px){

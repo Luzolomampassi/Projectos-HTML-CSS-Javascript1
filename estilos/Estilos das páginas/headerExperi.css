@@ -53,16 +53,16 @@ nav{
 }
 /*Icones do menu*/
 
-nav a{color: var(--color-text-muted);
+nav a{
+    color: var(--color-text-muted);
+   
     text-decoration: none;
     position: relative;
     transition: 0.3s;
 }
-nav a:hover{color: var(--color-text);
-   
+nav a:hover{
+    color: var(--color-text);
 }
-
-
 nav a::before{
     content: ' ';
     background-color: var(--color-primary);
@@ -74,22 +74,11 @@ nav a::before{
     transition: 0.3s;
 }
 
-nav a:hover::before{
-    width: 100%;
+nav a:hover::before{ 
+    width: 100%; 
 }
-.fa-code{
-    color: var(--color-primary);
-    font-weight:bolder;
-}
-.icone-bar{display: flex; 
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
 
-}
-.icone-bar a{
-    color: white;   
-}
+
 /*botões do menu*/
 
 .btns-menu{
@@ -144,9 +133,25 @@ nav a:hover::before{
 }
 
 #menu a{
+    display: inline-block;
     color: var(--color-text);
+    font-size: 1.1em;
     text-decoration: none;
+    transition: transform 0.3s ease, text-shadow 0.3s ease;
 }
+
+#menu a:hover{
+    text-shadow: 3px 3px 10px var(--color-primary);
+    transform: translateY(-8px);
+}
+
+#menu a:active{
+    transform: translateY(16px);
+}
+.download-cv{
+    
+}
+
 
 @media (min-width:768px){
 
@@ -165,8 +170,7 @@ nav a:hover::before{
         align-items: center;
 
     }
-    #menu ul{
-        
+    #menu ul{    
         display: flex;
         justify-content: space-around;
         font-weight: bold;

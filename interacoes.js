@@ -2,15 +2,17 @@
 const botao_menu = document.getElementById("menu-btn");
 const menu = document.getElementById("menu");
 
+// Menu mobile
+botao_menu.addEventListener("click", () => {
+    menu.classList.toggle("ativo");
+});
+
 const botao_moon_son = document.getElementById("theme-toggle");
 const icon = botao_moon_son.querySelector("i");
 const html = document.documentElement;
 
 
-// Menu mobile
-botao_menu.addEventListener("click", () => {
-    menu.classList.toggle("ativo");
-});
+
 
 
 // Tema light/dark

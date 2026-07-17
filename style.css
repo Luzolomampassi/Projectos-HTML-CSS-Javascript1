@@ -59,11 +59,11 @@ main{
 }
 
 ::view-transition-old(root) {
-    animation: fade-out 2s;
+    animation: fade-out .3s;
 }
 
 ::view-transition-new(root) {
-    animation: fade-in 2s;
+    animation: fade-in .3s;
 }
 @keyframes fade-out {
    

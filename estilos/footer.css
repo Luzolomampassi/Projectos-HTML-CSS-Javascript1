@@ -1,7 +1,9 @@
-footer{display: flex;
+footer{  
+    display: flex;
     justify-content: space-evenly;
     padding:20px;
     border: 1px solid var(--color-border);
+    position: static;
 }
 .icon-footer{
     color: white;

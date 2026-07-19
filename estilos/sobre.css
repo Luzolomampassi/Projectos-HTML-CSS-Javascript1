@@ -18,6 +18,7 @@
     --color-banner: #00071A;
     --color-bg: #000415;
     --color-card: #010B22;
+    --color-card2: #000B22;
     --color-border: #2D3748;
     --color-text: #E5E7EB;
     --color-text-muted: #9CA3AF;
@@ -40,32 +41,299 @@
     --gradient-herobody:radial-gradient(
     circle at top right,#5a1ea8,#090a1d 60%);
 }
+#boas-vinda{
+    display: inline-flex;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 30px;
+    color: var(--color-primary);
+    background-color: #270278be;
+}
+.banner-content{
+    font-size: 1.2em;
+    padding-bottom: 25px;
+}
+
+
+#banner-text-mark{
+    color: var(--color-primary);
+    text-shadow: 4px 5px 3px #0000005d;
+}
 .banner-sobre{
     padding: 10px;
     margin-top: 40px;
+    background-color: var(--color-bg);
+    border-bottom:1px solid var(--color-border) ;
 }
 .highlights{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 1fr;
+    margin-bottom: 30px;
 }
-.highlight{
+.highlight{ 
     background-color: var(--color-icon-bg);
     padding: 10px;
     color:var(--color-primary);
     border: 1px solid var(--color-surface);
     border-radius: 7px;
-   
+    
   
 }
 .highlights-conteiner{
     display: flex;
-    gap: 20px;
+    gap: 20px; 
 }
 .highlight-txt{
     display: block;
 }
+
+.hero-sobre{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+.perfil{
+    background: var(--color-header) url(../icones/building.jpg) no-repeat center center;
+    background-size: cover;
+    border-radius: 20px;
+    width: calc(100% - 100px);
+    height: 500px;  
+    border: 3px solid var(--color-surface2);
+    position: relative;
+    transition: transform .3s;
+    cursor: pointer;
+}
+.perfil:hover{
+    transform: translateY(-10px);
+}
+.perfil:active{
+    transform: scale(1.05);
+}
+.perfil:focus{
+    outline: 5px solid var(--color-surface2);
+    outline-offset: 10px;
+
+}
+
+
+.icone-css{
+    position: absolute;
+    top: 60%;      
+    right: -60px;     
+    width: 120px;
+    height: 120px;
+    z-index: 10;
+}
+
+.icone-css img{
+    width: 100%;
+    height: 100%;
+}
+.modal{
+    padding: 10px;
+    height: auto;
+    width: calc(100% - 100px);
+    background-color: var(--color-card);
+    border: 3px solid var(--color-surface);
+    border-radius: 15px;
+    color: var(--color-text-muted);
+}
+.modal h3{
+    color: var(--color-text);
+}
+/*Main do corpo*/
+.experiencias{
+    padding: 10px;
+    background-color: var(--color-banner);
+    width: 100%;
+    height: 500px;
+}
+
+.habilidades{
+    width: 100%;
+    background-color: var(--color-card2);
+    border: 1px solid #071632;
+    border-radius: 10px;
+    min-height: 200px;
+    padding: 10px;
+}
+.tecnologias{
+    display: flex;
+    gap: 20px;
+    justify-content: space-around;
+}
+.hightlight-tec{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 20%;
+    border-radius: 18px;
+    min-height: 120px;
+    max-height:160px;
+    margin: 20px 0px;
+    gap: 10px;
+    background-color:#0B1324;
+}
+
+.hightlight-tec::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    padding: 1.5px;
+    border-radius: inherit;
+
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+            mask-composite: exclude;
+
+    opacity: .85;
+    pointer-events: none;
+}
+
+.hightlight-tec img{
+    width: calc(100% - 20px);
+    object-fit: contain;
+    overflow: hidden;
+}
+.html{
+    background:
+        radial-gradient(circle at top,
+            rgba(255,107,74,.22),
+            transparent 65%),
+        linear-gradient(to bottom,
+            rgba(255,107,74,.18) 0%,
+            rgba(255,107,74,.08) 45%,
+            transparent 100%),
+        #0B1324;
+}
+
+.html::before{
+    background: linear-gradient(135deg,#ff784f11,#7e3156);
+}
+.css{
+    background:
+        radial-gradient(circle at top,
+            rgba(45,140,255,.22),
+            transparent 65%),
+        linear-gradient(to bottom,
+            rgba(45,140,255,.18) 0%,
+            rgba(45,140,255,.08) 45%,
+            transparent 100%),
+        #0B1324;
+}
+
+.css::before{
+    background: linear-gradient(135deg,#2d8bff3b,#1b4cff7e);
+}
+.js{
+
+    background:
+        radial-gradient(circle at top,
+            rgba(255,212,59,.22),
+            transparent 65%),
+        linear-gradient(to bottom,
+            rgba(255,212,59,.18) 0%,
+            rgba(255,212,59,.08) 45%,
+            transparent 100%),
+        #0B1324;
+}
+
+.js::before{
+    background: linear-gradient(135deg,#ffd53b2e,#8a6d00);
+}
+.git{
+    background:
+        radial-gradient(circle at top,
+            rgba(255,97,64,.22),
+            transparent 65%),
+        linear-gradient(to bottom,
+            rgba(255,97,64,.18) 0%,
+            rgba(255,97,64,.08) 45%,
+            transparent 100%),
+        #0B1324;
+}
+
+.git::before{
+    background: linear-gradient(135deg,#ff60402b,#8d2f56);
+}
+.vscode{
+    background:
+        radial-gradient(circle at top,
+            rgba(0,122,255,.22),
+            transparent 65%),
+        linear-gradient(to bottom,
+            rgba(0,122,255,.18) 0%,
+            rgba(0,122,255,.08) 45%,
+            transparent 100%),
+        #0B1324;
+}
+
+.vscode::before{
+    background: linear-gradient(135deg,#007bff2e,#0048b5);
+}
+
+
+.bar{
+    padding: 20px;
+    border: 1px solid #071632;
+    border-radius: 5px;
+   
+}
+.progress-bar{
+    width:90%;
+    border-radius: 0px;
+    overflow: hidden;
+    position: relative;
+    margin-top: 10px;
+}
+.barra-conteiner{
+    display: flex;
+    gap: 10px;
+}
+
+progress::-webkit-progress-bar {
+    background-color: #1f2937;
+    border-radius: 8px;
+}
+
+progress::-webkit-progress-value {
+    background-color: var(--color-primary); 
+    border-radius: 8px;
+    
+}
+
+progress::-moz-progress-bar {
+    background-color: var(--color-primary);
+    border-radius: 8px;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @view-transition {
     navigation: auto;
 }

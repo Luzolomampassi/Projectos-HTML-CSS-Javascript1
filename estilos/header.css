@@ -51,6 +51,12 @@ nav{
     position: relative;
 
 }
+.icone-nav:hover{
+    animation: girar 2s infinite linear;
+}
+
+
+
 /*Icones do menu*/
 
 nav a{color: var(--color-text-muted);
@@ -171,5 +177,13 @@ nav a:hover::before{
         justify-content: space-around;
         font-weight: bold;
         gap: 30px;
+    }
+}
+@keyframes girar{
+    from{
+        transform: rotateY(0deg);
+    }
+    to{
+        transform: rotateY(360deg);
     }
 }

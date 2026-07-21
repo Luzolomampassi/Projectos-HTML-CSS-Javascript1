@@ -6,6 +6,7 @@
     justify-content:space-around;
     align-content: center;
     background:var(--color-header);
+    gap: 20px;
 }
 /* ===========Texto de boas vinda ========== */
 .boas-vinda{
@@ -28,6 +29,7 @@
 .banner-content{
     font-size: 1.4em;
     padding-bottom: 25px;
+    
 }
 .banner-content h1{
     color: white;
@@ -41,8 +43,8 @@
 /* ===========Botões========== */
 .banner-buttons{
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
     width:100%;  
 }
 .banner-buttons a{
@@ -120,7 +122,7 @@ a:focus-visible{
 .hero{
     display: flex;
     padding: 20px;
-    width:80%; 
+    width:100%;
     height: auto;
 }
 .window{
@@ -136,60 +138,51 @@ a:focus-visible{
     width: 100%;
     height: auto;
 }
-.icon-code{
+.icone-code{
     position: absolute;
     top: 25%;      
     left: 0px;     
     width: 100px;
     height: 100px;
-    z-index: 20;
 
 }
-.icon-code img{
+.icone-code img{
     display:block;
     max-width:100%;
     height:auto;
 }
 
-.icon-css{
+.icone-css{
     position: absolute;
-    top: 20%;      
-    left: -15%;     
+    top: 70%;      
+    right: -20px;     
     width: 120px;
     height: 120px;  
     z-index: 10; 
 }
 
-.icon-css img{
+.icone-css img{
     display:block;
     max-width:100%;
     height:auto;
 }
-.icon-photo{
-    position: absolute;
-    top: 70%;      
-    right: -20px;     
-    width: 200px;
-    
-}
-.icon-phto img{
-    display:block;
-    max-width:100%;
-    height:auto;
-}
+
 
 @media(min-width:768px){
     .hero{
-        width: 40%;
+        width: 50%;
     }
    .banner{
-    font-size:calc(1.5em,2.2rem,24) ;
+    flex: 1;
+    flex-flow: row wrap;
+    font-size:calc(1.4em,2rem,24) ;
    }
 
     .banner-conteiner{
-        width: 40%;
+        width: 50%;
         margin: 0;
         padding: 20px;
     }
+  
 }
 

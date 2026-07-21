@@ -59,7 +59,7 @@
 }
 
 .banner-content{
-    font-size:clamp(1.6rem,3vw,2rem);
+    font-size:clamp(1.4rem,2vw,2rem);
     padding-bottom: 25px;
     
 }

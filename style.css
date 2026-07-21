@@ -39,7 +39,26 @@
     circle at top right,#5a1ea8,#090a1d 60%);
 }
 
-   
+html{
+    scroll-behavior: smooth;
+}
+::-webkit-scrollbar{
+    width: 12px;
+}
+
+::-webkit-scrollbar-track{
+    background: #0B1324;
+}
+
+::-webkit-scrollbar-thumb{
+    background: var(--color-primary);
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background: #A78BFA;
+}
+
 
 body{
     width: 100%;

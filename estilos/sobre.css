@@ -146,7 +146,7 @@
     width: 100%;
 }
 .perfil{
-    background: var(--color-header) url(../icones/building.jpg) no-repeat center center;
+    background: var(--color-header)  no-repeat center center;
     background-size: cover;
     border-radius: 20px;
     width: calc(100% - 140px);
@@ -156,6 +156,10 @@
     transition: .4s ease;
     cursor: pointer;
     box-shadow: 1px 1px 10px rgba(7, 7, 7, 0.253);
+    display: flex;
+    font-weight: bolder;
+    justify-content: center;
+    align-items: center;
 }
 .perfil:hover{
     transform: scale(1.05);
@@ -408,6 +412,25 @@ abbr {
 }
 .vscode::before{
     background: linear-gradient(135deg,#007bff2e,#0048b5);
+}
+.github{
+    background:
+        radial-gradient(circle at top,
+            rgba(110,118,129,.25),
+            transparent 65%),
+        linear-gradient(to bottom,
+            rgba(110,118,129,.18) 0%,
+            rgba(110,118,129,.08) 45%,
+            transparent 100%),
+        #0B1324;
+}
+
+.github:hover{
+    box-shadow: 1px 1px 4px rgb(110,118,129);
+}
+
+.github::before{
+    background: linear-gradient(135deg,#6e76812e,#24292f);
 }
 /*==========================BARRA DE PROGRESSO==========================*/
 

@@ -125,6 +125,10 @@ a:focus-visible{
 @media(max-width:768px){
    .banner{
     flex-direction: column;
+    font-size: ;
+   }
+   .banner-buttons {
+    justify-content: space-between;
    }
 }
 

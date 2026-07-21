@@ -267,6 +267,8 @@ EXPERIÊNCIAS
     background-color:#0B1324;
     transition: transform .3s;
     animation: surgir .6s ease;
+    cursor: pointer;
+ 
    
 }
 .highlight-tec:hover {
@@ -298,6 +300,12 @@ EXPERIÊNCIAS
 .highlight-tec:hover{
    transform:translateY(-10px);
 }
+abbr {
+    text-decoration: none;
+    border-bottom: none;
+    cursor: help;
+}
+
 .html{
     background:
         radial-gradient(circle at top,
@@ -309,6 +317,7 @@ EXPERIÊNCIAS
             transparent 100%),
         #0B1324;
     transition: .3s;
+     
 }
 .html:hover {
     box-shadow: 1px 1px 4px rgb(255, 107, 74);

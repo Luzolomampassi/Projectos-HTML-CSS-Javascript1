@@ -12,7 +12,7 @@
     overflow:hidden;
 }
 /* ===========Texto de boas vinda ========== */
-#boas-vinda{
+.boas-vinda{
     display: inline-flex;
     padding: 10px;
     margin-bottom: 15px;
@@ -38,7 +38,7 @@
     padding-bottom: 15px;
 }
 
-#banner-text-mark{
+.banner-text-mark{
     color: var(--color-primary);
     text-shadow: 4px 5px 3px #0000005d;
 }
@@ -125,10 +125,19 @@ a:focus-visible{
 @media(max-width:768px){
    .banner{
     flex-direction: column;
-    font-size: ;
+    font-size:calc(1.4em,2rem,24px) ;
    }
-   .banner-buttons {
-    justify-content: space-between;
-   }
+   .banner-buttons{
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+    width:100%;  
+}  
+    .banner-conteiner{
+        width: 100%;
+        margin: 0;
+        padding: 20px;
+    }
 }
 

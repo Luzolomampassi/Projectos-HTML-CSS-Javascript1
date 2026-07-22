@@ -12,7 +12,7 @@
     --color-banner: #00071A;
     --color-bg: #030B1E;
     --color-surface: #111827;
-    --color-surface-2: #1F2937;
+    --color-surface3: #1F2937;
     --color-border: #2D3748;
     --color-text: #E5E7EB;
     --color-text-muted: #9CA3AF;
@@ -102,12 +102,20 @@ main{
 @keyframes surgir{
     from{
         opacity: 0;
-        transform: translateY(30px);
+        transform: translateY(80px);
     }
     to{
         opacity: 1;
-        transform: translateY(-10px);
+        transform: translateY(0px);
     }
     
+}
+@keyframes girar{
+    from{
+        transform: rotateY(0deg);
+    }
+    to{
+        transform: rotateY(360deg);
+    }
 }
 

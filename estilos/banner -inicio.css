@@ -6,7 +6,6 @@
     justify-content:space-around;
     align-content: center;
     background:var(--color-header);
-    gap: 20px;
 }
 /* ===========Texto de boas vinda ========== */
 .boas-vinda{
@@ -20,7 +19,7 @@
 
 /* ===========Conteúdo========== */
 
-.banner-conteiner{
+.banner-container{
     width:100%; 
     z-index:2;
     padding: 20px;
@@ -29,7 +28,6 @@
 .banner-content{
     font-size: 1.4em;
     padding-bottom: 25px;
-    
 }
 .banner-content h1{
     color: white;
@@ -43,8 +41,8 @@
 /* ===========Botões========== */
 .banner-buttons{
     display: flex;
-    justify-content: space-between;
-    gap: 20px;
+    justify-content: space-around;
+    flex-wrap: wrap;
     width:100%;  
 }
 .banner-buttons a{
@@ -58,7 +56,7 @@
     cursor:pointer;
     transition:.4s;
     border: 1px groove var(--color-border);
-    outline: none;
+   
     border: none;
     padding: 5px;
     font-size: 1.1em;
@@ -91,7 +89,7 @@
 
 
 .btn-secundary{
-    background-color: var(--color-surface-2);
+    background-color: var(--color-surface3);
    
 }
 .btn-secundary:hover{
@@ -119,70 +117,99 @@ a:focus-visible{
     outline-offset:4px;}
 
 /*============================== HERO ==============================*/
-.hero{
-    display: flex;
+.hero{  
     padding: 20px;
-    width:100%;
-    height: auto;
 }
 .window{
-    width: 100%;
-    height: auto;  
-    position: relative;
-    transition: .4s ease;
-    cursor: pointer;
-    box-shadow: 1px 1px 10px rgba(7, 7, 7, 0.253);
+    width:100%;
+    max-width:550px;
+    margin:auto;
+    position:relative;
+    z-index: 1;
 }
-.window img{
-    display: block;
-    width: 100%;
-    height: auto;
-}
-.icone-code{
-    position: absolute;
-    top: 25%;      
-    left: 0px;     
-    width: 100px;
-    height: 100px;
 
-}
-.icone-code img{
+.window > img{
     display:block;
-    max-width:100%;
+    width:100%;
     height:auto;
 }
 
-.icone-css{
-    position: absolute;
-    top: 70%;      
-    right: -20px;     
-    width: 120px;
-    height: 120px;  
-    z-index: 10; 
+
+.icon-code{
+    position:absolute;
+    top:12%;
+    right:-5%;
+    width:18%;
+    max-width:120px;
+    z-index:10;
 }
 
-.icone-css img{
-    display:block;
-    max-width:100%;
+
+.icon-css{
+    position:absolute;
+    top:55%;
+    left:-5%;
+    width:20%;
+    max-width:130px;
+    z-index:10;
+}
+
+
+.icon-photo{
+    position:absolute;
+    bottom:5%;
+    right:5%;
+    width:35%;
+    max-width:220px;
+   
+}
+
+
+.icon-code img,
+.icon-css img,
+.icon-photo img{
+    width:100%;
     height:auto;
+    display:block;
+    z-index: 2;
 }
-
 
 @media(min-width:768px){
     .hero{
-        width: 50%;
+        width: 40%;
     }
    .banner{
-    flex: 1;
-    flex-flow: row wrap;
-    font-size:calc(1.4em,2rem,24) ;
+    font-size:clamp(1.3em,2.2rem) ;
    }
 
-    .banner-conteiner{
-        width: 50%;
+    .banner-container{
+        width: 40%;
         margin: 0;
         padding: 20px;
     }
-  
 }
+@media(min-width:900px){
+    .hero{
+        width: 45%;
+        min-height: 400px;
+        height: 100%;
+       
+    }
+    .window{
+        height: 100%;
+    }
+   .banner{
+        gap: 40px;
+        align-items: center;
+   }
+
+    .banner-container{
+        width: 40%;
+        margin: 0;
+        padding: 20px;
+    }
+    
+}
+
+
 

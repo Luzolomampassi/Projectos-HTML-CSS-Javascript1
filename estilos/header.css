@@ -51,6 +51,26 @@ nav{
     position: relative;
 
 }
+.logo{
+    color: var(--color-text-muted);
+    text-decoration: none;
+    position: relative;
+    transition: 0.3s;
+
+}
+.logo::before{
+    content: ' ';
+    background-color: var(--color-primary);
+    position: absolute;
+    left: 0;
+    width: 50%;
+    height: 2.5px;
+    bottom: 0px;
+    transition: 0.3s;
+}
+.logo:hover{
+    color: var(--color-text);
+}
 .icone-nav:hover{
     animation: girar 2s infinite linear;
 }
@@ -64,12 +84,12 @@ nav a{color: var(--color-text-muted);
     position: relative;
     transition: 0.3s;
 }
-nav a:hover{color: var(--color-text);
+nav ul a:hover{color: var(--color-text);
    
 }
 
 
-nav a::before{
+nav ul a::before{
     content: ' ';
     background-color: var(--color-primary);
     position: absolute;
@@ -80,7 +100,7 @@ nav a::before{
     transition: 0.3s;
 }
 
-nav a:hover::before{
+nav ul a:hover::before{
     width: 100%;
 }
 .fa-code{
@@ -106,19 +126,11 @@ nav a:hover::before{
   
 
 }
-#theme-toggle{
-    background: transparent;
-    color: var(--color-text);
-    outline: none;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-}
+
 
 #menu-btn{
     background: transparent;
     color: var(--color-text);
-    outline: none;
     border: none;
     font-size: 24px;
     cursor: pointer;
@@ -127,7 +139,6 @@ nav a:hover::before{
 #menu{
     display: none;
     position: absolute;
-    
     top: 100%;
     right: 0;
     width: 240px;
@@ -141,7 +152,6 @@ nav a:hover::before{
 #menu.ativo{
     display: block;
     z-index: 20;
-
 }
 
 #menu ul{
@@ -149,7 +159,7 @@ nav a:hover::before{
 }
 
 #menu li{
-    margin: 12px 0;
+    margin: 20px 0;
 }
 
 #menu a{
@@ -157,9 +167,7 @@ nav a:hover::before{
     text-decoration: none;
 }
 
-@media (min-width:768px){
-
-   
+@media (min-width:1024px){
     #menu-btn{
         display: none;
     }
@@ -175,18 +183,9 @@ nav a:hover::before{
 
     }
     #menu ul{
-        
         display: flex;
-        justify-content: space-around;
         font-weight: bold;
         gap: 30px;
     }
 }
-@keyframes girar{
-    from{
-        transform: rotateY(0deg);
-    }
-    to{
-        transform: rotateY(360deg);
-    }
-}
+

@@ -55,17 +55,12 @@
     border-radius: 30px;
     color: var(--color-primary);
     background-color: #270278be;
-
 }
 
 .banner-content{
     font-size:clamp(1.4rem,2vw,2rem);
-    padding-bottom: 25px;
-    
+    padding-bottom: 25px;   
 }
-
-
-
 
 /*==========================BANNER==========================*/
 .banner-text-mark{
@@ -149,8 +144,9 @@
     background: var(--color-header)  no-repeat center center;
     background-size: cover;
     border-radius: 20px;
-    width: calc(100% - 140px);
-    height: 470px;  
+    width:90%;
+    max-width:370px;
+    height:470px;
     border: 3px solid var(--color-surface2);
     position: relative;
     transition: .4s ease;
@@ -175,11 +171,11 @@
 }
 
 .icone-code{
-    position: absolute;
-    top: 25%;      
-    left: -60px;     
-    width: 140px;
-    height: 160px;
+      position:absolute;
+    top:25%;
+    left:-10%;
+    width:25%;
+    max-width:140px;
 }
 .icone-code img{
     display:block;
@@ -189,10 +185,10 @@
 
 .icone-css{
     position: absolute;
-    top: 60%;      
-    right: -60px;     
-    width: 120px;
-    height: 120px;  
+    top:60%;
+    right:-10%;
+    width:22%;
+    max-width:120px; 
     z-index: 10; 
 }
 
@@ -244,45 +240,42 @@
     margin-bottom: 20px;
 
 }
-.tecnologias{
-    display: flex;
-    gap: 10px;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    width: 100%;
+.tecnologias,
+.ferramentas{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+    justify-content:flex-start;
 }
 .tecnologias h3{
     display: flex;
     width: 100%;  
 }
-.ferramentas{
-    display: flex;
-    gap: 20px;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    width: 100%;
-}
+
 .ferramentas h3{
     display: flex;
     width: 100%;
 }
 .highlight-tec{
-    display: flex;
-    flex: 1;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    width: 10%;
-    border-radius: 18px;
-    min-height: 120px;
-    max-height:160px;
-    margin: 20px 0px;
-    gap: 20px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    width:140px;
+    height:140px;
+
+    border-radius:18px;
+    gap:15px;
+
     background-color:#0B1324;
-    transition: transform .3s;
-    animation: surgir .6s ease;
-    cursor: pointer;
+    transition:.3s;
+    cursor:pointer;
+}
+.highlight-tec img{
+    width:55px;
+    height:55px;
+    object-fit:contain;
 }
 .highlight-tec:hover {
     transform: translateY(-10px);
@@ -305,11 +298,7 @@
     pointer-events: none;
 }
 
-.highlight-tec img{
-    width: calc(100% - 100px);
-    object-fit: contain;
-    overflow: hidden;
-}
+
 .highlight-tec:hover{
    transform:translateY(-10px);
 }
@@ -567,13 +556,13 @@ progress::-moz-progress-bar {
     width: 100%;
 }
     .banner-conteiner{
-        width: 50%;  
+        width: 45%;  
         transform: translateX(10%);  
 
     }
     .hero-sobre{
-        width: 50%;  
-        transform: translateX(-20%);  
+        width: 55%;  
+        transform: translate(-15%,-10%);  
     }
     .perfil{
         width: 370px;
@@ -643,6 +632,8 @@ progress::-moz-progress-bar {
         border-radius: 10px;
         height:auto;
         padding: 5px;
+        flex:0 1 140px;
+        min-height:140px;
     }
    
 }

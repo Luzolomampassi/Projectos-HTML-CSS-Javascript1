@@ -40,7 +40,6 @@
     circle at top right,#5a1ea8,#090a1d 60%);
 }
 body{
-    line-height:1.5;
     min-height:100vh;
     background-color: var(--color-bg);
     font-family: Arial, Helvetica, sans-serif;
@@ -74,13 +73,13 @@ body{
 
 .card_contato{
     width: 50%;
-   
+    height: auto;
 }
 .card_contato input{
     outline: none;
     margin-top: 20px;
     width: 100%;
-    padding: 10px;
+    padding: 15px;
     border-radius:7px;
     color: white;
     border: 1px solid var(--color-border);
@@ -103,16 +102,14 @@ body{
     font-weight: bold;
 }
 .contato form{
-    padding: 10px;
+    padding: 20px;
     background-color: var(--color-card);
     border: 1px solid var(--color-border);
     border-radius: 8px;
+    width: 100%; 
 }
 .contato form >h2{
     margin-top: 30px;
-}
-form{
-    width: 100%;
 }
 
 /*===========Informações===========*/
@@ -135,7 +132,7 @@ textarea{
     margin-top: 20px;
     border-radius: 10px;
     width: 100%;
-    min-height: 150px;
+    min-height: 200px;
     max-height: 300px;
     min-width: 50%;
     max-width: 100%;
@@ -195,13 +192,11 @@ textarea::placeholder{
 }
 .card-infor h2{
     padding: 10px;
-    margin: 10px 0px 10px 0px;
-
 }
 .card-infor-conteiner{
     width: 100%;
     background-color: var(--color-card);
-    margin-bottom: 10px;
+    
     padding: 10px;
     border: 1px solid var(--color-border);
     border-radius: 8px;
@@ -210,7 +205,7 @@ textarea::placeholder{
     display: flex;
     flex-direction: column;
     gap: 5px;
-    margin-bottom: 20px;
+
 }
 .card-infor-conteiner h3 {
     display: flex;
@@ -223,7 +218,7 @@ textarea::placeholder{
 }
 .mapa-conteiner{
     background-color: var(--color-card);
-    padding: 10px;
+    padding: 0px 10px 10px 10px;
     border-radius: 8px; 
     width:100%;
     border: 1px solid var(--color-border);
@@ -233,14 +228,21 @@ textarea::placeholder{
     width:100%;
     height: auto;
 }
-
+.mapa-conteiner{
+    margin-top: 15px;
+}
 .card-infor-conteiner .icone-infor {
     color: var(--color-surface2);
     background-color: var(--color-surface);
     padding: 6px;
     margin-bottom: 5px;
     border-radius: 50%;
+    
 }
+
+
+
+/*==========Hero==========*/
 @media (max-width:768px){
     .cards{
         justify-content: center;

@@ -1,19 +1,19 @@
-.projetos{
+.projects{
     width: 100%;
 }
-#projetos-tema{
+.projects-theme{
     padding: 10px;
     display: flex;
     justify-content: center;
 }
-#projetos-tema h1{
+.projects-theme h1{
     text-align: center;
     position: relative;
     padding: 15px;
     margin-bottom: 20px;
 
 }
-#projetos-tema h1::after{
+.projects-theme h1::after{
     content: '';
     position: absolute;
     background-color: var(--color-primary);
@@ -25,26 +25,29 @@
 }
 
 .projects-grid{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:2rem;
     justify-items: center;
-    gap: 20px;
     animation: surgir 1s;
     cursor: pointer;
 }
+
+
+
 /* Badges */
 .badges{
     display: flex;
     justify-content: center;
     gap: 20px;
 }
-#badge-html{
+.badge-html{
     background-color: #5A1C0A;
     color: #DF874F;
     border-radius: 5px;
     padding: 5px;
 }
-#badge-css{
+.badge-css{
     background-color: #00398B;
     border-radius: 5px;
     padding: 5px 5px 0px 5px;
@@ -130,15 +133,4 @@
 }
 }
 
-/*Animation*/
-@keyframes surgir{
-    from{
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to{
-        opacity: 1;
-        transform: translateY(-10px);
-    }
-    
-}
+

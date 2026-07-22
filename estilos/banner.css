@@ -172,7 +172,7 @@ a:focus-visible{
     width: 200px;
     
 }
-.icon-phto img{
+.icon-photo img{
     display:block;
     max-width:100%;
     height:auto;
@@ -183,7 +183,7 @@ a:focus-visible{
         width: 40%;
     }
    .banner{
-    font-size:calc(1.5em,2.2rem,24) ;
+    font-size:calc(1.5em,2.2rem,24px) ;
    }
 
     .banner-conteiner{

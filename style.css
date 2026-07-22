@@ -62,18 +62,10 @@ html{
 
 body{
     width: 100%;
-   
     background-color: var(--color-bg);
     color: var(--color-text);
 }
 
-
-
-
-main{
-    padding-bottom:25px;
-   
-}
 @view-transition {
     navigation: auto;
 }

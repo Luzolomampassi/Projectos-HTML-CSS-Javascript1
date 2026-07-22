@@ -69,9 +69,7 @@
 }
 .banner-sobre{
     padding: 10px;
-    margin-top: 40px;
     background-color: var(--color-bg);
-    border-bottom:1px solid var(--color-border) ;
   
 }
 .highlights{
@@ -545,97 +543,121 @@ progress::-moz-progress-bar {
 
 
 /*==========================Responsividade==========================*/
+
+
 @media (min-width:768px){
-    main{
-        margin-bottom: 0px;
-    }
-    .banner-sobre{
-    display: flex;
-    justify-content: space-between;
-    align-content: center;
+
+.banner-sobre{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:40px;
+    margin-bottom:10px;
+
+}
+
+.banner-container{
+    flex:1;
+}
+
+.hero-sobre{
+    flex:1;
+    position:relative;
+    transform:none;
+    transform: translateX(-10%);
+
+}
+
+.perfil{
+    width:340px;
+    height:430px;
+}
+
+.modal{
+    position:absolute;
+    width:270px;
+    top:40px;
+    right:-30px;
+}
+
+.icone-code{
+    left:-40px;
+    top:90px;
+}
+
+.icone-css{
+    right:-20px;
+    bottom:20px;
+    top:auto;
+}
+
+}
+@media (min-width:992px){
+
+.banner-sobre{
+    gap:70px;
+    margin-bottom:10px;
+
+}
+
+.perfil{
+    width:370px;
+    height:450px;
+}
+
+.modal{
+    width:310px;
+    right:-60px;
+    top:35px;
+}
+
+.icone-code{
+    left:-55px;
+    width:120px;
+}
+
+.icone-css{
+    right:-30px;
+    width:95px;
+}
+
+}
+@media (min-width: 1024px){
+
+.experiencias{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+.skills,
+.jornada{
     width: 100%;
 }
-    .banner-conteiner{
-        width: 45%;  
-        transform: translateX(10%);  
 
-    }
-    .hero-sobre{
-        width: 55%;  
-        transform: translate(-15%,-10%);  
-    }
-    .perfil{
-        width: 370px;
-        border:2px solid var(--color-surface2);
-        position: relative;
-        height: 450px;
-       
-    }
-    .modal{
-        border:2px solid var(--color-surface);
-        position: absolute;
-        width:300px;
-        height:380px;
-        right: -15%;
-        top: 10%;
-    }
-    .icone-css{
-    position: absolute;
-    top: 83%;      
-    right: -15px;     
-    width: 100px;
-    height: 100px;
+}
+@media (min-width:1200px){
+
+.banner-sobre{
+    max-width:1400px;
+    margin:auto;
+    margin-bottom:10px;
+
 }
 
-    .icone-css img{
-        display: block;
-        width: 100%;
-        height: auto;
+.banner-content h1{
+    font-size:4rem;
 }
-    .experiencias{
-        display: flex;
-        justify-content: center;
-        gap: 20px;
-        min-height: 600px;
-    }
-    
-    .skills{
-        display: grid;
-        grid-template-columns: 1fr;
-        width: 50%;      
-       
-    }
-    .skills h2{
-       display: inline-block;
-       margin-top: 10px;  
-    }
-    .tecnologias{
-        gap: 10px; 
-    }
-    .ferramentas{
-        gap: 10px; 
-    }
-    .bar{
-        display: block;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    .jornada{
-        width: 50%;
-        margin-bottom: 0px;
-    }
-    .jornada h2,h3,h4,p{
-        margin-bottom: 20px;
-    }
-    .highlight-tec{
-        border-radius: 10px;
-        height:auto;
-        padding: 5px;
-        flex:0 1 140px;
-        min-height:140px;
-    }
-   
+
+.banner-content p{
+    font-size:1.2rem;
+}
+
+.modal{
+    width:340px;
+}
+
 }
 
 /*==========================VIEW TRANSITION==========================*/

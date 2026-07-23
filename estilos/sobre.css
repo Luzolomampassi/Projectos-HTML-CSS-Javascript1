@@ -626,7 +626,7 @@ progress::-moz-progress-bar {
 
 .experiencias{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2,1fr);
     gap: 2rem;
     align-items: start;
 }
@@ -637,28 +637,7 @@ progress::-moz-progress-bar {
 }
 
 }
-@media (min-width:1200px){
 
-.banner-sobre{
-    max-width:1400px;
-    margin:auto;
-    margin-bottom:10px;
-
-}
-
-.banner-content h1{
-    font-size:4rem;
-}
-
-.banner-content p{
-    font-size:1.2rem;
-}
-
-.modal{
-    width:340px;
-}
-
-}
 
 /*==========================VIEW TRANSITION==========================*/
 @view-transition {

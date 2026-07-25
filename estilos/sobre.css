@@ -63,10 +63,7 @@
 }
 
 /*==========================BANNER==========================*/
-.banner-text-mark{
-    color: var(--color-primary);
-    text-shadow: 4px 5px 3px #0000005d;
-}
+
 .banner-sobre{
     padding: 10px;
     background-color: var(--color-bg);

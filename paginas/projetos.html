@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
       content="Portfólio de Luzolo Mampassi.">
-    <meta name="Luzolo">
+ 
     
     <title>Projetos</title>
     <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
@@ -14,6 +14,7 @@
     <script src="https://kit.fontawesome.com/f6a9b3f1e7.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="../estilos/header.css">
+    <link rel="stylesheet" href="../estilos/footer.css">
     <link rel="stylesheet" href="../estilos/Estilos das páginas/Banner-projetos.css">
     
    
@@ -66,37 +67,42 @@
     </nav>
 </header>
 <main>
-    <section class="banner-projetos">
-       
-        <div class="banner-conteiner">
-            <p id="txt-mark">Meus trabalhos</p>
-        <h1>Meus <span id="txt-mark">projetos</span></h1>
-        <p>Alguns projetos que desenvolvi aplicando minhas <br>
-        habilidades em desenvolvimento front-end e criando<br>
-        experiências incríveis.</p>
+   <section class="banner">
+        <div class="banner-content">
+            <h1>Meus <span class="banner-text-mark">Projetos</span></h1>
+            <p>Alguns projetos que desenvolvi aplicando minhas <br>habilidades em desenvolvimento front-end e criando experiências incríveis.</p>
         </div>
-        <div class="banner-cards">
-            <div class="banner-card">
-                <div class="txt-card">
-                    <h2>4+</h2>
-                    <p>Projetos concluídos</p>
-                </div>
-            </div>
-            <div class="banner-card">
-                 <div class="txt-card">
-                    <h2>8</h2>
-                    <p>Tecnologias Utilizadas</p>
-                 </div>
-            </div>
-            <div class="banner-card">
-                 <div class="txt-card">
-                    <h2>-1</h2>
-                    <p>Anos de Jornada</p>
-                 </div>
-            </div>
+        <div class="cards">
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
         </div>
-       
-    </section>
+   </section>
+   <section class="searcr-container">
+        <div class="filters">
+            <button>Todos</button>
+            <button>Front-end</button>
+            <button>JavaScript</button>
+            <button>UI/UX</button>
+            <button>Landing Pages</button>
+        </div>
+        <div class="search_bar">
+            <i class="bi bi-search"></i>
+            <input type="search" name="search" id="search" placeholder=" Buscar projeto...">
+        </div>
+   </section>
+   <section class="projets"></section>
+   <section class="menu">
+    <nav>
+        <ul>
+            <li><i class="bi bi-house-door"></i> Inicio</li>
+            <li><i class="fa-regular fa-user"></i> Sobre</li>
+            <li><i class="bi bi-code-slash"></i> Projetos</li>
+            <li>Habilidades</li>
+            <li><i class="fa-regular fa-envelope"></i>Contato</li>
+        </ul>
+    </nav>
+   </section>
 </main>
     <script src="../interacoes.js"></script>
 </body>

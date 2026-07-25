@@ -38,10 +38,68 @@
     --gradient-herobody:radial-gradient(
     circle at top right,#5a1ea8,#090a1d 60%);
 }
+.light-theme {
+    color: black;
+    /* Cores primárias (mantidas) */
+    --color-primary: #551EAE;
+    --color-secondary: #7C3AED;
+    --color-accent: #6366F1;
+
+    /* Cores neutras */
+    --color-header: #FFFFFF;
+    --color-banner: #F8FAFC;
+    --color-bg: #F1F5F9;
+    --color-card: #FFFFFF;
+    --color-card2: #F8FAFC;
+    --color-border: #CBD5E1;
+    --color-text: #1E293B;
+    --color-text-muted: #64748B;
+    --color-surface: #EEF2FF;
+    --color-surface2: #DDD6FE;
+    --color-icon-bg: #E0E7FF;
+
+    /* Gradientes */
+    --gradient-primary: linear-gradient(
+        135deg,
+        #8B5CF6 0%,
+        #4012CE 100%
+    );
+
+    --gradient-secundary: linear-gradient(
+        135deg,
+        #5E1FE6,
+        #7C3AED
+    );
+
+    --gradient-herobody: radial-gradient(
+        circle at top right,
+        #C4B5FD,
+        #F8FAFC 60%
+    );
+
+    /* Bordas */
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 20px;
+}
+
+/*===== Base =====*/
 
 html{
     scroll-behavior: smooth;
 }
+
+body{
+    width: 100%;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+}
+.banner-text-mark{
+    color: var(--color-primary);
+    text-shadow: 4px 5px 3px #0000005d;
+}
+/*===== Barra de scroll =====*/
+
 ::-webkit-scrollbar{
     width: 12px;
 }
@@ -58,14 +116,7 @@ html{
 ::-webkit-scrollbar-thumb:hover{
     background: #A78BFA;
 }
-
-
-body{
-    width: 100%;
-    background-color: var(--color-bg);
-    color: var(--color-text);
-}
-
+/*===== Animações =====*/
 @view-transition {
     navigation: auto;
 }

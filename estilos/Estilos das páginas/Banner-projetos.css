@@ -40,6 +40,7 @@
 
 main{
     color: var(--color-text-muted);
+    overflow-x: hidden;
 }
 /*===== Banner =====*/
 h1,h2,h3,h4{
@@ -147,7 +148,7 @@ h1,h2,h3,h4{
     font-weight: bold;
     position: absolute;
     left: 10px;
-    bottom: 10px;
+    bottom: 15px;
     z-index: 10;
 }
 /*===== Secção de projetos =====*/
@@ -361,6 +362,7 @@ h1,h2,h3,h4{
     color: var(--color-primary);
 }
 
+ /*========== Responsividade =========*/
 
 @media (min-width:768px) and (max-width:990px){
     .projets{
@@ -423,9 +425,21 @@ h1,h2,h3,h4{
 
 }
 @media(min-width:1023px){
+    nav{
+        animation: surgir-top .5s ease;
+    }
     .banner{
         display: grid;
         grid-template-columns: repeat(2,1fr);
+    }
+    .banner-content{
+        padding-left: 15px;
+        animation: surgir-left .5s ease;
+
+    }
+    .cards{
+        animation: surgir-right .5s ease;
+
     }
      .cards_projets{
         padding: 10px;
@@ -435,6 +449,8 @@ h1,h2,h3,h4{
         row-gap: 10px;
         width: 100%;
 
+        animation: surgir-bottom .5s ease;
+        
     }
    
     .item{
@@ -448,16 +464,10 @@ h1,h2,h3,h4{
     .search_container{
    
     flex-flow: row nowrap; 
-  
+        animation: surgir-right .5s ease;
+        
 }
     .menu_container {
     display: none;
   
-}
-    
- 
-
-}
-
-
-
+}}

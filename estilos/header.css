@@ -41,10 +41,12 @@ nav{
     margin: 10px 7px;
     display: flex;
     justify-content: space-between;
+    align-content: center;
     align-items: center;
     border: 1px solid var(--color-surface);
     border-radius: 12px;
     padding: 10px;
+    height: 90px;
     box-shadow: 1px 1px 1px var(--color-surface);
     flex-wrap: wrap;
     text-align: center;
@@ -54,22 +56,9 @@ nav{
 .logo{
     color: var(--color-text-muted);
     text-decoration: none;
-    position: relative;
+    
     transition: 0.3s;
 
-}
-.logo::before{
-    content: ' ';
-    background-color: var(--color-primary);
-    position: absolute;
-    left: 0;
-    width: 50%;
-    height: 2.5px;
-    bottom: 0px;
-    transition: 0.3s;
-}
-.logo:hover{
-    color: var(--color-text);
 }
 .icone-nav:hover{
     animation: girar 2s infinite linear;

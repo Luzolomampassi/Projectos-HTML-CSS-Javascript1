@@ -594,6 +594,7 @@ progress::-moz-progress-bar {
 .banner-sobre{
     gap:70px;
     margin-bottom:10px;
+   
 
 }
 
@@ -626,6 +627,17 @@ progress::-moz-progress-bar {
     grid-template-columns: repeat(2,1fr);
     gap: 2rem;
     align-items: start;
+}
+nav{
+     animation: surgir-top .5s;
+}
+.highlights,
+.banner-content{
+    animation: surgir-left .5s;
+
+}
+.hero-sobre{
+    animation: surgir-right .5s;
 }
 
 .skills,

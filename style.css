@@ -93,6 +93,7 @@ body{
     width: 100%;
     background-color: var(--color-bg);
     color: var(--color-text);
+    overflow-x: hidden;
 }
 .banner-text-mark{
     color: var(--color-primary);
@@ -161,4 +162,52 @@ body{
         transform: rotateY(360deg);
     }
 }
+ /*========== Animação =========*/
+
+
+@keyframes surgir-top{
+    from{
+        opacity: 0;
+        transform: translateY(-120%);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes surgir-right{
+    from{
+        opacity: 0;
+        transform: translateX(150%);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes surgir-left{
+    from{
+        opacity: 0;
+        transform: translateX(-120%);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes surgir-bottom{
+    from{
+        opacity: 0;
+        transform: translateY(120%);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+
 

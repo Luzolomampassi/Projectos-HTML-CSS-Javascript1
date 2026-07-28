@@ -46,7 +46,7 @@ nav{
     border: 1px solid var(--color-surface);
     border-radius: 12px;
     padding: 10px;
-    height: 90px;
+    height: 60px;
     box-shadow: 1px 1px 1px var(--color-surface);
     flex-wrap: wrap;
     text-align: center;

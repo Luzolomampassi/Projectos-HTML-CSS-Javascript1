@@ -37,7 +37,14 @@
     circle at top right,#5a1ea8,#090a1d 60%);
 }
 /*=====Menu====*/
+header{
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: var(--color-banner);
+}
 nav{
+
     margin: 10px 7px;
     display: flex;
     justify-content: space-between;

@@ -44,7 +44,6 @@ header{
     background-color: var(--color-banner);
 }
 nav{
-
     margin: 10px 7px;
     display: flex;
     justify-content: space-between;

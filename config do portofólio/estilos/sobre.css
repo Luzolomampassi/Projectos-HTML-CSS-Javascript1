@@ -315,6 +315,7 @@ abbr {
 }
 
 .html{
+    position: relative;
     background:
         radial-gradient(circle at top,
             rgba(255,107,74,.22),
@@ -331,9 +332,12 @@ abbr {
     box-shadow: 1px 1px 4px rgb(255, 107, 74);
 }
 .html::before{
+     content: '';
+    position: absolute;
     background: linear-gradient(135deg,#ff784f11,#7e3156);
 }
 .css{
+    position: relative;
     background:
         radial-gradient(circle at top,
             rgba(45,140,255,.22),
@@ -345,15 +349,16 @@ abbr {
         #0B1324;
 }
 .css:hover {
-   
     box-shadow: 1px 1px 4px rgb(45,140,255);
 }
 
 .css::before{
+     content: '';
+    position: absolute;
     background: linear-gradient(135deg,#2d8bff3b,#1b4cff7e);
 }
 .js{
-
+    position: relative;
     background:
         radial-gradient(circle at top,
             rgba(255,212,59,.22),
@@ -371,8 +376,11 @@ abbr {
 
 .js::before{
     background: linear-gradient(135deg,#ffd53b2e,#8a6d00);
+    content: '';
+    position: absolute;
 }
 .git{
+    position: relative;
     background:
         radial-gradient(circle at top,
             rgba(255,97,64,.22),
@@ -388,9 +396,12 @@ abbr {
 }
 
 .git::before{
+     content: '';
+    position: absolute;
     background: linear-gradient(135deg,#ff60402b,#8d2f56);
 }
 .vscode{
+    position: relative;
     background:
         radial-gradient(circle at top,
             rgba(0,122,255,.22),
@@ -406,9 +417,12 @@ abbr {
     box-shadow: 1px 1px 4px rgb(0,122,255);
 }
 .vscode::before{
+     content: '';
+    position: absolute;
     background: linear-gradient(135deg,#007bff2e,#0048b5);
 }
 .github{
+    position: relative;
     background:
         radial-gradient(circle at top,
             rgba(110,118,129,.25),
@@ -426,6 +440,39 @@ abbr {
 
 .github::before{
     background: linear-gradient(135deg,#6e76812e,#24292f);
+    content: '';
+    position: absolute;
+}
+.figma{
+    background:
+        radial-gradient(circle at top,
+            rgba(242, 78, 30, .22),
+            transparent 65%),
+        linear-gradient(to bottom,
+            rgba(162, 89, 255, .18) 0%,
+            rgba(26, 188, 254, .10) 30%,
+            rgba(10, 207, 131, .08) 60%,
+            transparent 100%),
+        #0B1324;
+    position: relative;
+
+}
+
+.figma:hover{
+    box-shadow: 1px 1px 4px rgb(242, 78, 30);
+}
+
+.figma::before{
+    content: '';
+    position: absolute;
+    background: linear-gradient(
+        135deg,
+        #F24E1E,
+        #FF7262,
+        #A259FF,
+        #1ABCFE,
+        #0ACF83
+    );
 }
 /*==========================BARRA DE PROGRESSO==========================*/
 

@@ -7,14 +7,17 @@
 }
 :root{
     --color-destaque:#0238CE;
-    --color-destaque-inverso:#ECF0FE;
+    --color-destaque-inverso:#e3eaff;
     --color-secundaria:#040F2C;
     --color-terciaria:#0032D0;
     --color-bg:#E8ECFC;
+    --color-bg-white:#fdfeff;
     --color-bg2:#F1F4FE;
     --card-bg:#fcfcfe;
     --color-txt:#fdfeff;
     --color-txt-muted:#7a7a7a;
+   
+
 }
 .dark-theme{
     --color-destaque:#4D7CFF;
@@ -22,6 +25,7 @@
     --color-secundaria:#020817;
     --color-terciaria:#2563EB;
     --color-bg:#030712;
+    --color-bg-white:#030712;
     --color-bg2:#0B1220;
     --card-bg:#111827;
     --color-txt:#F8FAFC;
@@ -32,6 +36,16 @@ body{
     color: var(--color-txt-muted);
     font-family: Arial, Helvetica, sans-serif;
     overflow-x: hidden;
+    transition: background-color .5s , color .5s;
+}
+#inicio,
+#recursos,
+.estatisticas,
+#precos,
+#depoimentos,
+#anuncio{
+        transition: background-color .5s , color .5s;
+
 }
 h1,h2{
     color: var(--color-secundaria);
@@ -47,6 +61,7 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    background-color: var(--color-bg-white);
 }
 .logo{
     font-size: 2em;
@@ -67,22 +82,29 @@ nav a{
     font-weight: bold;
 
 }
+.btn-dark{
+    display: flex;
+}
+.fa-moon{
+    color: var(--color-destaque);
+}
 .menu {
+    display: none;
     top: 100%;
     position: absolute;
     justify-content: space-evenly;
     color: var(--color-destaque);
-    transform: translateX(100%);
-    background-color: var(--color-secundaria);
+    background-color: rgb(2, 8, 23,.25);
     padding: 10px;
     border-radius: 8px;
     height: 500px;
     width: 250px;
     transition: transform .4s;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.309);
+    backdrop-filter: blur(10px);
 
 }
-.menu.ativo ul{
+.menu ul{
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -93,12 +115,11 @@ nav a{
     width: 100%;
     border-bottom: 2px solid var(--color-terciaria);
     transition: transform .4s;
-}
-.menu li{
     outline: 2px double var(--color-destaque);
     outline-offset: 1px;
     border-radius: 8px;
 }
+
 .menu li:active{
     transform: translateY(10px);
     background-color: var(--color-txt);
@@ -113,23 +134,21 @@ nav a{
     color: var(--color-txt);
 }
 
-
 .menu.ativo {
     display: flex;
     flex-direction: column;
-    transform: translateX(-33%);
     gap: 20px;
+    animation: surgindo .5s forwards;
+
 }
 
 
 .nav-buttons{
     gap: 10px;
     display: flex;
-    align-items: center;
-    text-align: center;
-    flex-flow: column wrap;
-}
+    flex-direction: column;
 
+}
 #btn-login{
     color: var(--color-destaque);
     background-color: var(--color-txt);
@@ -141,14 +160,16 @@ nav a{
     transition: border .5s, outiline .5s;
 
 }
+
 #btn-login:hover{
     border: 2px solid var(--color-destaque);  
 }
-
+.btn-secundary:focus,
 #btn-login:focus{
     outline: 1px solid var(--color-destaque);  
     outline-offset: 2px;
 }
+
 #btn-signup{
     color: var(--color-txt);
     background-color: var(--color-destaque);
@@ -159,26 +180,27 @@ nav a{
 #btn-signup:hover{
     border: 2px solid var(--color-destaque);  
 }
+
+.btn-primary:focus,
+#btn-signup:focus{
+    outline: 1px solid var(--color-destaque);  
+    outline-offset: 2px;
+}
 #btn-menu{
     border: none;
     padding: 10px;
     cursor: pointer;
     font-size: 1.4em;
 }
-
-
-#btn-signup:focus{
-    outline: 1px solid var(--color-destaque);  
-    outline-offset: 2px;
-}
-
 /*===== Banner e hero =====*/
 
 #inicio{
     display: grid;
     grid-template-columns:1fr;
     grid-template-rows:2fr;
-
+    background-color: var(--color-txt);
+    padding: 10px;
+    background-color: var(--color-bg-white);
 }
 #inicio h1{
     font-weight: bold;
@@ -197,16 +219,34 @@ nav a{
     padding: 10px;
     display: flex;
     justify-content: space-evenly;
-    gap: 10px;
+    gap: 20px;
     font-weight: bold;
 }
 .btn-primary{
-    
+     display: flex;
+    align-items: center;
     color: var(--color-txt);
     background-color: var(--color-destaque);
-    padding: 5px 15px;
+    padding: 0px 30px;
     border-radius: 8px;
 }
+.btn-secundary{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: var(--color-secundaria);
+    padding: 0px 30px;
+    transition: border .5s, outiline .5s;
+    
+}
+.fa-play{
+    color: var(--color-destaque);
+    border-radius: 50%;
+    padding: 10px;
+    font-size: 1.2em;
+    border: 5px solid var(--color-destaque-inverso);
+}
+
 
 .hero-container{
     width: 100%;
@@ -222,10 +262,14 @@ nav a{
     justify-content: space-evenly;
     align-items: center;
 }
+.fa-circle-check{
+    color: var(--color-destaque);
+}
 /*===== Recursos =====*/
 
 #recursos{
     background-color: var(--color-bg);
+    transition: background-color .5s , color .5s;
 }
 
 .cards-recursos{
@@ -492,46 +536,93 @@ footer h4{
         display: grid;
         grid-template-columns: repeat(4,1fr);
     }
-    .links ul{
-        
-    }
+    
     .links h4{
         margin-bottom: 10px;
         color: var(--color-txt);
     }
 }
 @media (min-width:1024px){
+    
     header{
-        justify-content: space-around;
-    }
+        display:flex;
+        flex-direction:row;
+        align-content: center;
+        width:100%;
+        max-height: 120px;
+        justify-content:space-evenly;
+        align-items:center;
+        gap:20px;
+        padding:20px;
+        margin-bottom: 30px;
+}   .logo{
+    align-self: center;
+}
    
-    .menu{
-        display: flex;
-        gap: 20px;
-        align-items: center;
-        flex-direction: row;
-        width: 100%;
-        background: transparent;
-        top: 0;
-        left: 0;
-        flex: 1;
+    nav{
+        display:flex;
+        align-items:center;
+        font-weight:bold;
+        width:100%;
+}
 
-    }
+    .menu{
+        display:flex;
+        flex-direction:row;
+        justify-content:space-evenly;
+        align-items:center;
+        position:static;
+        background:transparent;
+        transform:none;
+        width:100%;
+        box-shadow:none;
+}
     .menu ul{
-        display: flex;
-        gap: 20px;
-    }
+    display:flex;
+    flex-direction:row;
+    gap:20px;
+}
+
     .nav-buttons{
-    flex-flow: row wrap;
-    padding: 0 10px;
+     flex-direction:row;
+
+}   #btn-login:focus{
+     outline: 2px solid var(--color-destaque);
+     outline-offset: 2px;
+}
+     #btn-signup:focus{
+     outline: 2px solid var(--color-destaque);
+     outline-offset: 2px;
+}
+
+    .menu li{
+    border: none;
+    outline: none;
+}
+
+    .menu a{
+    color: var(--color-destaque);
 }
     #btn-menu{
         display: none;
 }
     
     #inicio{
-        grid-template-columns: 1fr 2fr;
+        grid-template-columns: 1fr 1.5fr;
+        min-height: 400px;
+        max-height:600px;
+        padding: 20px;
+}   .banner{
+        display: block;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 14%;
 }
+    #inicio h1{
+        font-size:clamp(1em,3.3em,5rem);
+        margin-bottom: 20px;
+    
+    }
 
     .hero{
         width: 100%;
@@ -542,8 +633,8 @@ footer h4{
         justify-content: center;
 }
     .img-hero{
-        height: 280px;
-        width: 60%;
+        height: 380px;
+        width: 85%;
   
 }
     .cards-recursos{
@@ -605,8 +696,18 @@ footer h4{
         margin-bottom: 10px;
         color: var(--color-txt);
     }
+
 }
 
 
 
-
+@keyframes surgindo{
+    from{
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(-30%);
+    }
+}

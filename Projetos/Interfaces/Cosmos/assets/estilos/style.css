@@ -1,0 +1,261 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+}
+:root{
+    --card_color: rgb(255, 255, 255 , 0.05);
+    --border_color_gray: rgb(255, 255, 255 , 0.08);
+    --border_color: rgb(135, 94, 78,.3);
+    --border_color2: rgba(154, 93, 69, 0.3);
+    --color-text:#ffffff;
+    --gradiente-primary:linear-gradient(120deg ,
+    #EEA78F ,
+    #B591D3);
+}
+body{
+    background: black url(../imagem/Buraco\ negro\ bg.png) no-repeat;
+    background-position: right center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+    width:97vw;
+}
+.page{
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-template-rows: auto auto auto 50px;
+    margin: 20px auto;
+    color: var(--color-text);
+    font-family: Arial, Helvetica, sans-serif;
+    width: calc(100% - 40px);
+    min-height: 620px;
+    padding: 10px;
+    background-color: var(--card_color);
+    border: 1px solid  var(--card_color);
+    border-radius: 20px;
+}
+/*====== Menu =====*/
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 10px;
+    max-height: 80px;
+    gap: 10px;
+    grid-area: 1/1/1/7;
+}
+.menu{
+    display: flex;
+    width: 600px;
+    justify-content: space-evenly;
+    background-color: var(--card_color);
+    border: 1px solid  var(--border_color);
+    border-radius: 18px;
+    overflow: hidden;
+    gap: 30px;
+    padding: 15px;
+    backdrop-filter: blur(10px);
+}
+a{
+    cursor: pointer;
+    color: var(--color-text);
+}
+.buttons{
+    display: flex;
+    gap: 20px;
+    padding: 10px;
+    height: 60px;
+
+}
+.search{
+    color: var(--color-text);
+    border-radius: 50%;
+    padding: 10px;
+    border: 2px solid var(--border_color);
+    background: transparent;
+}
+.login{
+    color: var(--color-text);
+    border-radius: 20px;
+    padding: 10px 20px;
+    border: 2px solid var(--border_color2);
+    background: transparent;
+}
+/*====== Corpo =====*/
+.banner{
+    display: flex;
+    flex-direction: column;
+    padding-left: 40px;
+    grid-area: 2/1/2/4;
+}
+h1{
+    font-size: clamp(2em,3em,6em);
+}
+/*===== Cards ====*/
+.sub-banner{
+    grid-area: 3/1/4/4;
+    max-width: 700px;
+    padding:10px 10px 10px 40px;
+
+}
+.cards{
+    display: flex;
+    gap: 10px;
+    grid-area: 3/1/4/4;
+    margin-bottom: 10px;
+}
+.card{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    max-width: 160px;
+    background-color: var(--card_color);
+    border: 2px solid  var(--border_color_gray);
+    border-radius: 18px;
+    gap: 5px;
+    padding: 20px;
+    backdrop-filter: blur(10px);
+}
+.saiba img,
+.card img{
+    width: 40px;
+    background-color: var(--card_color);
+    border: 1px solid  var(--border_color);
+    border-radius: 18px;
+    backdrop-filter: blur(10px);
+}
+
+.formulario{
+    display: flex;
+    width: 100%;
+    background-color: var(--card_color);
+    border: 2px solid  var(--border_color_gray);
+    border-radius: 18px;
+    height: 100px;
+    gap: 10px;
+    padding: 20px;
+    backdrop-filter: blur(10px);
+    grid-area: 3/1/4/4;
+
+}
+.form_txt{
+    font-size: .9rem;
+}
+.caixa{
+    position: relative;
+    align-items: center;
+    display: flex;
+}
+#email{
+    padding: 10px;
+    color: gray;
+    border: 2px solid gray;
+    border-radius: 20px;
+    width: 260px;
+    background: transparent;
+}
+#btn-assinar{
+    position: absolute;
+    right: 0;
+    padding: 10px;
+    width: 80px;
+    border-radius: 15px;
+    background: var(--gradiente-primary);
+    border: 1px solid rgba(128, 128, 128, .01);
+}
+/*===== Explorar ====*/
+.saiba{
+    margin: auto;
+    display: flex;
+    padding: 10px;
+    background-color: var(--card_color);
+    border: 1px solid  var(--border_color);
+    border-radius: 18px;
+    backdrop-filter: blur(10px);
+    height: auto;
+    width: 190px;
+    grid-area: 2/6/2/7;
+}
+
+.explorar{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    grid-area: 3/5/3/7;
+    padding: 10px 20px ;
+    min-width: 400px;
+    height: auto;
+    justify-content: space-evenly;
+    background-color: var(--card_color);
+    border: 1px solid  var(--border_color);
+    border-radius: 18px;
+    backdrop-filter: blur(10px);
+}   
+.top{
+    display: flex;
+    justify-content: space-between;
+}
+.explorar img{
+    width: 100px;
+    height: 50px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.item{
+    display: flex;
+    align-items: center;
+}
+
+/*====== Explorar =====*/
+
+/*====== Footer =====*/
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 40px;
+    grid-area: 4/1/4/7;
+}
+.termos,
+.social{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+}
+.icone{
+    border-radius: 50%;
+    padding: 8px;
+    border: 1px solid gray;
+}
+
+.icone{
+    transition: border .3s , background-color .3s , background-image .3s;
+}
+.fa-twitter:hover{
+    background-color: #1C96E8;
+    border-color:transparent;
+    cursor:pointer;
+}
+.fa-instagram:hover {
+    background-image: linear-gradient(
+        45deg,
+        #FEDA75,
+        #FA7E1E,
+        #D62976,
+        #962FBF,
+        #4F5BD5
+    );
+    cursor:pointer;
+}
+.fa-youtube:hover{
+    background-color: red;
+    border-color:transparent;
+    cursor:pointer;
+}
+.fa-discord:hover{
+    background-color: #5561EA;
+    border-color:transparent;
+    cursor:pointer;
+}

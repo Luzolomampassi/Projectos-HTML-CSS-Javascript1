@@ -1,261 +1,769 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
-    list-style-type: none;
+    list-style: none;
 }
-:root{
-    --card_color: rgb(255, 255, 255 , 0.05);
-    --border_color_gray: rgb(255, 255, 255 , 0.08);
-    --border_color: rgb(135, 94, 78,.3);
-    --border_color2: rgba(154, 93, 69, 0.3);
-    --color-text:#ffffff;
-    --gradiente-primary:linear-gradient(120deg ,
-    #EEA78F ,
-    #B591D3);
+
+:root {
+    --card-color: rgba(255, 255, 255, 0.055);
+    --card-color-hover: rgba(255, 255, 255, 0.08);
+
+    --border-color: rgba(255, 255, 255, 0.18);
+    --border-color-strong: rgba(255, 255, 255, 0.28);
+
+    --text: #ffffff;
+    --text-secondary: rgba(255, 255, 255, 0.72);
+
+    --purple: #9c7cff;
+
+    --gradient-primary: linear-gradient(
+        120deg,
+        #eea78f,
+        #b591d3
+    );
 }
-body{
-    background: black url(../imagem/Buraco\ negro\ bg.png) no-repeat;
-    background-position: right center;
-    background-size: cover;
-    background-attachment: fixed;
-    height: 100vh;
-    width:97vw;
-}
-.page{
-    display: grid;
-    grid-template-columns: repeat(6,1fr);
-    grid-template-rows: auto auto auto 50px;
-    margin: 20px auto;
-    color: var(--color-text);
+
+body {
+    min-height: 100vh;
+    width: 100%;
+
+    color: var(--text);
+
     font-family: Arial, Helvetica, sans-serif;
-    width: calc(100% - 40px);
-    min-height: 620px;
-    padding: 10px;
-    background-color: var(--card_color);
-    border: 1px solid  var(--card_color);
-    border-radius: 20px;
+
+    background:
+        #050505 url("../imagem/Buraco negro bg.png")
+        center center /
+        cover
+        no-repeat;
+
+    background-attachment: fixed;
 }
-/*====== Menu =====*/
-header{
+
+
+/* =====================================================
+   PAGE
+===================================================== */
+
+.page {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows:  80px 1fr 1fr 75px;
+    grid-template-areas:
+        "header   header   header   header   header   header"
+        "banner   banner   banner   banner   saiba   saiba"
+        "sub      sub      sub      sub      explorar explorar"
+        "footer   footer   footer   footer   footer   footer";
+
+    width: calc(100% - 80px);
+    max-width: 1420px;
+    min-height: calc(100vh - 55px);
+    margin: 27px auto;
+    padding: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 25px;
+    background: rgba(0, 0, 0, 0.12);
+    overflow-x: hidden;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+header {
+    grid-area: header;
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    padding: 0px 10px;
-    max-height: 80px;
+    padding: 0 10px;
+    gap: 25px;
+}
+
+
+/* ---------- Logo ---------- */
+
+.logo {
+    display: flex;
+    align-items: center;
     gap: 10px;
-    grid-area: 1/1/1/7;
+    min-width: 170px;
 }
-.menu{
+
+.logo::before {
+    content: "✦";
+
     display: flex;
-    width: 600px;
-    justify-content: space-evenly;
-    background-color: var(--card_color);
-    border: 1px solid  var(--border_color);
-    border-radius: 18px;
-    overflow: hidden;
-    gap: 30px;
-    padding: 15px;
-    backdrop-filter: blur(10px);
+    align-items: center;
+    justify-content: center;
+
+    width: 48px;
+    height: 48px;
+
+    font-size: 1.5rem;
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.02);
 }
-a{
-    cursor: pointer;
-    color: var(--color-text);
+
+.logo h2 {
+    font-size: 1.25rem;
 }
-.buttons{
+
+
+/* ---------- Menu ---------- */
+
+header nav {
     display: flex;
-    gap: 20px;
-    padding: 10px;
+    justify-content: center;
+
+    flex: 1;
+}
+
+.menu {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 42px;
+
+    width: 570px;
     height: 60px;
 
-}
-.search{
-    color: var(--color-text);
-    border-radius: 50%;
-    padding: 10px;
-    border: 2px solid var(--border_color);
-    background: transparent;
-}
-.login{
-    color: var(--color-text);
+    padding: 10px 30px;
+
+    background:
+        linear-gradient(
+            110deg,
+            rgba(100, 80, 130, 0.28),
+            rgba(120, 75, 55, 0.28)
+        );
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
     border-radius: 20px;
-    padding: 10px 20px;
-    border: 2px solid var(--border_color2);
-    background: transparent;
-}
-/*====== Corpo =====*/
-.banner{
-    display: flex;
-    flex-direction: column;
-    padding-left: 40px;
-    grid-area: 2/1/2/4;
-}
-h1{
-    font-size: clamp(2em,3em,6em);
-}
-/*===== Cards ====*/
-.sub-banner{
-    grid-area: 3/1/4/4;
-    max-width: 700px;
-    padding:10px 10px 10px 40px;
 
+    backdrop-filter: blur(15px);
 }
-.cards{
-    display: flex;
-    gap: 10px;
-    grid-area: 3/1/4/4;
-    margin-bottom: 10px;
-}
-.card{
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    max-width: 160px;
-    background-color: var(--card_color);
-    border: 2px solid  var(--border_color_gray);
-    border-radius: 18px;
-    gap: 5px;
-    padding: 20px;
-    backdrop-filter: blur(10px);
-}
-.saiba img,
-.card img{
-    width: 40px;
-    background-color: var(--card_color);
-    border: 1px solid  var(--border_color);
-    border-radius: 18px;
-    backdrop-filter: blur(10px);
-}
-
-.formulario{
-    display: flex;
-    width: 100%;
-    background-color: var(--card_color);
-    border: 2px solid  var(--border_color_gray);
-    border-radius: 18px;
-    height: 100px;
-    gap: 10px;
-    padding: 20px;
-    backdrop-filter: blur(10px);
-    grid-area: 3/1/4/4;
-
-}
-.form_txt{
-    font-size: .9rem;
-}
-.caixa{
+.menu a {
     position: relative;
-    align-items: center;
-    display: flex;
-}
-#email{
-    padding: 10px;
-    color: gray;
-    border: 2px solid gray;
-    border-radius: 20px;
-    width: 260px;
-    background: transparent;
-}
-#btn-assinar{
-    position: absolute;
-    right: 0;
-    padding: 10px;
-    width: 80px;
-    border-radius: 15px;
-    background: var(--gradiente-primary);
-    border: 1px solid rgba(128, 128, 128, .01);
-}
-/*===== Explorar ====*/
-.saiba{
-    margin: auto;
-    display: flex;
-    padding: 10px;
-    background-color: var(--card_color);
-    border: 1px solid  var(--border_color);
-    border-radius: 18px;
-    backdrop-filter: blur(10px);
-    height: auto;
-    width: 190px;
-    grid-area: 2/6/2/7;
+    color: var(--text);
+    font-size: 0.95rem;
 }
 
-.explorar{
+.menu a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -13px;
+    height: 2px;
+    width: 0;
+    background: #b99cff;
+    border-radius: 10px;
+    transition: box-shadow 0.4s, width 0.4s;
+}
+
+.menu a:hover::after {
+    width: 100%;
+    box-shadow: 0 0 8px rgba(185, 156, 255, 0.8);
+}
+
+
+/* ---------- Header buttons ---------- */
+
+.buttons {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    min-width: 180px;
+    justify-content: flex-end;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    color: white;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.login {
+    height: 52px;
+    padding: 0 25px;
+    color: white;
+    background: rgba(255, 255, 255, 0.025);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 30px;
+    font-size: 0.95rem;
+    cursor: pointer;
+}
+.search:hover,
+.login:hover{
+    background-color: var(--border-color);
+}
+
+
+/* =====================================================
+   BANNER
+===================================================== */
+
+.banner {
+    grid-area: banner;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    grid-area: 3/5/3/7;
-    padding: 10px 20px ;
-    min-width: 400px;
-    height: auto;
-    justify-content: space-evenly;
-    background-color: var(--card_color);
-    border: 1px solid  var(--border_color);
-    border-radius: 18px;
-    backdrop-filter: blur(10px);
-}   
-.top{
-    display: flex;
-    justify-content: space-between;
-}
-.explorar img{
-    width: 100px;
-    height: 50px;
-    border-radius: 8px;
-    overflow: hidden;
-}
-.item{
-    display: flex;
-    align-items: center;
-}
-
-/*====== Explorar =====*/
-
-/*====== Footer =====*/
-footer{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     padding-left: 40px;
-    grid-area: 4/1/4/7;
-}
-.termos,
-.social{
-    display: flex;
-    justify-content: space-evenly;
-    gap: 20px;
-}
-.icone{
-    border-radius: 50%;
-    padding: 8px;
-    border: 1px solid gray;
+    padding-top: 30px;
 }
 
-.icone{
-    transition: border .3s , background-color .3s , background-image .3s;
+
+/* ---------- Pequeno título ---------- */
+
+.txt-welcome {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    padding: 9px 15px 9px 32px;
+    color: rgba(255, 255, 255, 0.85);
+    background:linear-gradient(to right ,#070608 80%,rgb(33, 26, 25));
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    border-radius: 30px;
+    backdrop-filter: blur(10px);
 }
-.fa-twitter:hover{
-    background-color: #1C96E8;
-    border-color:transparent;
-    cursor:pointer;
+
+.txt-welcome p {
+    font-size: 0.8rem;
 }
+
+.circle {
+    position: absolute;
+    left: 12px;
+    width: 6px;
+    height: 6px;
+    background: #8f75ff;
+    border-radius: 50%;
+    box-shadow:
+        0 0 5px #8f75ff,
+        0 0 10px rgba(143, 117, 255, 0.8);
+}
+/* ---------- Título ---------- */
+
+.banner-content h1 {
+    margin-top: 30px;
+    font-size: clamp(3.2rem, 4.4vw, 4.8rem);
+    line-height: 1.02;
+    letter-spacing: -2px;
+}
+
+
+/* ---------- Descrição ---------- */
+
+.banner-content > p {
+    margin-top: 25px;
+    color: var(--text-secondary);
+    font-size: 1rem;
+    line-height: 1.65;
+}
+
+/* ---------- Botões ---------- */
+
+.banner-buttons {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    margin-top: 35px;
+}
+
+.banner-buttons a:first-child {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 52px;
+    padding: 0 30px;
+    color: #111;
+    background: var(--gradient-primary);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 30px;
+    font-weight: bold;
+    box-shadow: 0 8px 25px rgba(238, 167, 143, 0.15);
+}
+
+.banner-buttons a:last-child {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: white;
+    font-size: 0.95rem;
+}
+
+.banner-buttons a:last-child i {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 50px;
+    height: 50px;
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+
+    border-radius: 50%;
+
+    font-size: 0.85rem;
+}
+
+
+/* =====================================================
+   SUB-BANNER
+===================================================== */
+
+.sub-banner {
+    grid-area: sub;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px 20px 0 40px;
+}
+
+
+/* =====================================================
+   CARDS
+===================================================== */
+
+.cards {
+    display: flex;
+    gap: 14px;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.card {
+    flex: 1;
+    min-width: 0;
+    height: 183px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 25px;
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255, 255, 255, 0.065),
+            rgba(255, 255, 255, 0.025)
+        );
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 18px;
+    backdrop-filter: blur(12px);
+}
+
+.card img {
+    width: 42px;
+    height: 42px;
+    padding: 8px;
+    object-fit: contain;
+    background: rgba(120, 90, 180, 0.12);
+    border: 1px solid rgba(170, 140, 255, 0.22);
+    border-radius: 50%;
+}
+
+.card h2 {
+    margin-top: 12px;
+    font-size: 1.8rem;
+    line-height: 1;
+}
+
+.card p {
+    margin-top: 8px;
+    color: var(--text-secondary);
+    font-size: 0.8rem;
+    line-height: 1.45;
+}
+
+
+/* =====================================================
+   NEWSLETTER
+===================================================== */
+
+.formulario {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 85px;
+    padding: 15px 20px 15px 25px;
+    margin-top: 20px;
+    background:
+        linear-gradient(
+            100deg,
+            rgba(80, 60, 100, 0.12),
+            rgba(255, 255, 255, 0.035)
+        );
+    border: 1px solid rgba(130, 110, 220, 0.45);
+    border-radius: 18px;
+    backdrop-filter: blur(12px);
+}
+
+.form_txt h3 {
+    font-size: 0.95rem;
+    margin-bottom: 6px;
+}
+
+.form_txt p {
+    color: var(--text-secondary);
+    font-size: 0.75rem;
+}
+
+.caixa {
+    position: relative;
+    width: 310px;
+}
+
+#email {
+    width: 100%;
+    height: 42px;
+    padding: 0 90px 0 15px;
+    color: white;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    border-radius: 25px;
+    outline: none;
+}
+
+#email::placeholder {
+    color: rgba(255, 255, 255, 0.45);
+}
+
+#btn-assinar {
+    position: absolute;
+    top: 3px;
+    right: 3px;
+    width: 92px;
+    height: 36px;
+    color: #111;
+    background: var(--gradient-primary);
+    border: none;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+/* =====================================================
+   SAIBA MAIS
+===================================================== */
+
+.saiba {
+    grid-area: saiba;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 15px 0 20px;
+}
+
+.min-card {
+    width: 215px;
+    padding: 20px;
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.12),
+            rgba(255, 255, 255, 0.035)
+        );
+    border: 1px solid rgba(255, 255, 255, 0.28);
+    border-radius: 18px;
+    backdrop-filter: blur(15px);
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.min-card img {
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+    margin-bottom: 12px;
+    background: rgba(120, 90, 220, 0.12);
+    border: 1px solid rgba(170, 140, 255, 0.2);
+    border-radius: 50%;
+}
+
+.min-card h3 {
+    font-size: 1rem;
+    margin-bottom: 8px;
+}
+
+.min-card p {
+    color: var(--text-secondary);
+    font-size: 0.82rem;
+    line-height: 1.5;
+    margin-bottom: 18px;
+}
+
+.min-card > div:last-child {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.min-card a {
+    color: #d2b7ff;
+    font-size: 0.8rem;
+    text-decoration: underline;
+}
+
+.min-card i {
+    color: #d2b7ff;
+    font-size: 0.8rem;
+}
+
+
+/* =====================================================
+   EXPLORAR
+===================================================== */
+
+.explorar {
+    grid-area: explorar;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 25px;
+    margin: 10px 0 0 20px;
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.08),
+            rgba(255, 255, 255, 0.035)
+        );
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    min-width: 0;
+}
+
+.top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.top h3 {
+    font-size: 1.1rem;
+}
+
+.top a {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.75rem;
+}
+
+.item {
+    display: grid;
+    grid-template-columns: 95px 1fr 35px;
+    align-items: center;
+    gap: 15px;
+    padding: 8px 0;
+}
+
+.imagem {
+    width: 95px;
+    height: 60px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.explorar img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.item-content {
+    min-width: 0;
+}
+
+.item-content h3 {
+    margin-bottom: 5px;
+
+    font-size: 0.8rem;
+}
+
+.item-content p {
+    color: var(--text-secondary);
+    font-size: 0.7rem;
+    line-height: 1.45;
+}
+
+.item > div:last-child {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    color: #bba6ff;
+    background: rgba(130, 100, 220, 0.12);
+    border: 1px solid rgba(150, 120, 255, 0.2);
+    border-radius: 50%;
+}
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+    grid-area: footer;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 10px 35px 0 40px;
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 0.72rem;
+}
+
+.social {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 15px;
+}
+
+.icone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    padding: 8px;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    transition:
+        border 0.3s,
+        background-color 0.3s,
+        background-image 0.3s;
+}
+
+.termos {
+    display: flex;
+    gap: 35px;
+}
+
+.fa-twitter:hover {
+    background-color: #1c96e8;
+    border-color: transparent;
+    cursor: pointer;
+}
+
 .fa-instagram:hover {
     background-image: linear-gradient(
         45deg,
-        #FEDA75,
-        #FA7E1E,
-        #D62976,
-        #962FBF,
-        #4F5BD5
+        #feda75,
+        #fa7e1e,
+        #d62976,
+        #962fbf,
+        #4f5bd5
     );
-    cursor:pointer;
+
+    border-color: transparent;
+    cursor: pointer;
 }
-.fa-youtube:hover{
-    background-color: red;
-    border-color:transparent;
-    cursor:pointer;
+
+.fa-youtube:hover {
+    background-color: #ff0000;
+
+    border-color: transparent;
+
+    cursor: pointer;
 }
-.fa-discord:hover{
-    background-color: #5561EA;
-    border-color:transparent;
-    cursor:pointer;
+
+.fa-discord:hover {
+    background-color: #5561ea;
+
+    border-color: transparent;
+
+    cursor: pointer;
 }
+
+/* =====================================================
+   @Mediaqueries
+===================================================== */
+@media (max-width:600px){
+    .page{
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
+        grid-template-columns:1fr;
+        grid-template-rows: repeat(8,auto);
+        row-gap: 20px;
+    }
+    .header{
+        grid-row-start: 1;
+        grid-row-end: 1;
+    }
+    .menu{
+        display: none;
+    }
+    .buttons{
+        display: none;
+    }
+    .cards{
+       
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        backdrop-filter: blur(0px);
+    }
+    .card{
+        width: 100%;
+    }
+    .sub-banner{
+        width: 100%;
+        grid-column: 1/-1;
+    }
+    .banner{
+        width: 100%;
+        grid-column: 1/-1;
+    }
+    .formulario{
+        grid-column: 1/-1;
+        flex-wrap: wrap;
+        height: auto;
+        backdrop-filter: blur(1px);
+    }
+    .caixa{
+        width: 100%;
+    
+    }
+    .explorar{
+        margin: auto;
+        grid-row-start: 5;
+        grid-row-end: 6;
+    }
+    .saiba{
+        grid-row-start: 4;
+        grid-row-end: 5;
+    }
+    footer{
+        flex-direction: column-reverse;
+        padding: 10px;
+        gap: 20px;
+        grid-row-start: -1;
+        grid-row-end: -1;
+    }
+    
+}
+

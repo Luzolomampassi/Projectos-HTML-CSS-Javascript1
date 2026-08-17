@@ -3,8 +3,26 @@
   padding: 0;
   box-sizing: border-box;
 }
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Sriracha&display=swap');
+
+.manrope{
+  font-family: "Manrope", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  
+}
+
+.bodoni-moda{
+  font-family: "Bodoni Moda", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
 :root {
   /* Fundos e superfícies */
+   --color-page-background-transparente: rgb(246, 242, 233,.9);
   --color-page-background: #F6F2E9;
   --color-surface-primary: #FFFDF8;
   --color-surface-warm-beige: #E6DED0;
@@ -34,16 +52,534 @@
   --color-success-message: #D3BD91;
   --color-icon-muted: #A59984;
   --color-white: #FFFFFF;
+  --font-bodoni:"Bodoni Moda", serif;
+  --font-manrope: "Manrope", sans-serif;
 }
 
+::-webkit-scrollbar{
+  background-color: var(--color-white); 
+}
+::-webkit-scrollbar-thumb{
+  background-color: var(--color-brand-green);
+  border-radius:50px;
+}
 body{
   background-color: var(--color-page-background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-manrope);
+  min-height: 100vh;
 }
 
+/*================================
+                Banner
+==================================*/
 .banner{
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto auto;
   margin: 0px 18px;
+}
+
+
+.banner-content p{
+  color: #0A231E;
+}
+.banner-content p:nth-of-type(1){
+  color: var(--color-brand-gold); 
+}
+a{
+  color: var(--color-brand-green);
+  text-decoration: none;
+  font-size: .9em;
+}
+/*botões*/
+.banner-buttons{
+  padding: 10px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.btn-reserva{
+  border: 1px solid var(--color-border-warm);
+  padding: 15px;
+}
+.btn-reserva:hover{
+  background-color: var(--color-brand-green-hover);
+  color: var(--color-white);
+}
+/*Slide*/
+.slide-indicator {
+  display: flex;
+  margin-top: 76px;
+  align-items: center;
+  gap: 9px;
+  color: var(--color-text-secondary);
+  font-size: 10px;
+}
+.slide-indicator i {
+    font-style: normal;
+}
+.slide-indicator b {
+    color: var(--color-text-primary);
+}
+.slide-indicator span {
+    width: 71px;
+    height: 1px;
+    background: linear-gradient(to right, var(--color-brand-gold) 33%, #cfc7b6 33%);
+}
+h1{
+  color: var(--color-brand-green);
+  font-family: var(--font-bodoni);
+  font-size: clamp(2em,6vh,10em);
+  margin-bottom: 20px;
+}
+.hero{
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+}
+.hero img{
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .4s ease;
+}
+.hero img:hover{
+  transform: scale(1.05);
+}
+.image-note{
+  display: flex;
+  gap: 20px;
+  position: absolute;
+  font-size: clamp(12px,.5vw,4em);
+  bottom: 0%;
+  color: var(--color-white);
+  background-color: var(--color-brand-green-deep);
+  padding: 10px;
+  font-family: var(--font-manrope);
+  font-weight: lighter;
+  align-items: center;
+}
+.hero-stamp {
+  position: absolute;
+  z-index: 2;
+  right: 0;
+  top: 0;
+  background: var(--color-page-background);
+  padding: 22px 0 22px 22px;
+  font-family: "Bodoni Moda", serif;
+  font-size: 13px;
+  line-height: 1.05;
+  text-align: right;
+}
+.image-note .ri-leaf-line{
+  font-size: 2em;
+}
+/*===========================
+  Beneficios 
+==============================*/
+.beneficios{
+  display: grid;
+  width: 90%;
+  grid-template-columns: repeat(2,1fr);
+  font-family: var(--font-manrope);
+  margin:  auto;
+}
+.beneficio{
+  padding: 10px;
+}
+.beneficio:nth-of-type(1){
+  border-right: 1px solid var(--color-border-warm);
+  border-bottom: 1px solid var(--color-border-warm);
+}
+.beneficio:nth-of-type(4){
+  border-left: 1px solid var(--color-border-warm);
+  border-top: 1px solid var(--color-border-warm);
+}
+.ri-poker-diamonds-fill,
+.ri-home-line,
+.ri-pie-chart-2-line{
+  color: var(--color-brand-gold-cta);
+}
+
+/*================================
+                Menu
+==================================*/
+.menu{
+  font-family: var(--font-manrope);
+}
+.sections-intro{
+ height: 10vh;
+  
+}
+.sections-intro > p{
+  color: var(--color-brand-gold);
+  line-height: 5;
+
+}
+.sections-intro h2{
+  color: var(--color-brand-green);
+  font-size: clamp(42px, 4.5vw, 64px);
+  font-family: var(--font-bodoni);
+  font-weight: 500;
+  letter-spacing: -.065em;
+  line-height: .94;
+
+}
+.categorias{
+  display: flex;
+  border-bottom: 1px solid var(--color-border-warm);
+  margin-bottom: 5%;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+/*Button*/
+.categorias button{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 10px 20px;
+  background: transparent;
+  border: none;
+  transition: background-color .3s;
+  position: relative;
+}
+.categorias button:hover{
+  background-color: var(--color-surface-category-hover);
+}
+.categorias button::before{
+  content: '';
+  position: absolute;
+  height: 3px;
+  width: 0;
+  background-color: var(--color-brand-gold);
+  bottom: -1px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: width .3s ease-in;
+}
+.categorias button:hover::before{
+  width: 60%;
+}
+/*Icones*/
+.menu-icon{
+  font-size: 34px;
+  color: var(--color-brand-gold);
+  width: 24px;
+}
+/*Slides dos pratos*/
+.text-link{
+  display: none;
+}
+.dishes-heading p{
+  color: var(--color-text-primary);
+  font-weight: 100;
+}
+b{
+  color: var(--color-brand-gold-cta);
+}
+/*Cards*/
+
+/*================================
+                Cardapio
+==================================*/
+
+.dish-grid {
+  display: flex;
+  overflow-x: auto;
+  padding-right: 18px;
+  gap: 10px;
+  scroll-snap-type: x mandatory;
+  
+}
+.dish-card{
+  flex: 0 0 76%;
+  scroll-snap-align: start;
+ 
+}
+.dish-card:hover{
+  transform: translateY(-10px);
+  box-shadow: 0px 5px 3px rgba(0, 0, 0, 0.116);
+}
+/*Dish imagens*/
+.dish-img{
+  height: 275;
+}
+.dish-img img{
+  position: relative;
+}
+.btn-favorito {
+  position: absolute;
+  top: 11px;
+  right: 11px;
+  width: 31px;
+  height: 31px;
+  padding: 8px;
+  background: rgba(255, 253, 248, .9);
+  border: 0;
+  color: var(--color-text-primary);
+}
+
+.dish-info {
+  padding: 17px 16px 15px;
+}
+.dish-info h3 {
+  font-family: "Bodoni Moda", serif;
+  font-size: 18px;
+  letter-spacing: -.04em;
+  margin: 0 0 7px;
+  font-weight: 600;
+}
+.icone-favorito {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+}
+.icone-favorito:hover{
+  fill: rgba(255, 0, 0, 0.276);
+  stroke:  rgba(255, 0, 0, 0.276);
+
+}
+
+.icone-favorito.favoritado {
+    fill: red;
+    stroke: red;
+}
+.dish-bottom{
+  display: flex;
+  justify-content: space-between;
+}
+/*btn-adicionar*/
+.add-button{
+  background-color: var(--color-brand-green);
+  color: var(--color-white);
+  font-weight: 500;
+  border: 0;
+  width: 27px;
+  height: 27px;
+  font-size: 18px;
+  font-weight: 300;
+  transition: background .2s;
+}
+
+
+/*================================
+                Historia
+==================================*/
+.story{
+  background-color: var(--color-border-subtle);
+  padding-left: 20px;
+  line-height: 2;
+}
+.story > p{
+  color: var(--color-text-secondary);
+}
+.story > h2{
+  font-family: var(--font-bodoni);
+  font-weight: 100;
+}
+
+/*================================
+                Review
+==================================*/
+.review{
+  padding: 130px 0 120px;
+  margin: 0 18px;
+}
+
+.review-tittle{
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 20px;
+  padding: 10px;
+}
+.review-nav{
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.review-nav button{
+  height: 50px;
+  width: 50px;
+}
+/*review card*/
+
+
+.review-card {
+  position: relative;
+  margin-top: 53px;
+  min-height: 267px;
+  padding: 44px 52px;
+  background: var(--color-surface-primary);
+  border-left: 3px solid var(--color-brand-gold);
+  animation: reveal .4s ease;
+}
+.stars {
+  color: var(--color-brand-gold);
+  font-size: 14px;
+  letter-spacing: 3px;
+}
+.review-card blockquote {
+  font-family: "Bodoni Moda", serif;
+  font-size: clamp(24px, 2.5vw, 35px);
+  line-height: 1.27;
+  letter-spacing: -.04em;
+  max-width: 820px;
+  margin: 25px 0 35px;
+}.reviewer {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+.reviewer span{
+  font-size: 12px;
+  background-color: #D9CFBD;
+  padding: 12px 9px;
+  border-radius: 50%;
+  text-align: center;
+  font-weight: bolder;
+}
+.review-count {
+  position: absolute;
+  right: 47px;
+  bottom: 45px;
+  color: #9a998e;
+  font-size: 10px;
+}
+.review-count b {
+    color: var(--color-text-primary);
+}
+.review-count span {
+  display: inline-block;
+  width: 45px;
+  height: 1px;
+  background: var(--color-brand-gold);
+  vertical-align: middle;
+  margin: 0 8px;
+}
+/*================================
+                Promo
+==================================*/
+.promo{
+  background-color: var(--color-brand-green);
+  padding: 10px 0px 0px;
+  height: auto;
+  display: grid;
+  gap: 30px;
+
+}
+.promo-copy{
+  line-height: 2;
+  padding-left: 20px;
+}
+.promo-copy h2{
+  color: var(--color-brand-gold-light);
+  font-size: clamp(67px, 6vw, 80px);
+  font-family: var(--font-bodoni);
+  font-weight: 500;
+  letter-spacing: -.065em;
+}
+.promo-txt{
+  color: var(--color-brand-gold);
+}
+.txt-off{
+  color: var(--color-white);
+}
+.promo-copy a{
+  display: inline-block;
+  background-color: var(--color-brand-gold-cta);
+  padding: 10px;
+  transition: .3s;
+}
+.promo-copy a:hover{
+  background-color: var(--color-brand-green-hover);
+  transform: scale(.999) translateY(-1px) translateX(1px);
+}
+.div-imagem{
+  width: 100%;
+}
+.div-imagem img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+
+
+
+
+
+
+
+
+
+@keyframes reveal{
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+100% {
+    opacity: 1;
+    transform: none;
+}
+}
+
+/*================================
+                MediaQueries
+==================================*/
+@media (min-width:1023px){
+  .banner{
+    display: flex;
+    flex-direction: row-reverse;
+    margin-bottom: 20px;
+}
+  .banner-content{
+    width: 50%;
+    line-height: 1.2;
+}
+  .hero{
+    width: 50%;
+}
+  .beneficios{
+    grid-template-columns: repeat(4,1fr);
+    background-color: var(--color-white);
+    min-height: 150px;
+    align-items: center;
+    font-family: var(--font-manrope);
+    padding: 10px;
+    box-shadow: -4px 3px 9px rgba(0, 0, 0, 0.089);
+}
+  .sections-intro{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0px;
+  
+  }
+  .beneficio{
+    flex-direction: row;
+    display: flex;
+    gap: 10px;
+  
+} .poker-dimond{
+    height: 30px;
+    color: var(--color-brand-gold-cta);
+}
+  .beneficio i{
+    font-size: 1.5em;
+  }
+  .beneficio h4{
+    font-weight: 100;
+    font-size: 12px;
+    
+}
+  h1{
+  font-size: clamp(4em,10vh,20em);
+}
 }

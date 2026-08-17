@@ -3,138 +3,378 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arte % Sabor</title>
+    <title>Arte & Sabor</title>
     <link rel="stylesheet" href="assets/estilos/style.css">
     <link rel="stylesheet" href="assets/estilos/header.css">
     <link rel="stylesheet" href="assets/estilos/footer.css">
     <script src="https://kit.fontawesome.com/f6a9b3f1e7.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link
+  href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css"
+  rel="stylesheet"
+/>
+    
 </head>
 <body>
      <div class="topline"><p>Ingredientes frescos. Receitas honestas. Momentos inesquecíveis</p>
         </div>
-    <header>
-           <div class="logo">
-                <img src="assets/img/sabor_e_artes_logo.svg" alt="">
-            </div>
-        <nav class="menu">
-            <ul >
-                <li><a href="#">Início</a></li>
-                <li><a href="#">Menu</a></li>
-                <li><a href="#">Reservas</a></li>
-                <li><a href="#">Sobre nós</a></li>
-                <li><a href="#">Contato</a></li>
-                <a href="#">Reservar Agora</a>
-                
-            </ul>  
-             <div><i class="fa-regular fa-user"></i></div> 
-        </nav>  
-            <div class="header-actions">
-                <div><i class="fa-solid fa-magnifying-glass"></i></div>
-                <button id="btn-menu"><i class="fa fa-bars"></i></button>
-            </div>
-    </header>
-    <!--==========================================================
-      =   Main
-    ============================================================-->
-    <main>
-        <!--====== Banner & Hero ======-->
-        <section class="banner">
-            <article class="banner-content">
-                <p>Bem-Vindo AO</p>
-                <h1>Sabor que conta histórias.</h1>
-                <p>Pratos autorias preparados com ingredientes frescos e selecionados para transformar cada refeição em uma experiência única</p>
-
-                <div class="banner-buttons">
-                    <a href="#">Ver menu</a>
-                    <a href="#">Fazer reserva</a>
+<header>
+        <div class="logo">
+            <img src="assets/img/sabor_e_artes_logo.svg" alt="">
+        </div>
+    <nav class="menu-nav" id="menu">
+        <ul >
+            <li><a href="index.html">Início</a>
+            <li><a href="#">Menu</a></li>
+            <li><a href="#">Reservas</a></li>
+            <li><a href="#">Sobre nós</a></li>
+            <li><a href="#">Contato</a></li>
+        </ul>
+    </nav>  
+           
+    <div class="header-actions">
+            <div><i class="fa-regular fa-user"></i></div> 
+            <div><i class="fa-solid fa-magnifying-glass"></i></div>
+            <a href="#" id="reserva">Reservar Agora</a>  
+            <button id="btn-menu"><i class="fa fa-bars"></i></button>
+    </div>
+</header>
+<!--==========================================================
+    =   Main
+============================================================-->
+<main>
+    <!--====== Banner & Hero ======-->
+    <section class="banner">
+        <article class="hero">
+            <div class="hero-stamp">desde<br><b>2017</b></div>
+                <img src="assets/img/hero800x600 .png" alt="">
+                <div class="image-note"> <i class="ri-leaf-line"></i>
+                    <p>Da terra à mesa,<br>com respeito pelo tempo.</p>
                 </div>
-            </article>
-            <article class="hero">
-                <img src="assets/.png" alt="">
-            </article>
-        </section>
-         <!--====== Beneficios ======-->
-        <section class="Beneficios">
-            <div class="beneficio">
+        </article>
+        <article class="banner-content">
+            <p>BEM-ViNDO AO</p>
+            <h1>Sabor que <br> <em>conta histórias</em>.</h1>
+            <p>Pratos autorias preparados com ingredientes frescos e selecionados para transformar cada refeição em uma experiência única</p>
+
+            <div class="banner-buttons">
+                <a href="#">Ver menu</a>
+                <a href="#" class="btn-reserva">Fazer reserva</a>
+            </div>
+            <div class="slide-indicator"><b>01</b><span></span><i>03</i></div>
+        </article>  
+    </section>
+        <!--====== Beneficios ======-->
+    <section class="beneficios">
+        <div class="beneficio">
+            <i class="ri-leaf-line"></i>
+            <div>
                 <h4>Ingredientes Frescos</h4>
                 <p>Selecinamos o melhor da estação.</p>
             </div>
+        </div>
+        <div class="beneficio">
+              <svg viewBox="0 0 24 24" aria-hidden="true"  class="poker-dimond">
+                    <path
+                        d="M12 3.5
+                        C12.8 8.5 15.5 11.2 20.5 12
+                        C15.5 12.8 12.8 15.5 12 20.5
+                        C11.2 15.5 8.5 12.8 3.5 12
+                        C8.5 11.2 11.2 8.5 12 3.5Z"
+                        fill="currentColor"
+                    />
+                </svg>
             <div>
                 <h4>Receitas Exclusivas</h4>
                 <p>Criações autorais feitas com paixão.</p>
-            </div class="beneficio">
-            <div class="beneficio">
+            </div>
+        </div >
+        <div class="beneficio">
+            <i class="ri-home-line"></i>
+            <div>
                 <h4>Ambiente Acolhedor</h4>
                 <p>Conforto e bom gosto em cada deltahe.</p>
             </div>
-            <div class="beneficio">
+        </div>
+        <div class="beneficio">
+            <i class="ri-pie-chart-2-line"></i> 
+            <div>
                 <h4>Reservas Online</h4>
                 <p>Reserve sua mesa de forma rápida e prática.</p>
             </div>
-        </section >
-         <!--====== Menu ======-->
-        <section class="menu">
-            <div class="menu-intro"></div>
-            <div class="categorias"></div>
-            <div class="dishes-headin"></div>
-            <div class="card-grid"></div>
-        </section>
-        <!--====== Sobre nós ======-->
-        <section class="story">
+        </div>
+    </section >
+        <!--====== Menu ======-->
+    <section class="menu">
+        <div class="sections-intro">
+            <p class="categorias-txt">NOSSO CARDÁPIO</p>
+            <h2>Sabores para todos<br><em>os momentos</em></h2>
+        </div>
+        <div class="categorias">
+            <button>
+                <svg class="menu-icon" viewBox="0 0 24 24">
+                    <!-- metade inferior preenchida -->
+                    <path
+                        d="M4 12a8 8 0 0 0 16 0H4Z"
+                        fill="currentColor"
+                    />
 
-        </section>
-        <section class="promo">
+                    <!-- contorno do círculo -->
+                    <circle
+                        cx="12"
+                        cy="12"
+                        r="8"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                    />
 
-        </section>
-        
-
-
-    </main>
-    <footer>
-        <div class="footer-grid">
-            <div class="footer-brand">
-                <div>
-                    
+                    <!-- divisão horizontal -->
+                    <line
+                        x1="4"
+                        y1="12"
+                        x2="20"
+                        y2="12"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                    />
+                </svg>
+                Entradas
+            </button>
+            <button>
+                <svg viewBox="0 0 24 24" aria-hidden="true" class="menu-icon">
+<g fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round">
+    <line x1="12" y1="3" x2="12" y2="21"/>
+    <line x1="3" y1="12" x2="21" y2="12"/>
+    <line x1="5.6" y1="5.6" x2="18.4" y2="18.4"/>
+    <line x1="18.4" y1="5.6" x2="5.6" y2="18.4"/>
+    <line x1="8.5" y1="3.8" x2="15.5" y2="20.2"/>
+    <line x1="20.2" y1="8.5" x2="3.8" y2="15.5"/>
+</g></svg>
+                Pratos principais
+            </button>
+            <button>
+                <svg viewBox="0 0 24 24" aria-hidden="true"  class="menu-icon">
+                    <path
+                        d="M3 12c2.2-6 5.8-6 8 0s5.8 6 10 0"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                    />
+                </svg>
+                Massas
+            </button>
+            <button>
+                <svg viewBox="0 0 24 24" aria-hidden="true"  class="menu-icon">
+                    <rect
+                        x="6.5"
+                        y="6.5"
+                        width="11"
+                        height="11"
+                        transform="rotate(45 12 12)"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.3"
+                    />
+                        <rect
+                            x="9.5"
+                            y="9.5"
+                            width="5"
+                            height="5"
+                            transform="rotate(45 12 12)"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="1"
+                        />
+            </svg>
+                Carnes
+            </button>
+            <button>
+                <i class="fa-solid fa-circle-half-stroke menu-icon"></i>
+                Peixes
+            </button>
+            <button>
+                <svg viewBox="0 0 24 24" aria-hidden="true"  class="menu-icon">
+                    <path
+                        d="M12 3.5
+                        C12.8 8.5 15.5 11.2 20.5 12
+                        C15.5 12.8 12.8 15.5 12 20.5
+                        C11.2 15.5 8.5 12.8 3.5 12
+                        C8.5 11.2 11.2 8.5 12 3.5Z"
+                        fill="currentColor"
+                    />
+                </svg>
+                Sobremesas
+            </button>
+            <button>
+                <i class="fa-regular fa-circle menu-icon"></i>
+                Bebidas
+            </button>
+        </div>
+        <div class="dishes-heading">
+            <p>Seleção da casa <b>—</b> preparados no agora</p>
+            <a class="text-link" href="reservas">Ver cardápio completo</a>
+        </div>
+        <div class="dish-grid">
+            <article class="dish-card">
+                <div class="dish-img">
+                   
+                    <button id="btn-favorito" aria-label="Favoritar Salmão Grelhado" class="btn-favorito">
+                        <svg
+                            id="icone-favorito"
+                            class="icone-favorito"
+                            viewBox="0 0 24 24"
+                            aria-hidden="true"
+                        >
+                            <path
+                                d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78Z"
+                            />
+                        </svg>
+                            
+                    </button>
+                    </div>
+                    <div class="dish-info">
+                    <div>
+                        <h3>Salmão Grelhado</h3>
+                        <p>Legumes da estação, molho de limão e ervas frescas.</p>
+                    </div>
+                    <div class="dish-bottom">
+                        <strong>8.500kz</strong>
+                        <button class="add-button" aria-label="Adicionar Salmão Grelhado">+</button>
+                    </div>
                 </div>
-                <p>Um convite para abrandar, <br> partilhar e saborear bons momentos</p>
-                <div class="social">
-                    <div><i class="fa-brands fa-whatsapp icone"></i></div>
-                    <div><i class="fa-brands fa-instagram icone"></i></div>
-                    <div><i class="fa-brands fa-facebook icone"></i></div>
-                </div>
-            </div>
+            </article>
+
+    
+            
+        </div>
+    </section>
+    <!--====== Sobre nós ======-->
+    <section class="story">
+        <div class="sections-intro">
+            <p class="story-txt">A NOSSA HISTÓRIA</p>
+            <h2>Uma história<br><em>feita de sabor.</em></h2>
+        </div>
+        <p>Nasceu em Luanda, de uma vontade simples:aproximar pessoas à volta de comida preparada com verdade. Cozinharmos com ingredientes locais, memória, técnica e uma boa dose de curiosidade</p>
+
+        <h2>"Comida boa aproxima pessoas."</h2>
+    </section>
+
+    <section class="review">
+    <div class="review-tittle">
+        <div class="sections-intro">
+            <p class="review-txt">PALAVRAS À MESA</p>
+            <h2>O que dizem<br><em>nossos cientes.</em></h2>
+        </div>
+        <div class="review-nav">
+            <button aria-label="Avaliação anterior" id="btn-prev">←</button>
+            <button aria-label="Próxima avaliação" id="btn-next" >→</button>
+        </div>
+    </div>
+    <article class="review-card card1">
+        <div class="stars">★★★★★</div>
+        <blockquote>“O almoço executivo virou o meu ritual de sexta. Simplesmente delicioso.”</blockquote>
+
+        <div class="reviewer">
+            <span>MQ</span>
+            <p><b>Marta Quina</b>
+            <small>12 Jul 2026</small>
+            </p>
+        </div>
+        <div class="review-count"><b>02</b> <span></span> 03</div>
+    </article>
+    <!--CARD2-->
+    <article class="review-card card2">
+        <div class="stars">★★★★★</div>
+        <blockquote>“O almoço executivo virou o meu ritual de sexta. Simplesmente delicioso.”</blockquote>
+
+        <div class="reviewer">
+            <span>PF</span>
+            <p><b>Paulo Faria</b>
+            <small>28 Jun 2026</small>
+            </p>
+        </div>
+        <div class="review-count"><b>01</b> <span></span> 03</div>
+    </article>
+    <!--CARD3-->
+    <article class="review-card card3">
+        <div class="stars">★★★★★</div>
+        <blockquote>“O almoço executivo virou o meu ritual de sexta. Simplesmente delicioso.”</blockquote>
+
+        <div class="reviewer">
+            <span>TM</span>
+            <p><b>Teresa Miguel</b>
+            <small>12 Jul 2026</small>
+            </p>
+        </div>
+        <div class="review-count"><b>03</b> <span></span> 03</div>
+    </article>
+    </section>
+    <section class="promo">
+        <div class="promo-copy">
+            <strong class="promo-txt">ALMOÇO EXECUTIVO</strong>
+
+            <h2>
+                <i>20% </i><span class="txt-off">OFF</span>
+            </h2>
+            <p> 
+                De segunda a sexta-feira
+                das 12h às 15h</p>
+            <a href="#">Aproveitar agora →</a>
+        </div>
+        <div class="div-imagem">
+            <img src="assets/img/paisagem1000x600.png" alt="Paisagem de uma vista a baira mar">
+        </div>
+    </section>
+    
+
+
+</main>
+<footer>
+    <div class="footer-grid">
+        <div class="footer-brand">
             <div>
-                <h4>NAVEGAÇÃO</h4>
-                <a href="#">Início</a>
-                <a href="#">Menu</a>
-                <a href="#">Sobre nós</a>
-                <a href="#">Reservas</a>
-                <a href="#">Contato</a>
+                
             </div>
-            <div>
-                <h4>INFORMAÇÕES</h4>
-                <a href="#">Política de Privacidade</a>
-                <a href="#">Termos de Uso</a>
-                <a href="#">Perguntas Frequentes</a>
-            </div>
-            <div>
-                <h4>CONTATO</h4>
-                <p>+244 923 000 000</p>
-                <p>ola@sabores.com</p>
-                <p>Rua da missão, 48 Luanda Angola</p>
-            </div>
-            <div>
-                <h4>HORÁRIO</h4>
-                <p>Seg-Sex <span>12h-23h</span></p>
-                <p>Sabádo <span>12h-00h</span></p>
-                <p>Domingo <span>12h-18h</span></p>
+            <p>Um convite para abrandar, <br> partilhar e saborear bons momentos</p>
+            <div class="social">
+                <div><i class="fa-brands fa-whatsapp icone"></i></div>
+                <div><i class="fa-brands fa-instagram icone"></i></div>
+                <div><i class="fa-brands fa-facebook icone"></i></div>
             </div>
         </div>
-        <div class="footer-bottom">
-            <p>&copy;2026 Sabor & Artes Restaurante</p>
-            <p>Feito em Luanda, com muito sabor</p>
+        <div>
+            <h4>NAVEGAÇÃO</h4>
+            <a href="#">Início</a>
+            <a href="#">Menu</a>
+            <a href="#">Sobre nós</a>
+            <a href="#">Reservas</a>
+            <a href="#">Contato</a>
         </div>
-    </footer>
+        <div>
+            <h4>INFORMAÇÕES</h4>
+            <a href="#">Política de Privacidade</a>
+            <a href="#">Termos de Uso</a>
+            <a href="#">Perguntas Frequentes</a>
+        </div>
+        <div>
+            <h4>CONTATO</h4>
+            <p>+244 923 000 000</p>
+            <p>ola@sabores.com</p>
+            <p>Rua da missão, 48 Luanda Angola</p>
+        </div>
+        <div>
+            <h4>HORÁRIO</h4>
+            <p>Seg-Sex <span>12h-23h</span></p>
+            <p>Sabádo <span>12h-00h</span></p>
+            <p>Domingo <span>12h-18h</span></p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy;2026 Sabor & Artes Restaurante</p>
+        <p>Feito em Luanda, com muito sabor</p>
+    </div>
+</footer>
+<script src="assets/scripts/menu.js"></script>
 </body>
 </html>

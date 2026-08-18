@@ -34,8 +34,7 @@
 
 footer{
     background-color: var(--color-brand-green-deep);
-   
-    padding: 77px 20px 10px ;
+    padding: 77px 20px 0px 20px;
     color: var(--color-text-on-dark-muted);
     font-size: 13px;
  
@@ -69,21 +68,44 @@ footer h4{
 .social{
     display: flex;
     gap: 10px;
-
 }
 
 .icone{
     color: var(--color-white);
-    padding: 6px;
+    padding: 10px;
+    font-size: 1.5em;
     border-radius: 50%;
+    cursor: pointer;
     border: 1px solid var(--color-border-subtle);
-    transition: background-color .3s;
+    transition: background-color .3s,transform .3s ease;
 }
 .fa-whatsapp:hover{
     background-color: #23CC62;
+    border: 0;
+    transform: scale(1.1);
 }
 .fa-facebook:hover{
     background-color: #0761F7;
+    border: 0;
+    transform: scale(1.1);
+}
+
+.fa-instagram {
+    background: transparent;
+    transition: background .3s ease, transform .3s ease;
+}
+
+.fa-instagram:hover {
+    background: linear-gradient(
+        45deg,
+        #feda75,
+        #fa7e1e,
+        #d62976,
+        #962fbf,
+        #4f5bd5
+    );
+    border: 0;
+    transform: scale(1.1);
 }
 .footer-bottom{
     display: flex;
@@ -95,9 +117,6 @@ footer h4{
 
 }
 @media (min-width:1023px){
-    footer{
-        padding-bottom: 35px;
-}
     .footer-grid{
     grid-template-columns: 1.2fr repeat(4,1fr);
 }

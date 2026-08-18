@@ -269,6 +269,7 @@ h1{
   border: none;
   transition: background-color .3s;
   position: relative;
+  cursor: pointer;
 }
 .categorias button:hover{
   background-color: var(--color-surface-category-hover);
@@ -296,6 +297,9 @@ h1{
 /*Slides dos pratos*/
 .text-link{
   display: none;
+  color: var(--color-brand-green);
+  font-size: 1.2em;
+  font-family: var(--font-manrope);
 }
 .dishes-heading p{
   color: var(--color-text-primary);
@@ -321,11 +325,17 @@ b{
 .dish-card{
   flex: 0 0 76%;
   scroll-snap-align: start;
- 
+  background-color: var(--color-white);
 }
 .dish-card:hover{
   transform: translateY(-10px);
   box-shadow: 0px 5px 3px rgba(0, 0, 0, 0.116);
+}
+.dish-info div:nth-of-type(1){
+  margin-bottom: 10px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--color-border-subtle);
+
 }
 /*Dish imagens*/
 .dish-img {
@@ -348,6 +358,8 @@ b{
   background: rgba(255, 253, 248, .9);
   border: 0;
   color: var(--color-text-primary);
+  cursor: pointer;
+
 }
 
 .dish-info {
@@ -374,8 +386,8 @@ b{
 }
 
 .icone-favorito.favoritado {
-    fill: red;
-    stroke: red;
+  fill: red;
+  stroke: red;
 }
 .dish-bottom{
   display: flex;
@@ -392,6 +404,8 @@ b{
   font-size: 18px;
   font-weight: 300;
   transition: background .2s;
+  cursor: pointer;
+
 }
 
 
@@ -442,12 +456,12 @@ b{
 }
 
 .main-story {
-    position: static;
+  position: static;
 }
 
 .main-story p {
-    margin: 0 0 25px;
-    line-height: 1.8;
+  margin: 0 0 25px;
+  line-height: 1.8;
 }
 
 /*================================
@@ -458,6 +472,17 @@ b{
   margin: 0 18px;
 }
 
+.review {
+  position: relative;
+}
+
+.review-card {
+  display: none;
+}
+
+.review-card.active {
+  display: block;
+}
 .review-tittle{
   display: flex;
   justify-content: space-between;
@@ -473,6 +498,8 @@ b{
 .review-nav button{
   height: 50px;
   width: 50px;
+    cursor: pointer;
+
 }
 /*review card*/
 
@@ -657,53 +684,65 @@ b{
 
 @media (min-width:1023px){
 
-  .banner{
-    display: flex;
-    flex-direction: row-reverse;
-    margin-bottom: 20px;
+.banner{
+  display: flex;
+  flex-direction: row-reverse;
+  margin-bottom: 20px;
 }
-  .banner-content{
-    width: 50%;
-    line-height: 1.2;
+  .text-link{
+  display: flex;
 }
-  .hero{
-    width: 50%;
+
+.dish-card{
+  flex: 1 1 300px;
 }
-  .beneficios{
-    grid-template-columns: repeat(4,1fr);
-    background-color: var(--color-white);
-    min-height: 150px;
-    align-items: center;
-    font-family: var(--font-manrope);
-    padding: 10px;
-    box-shadow: -4px 3px 9px rgba(0, 0, 0, 0.089);
+.dishes-heading{
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 15px;
 }
-  .sections-intro{
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 0px;
+.banner-content{
+  width: 50%;
+  line-height: 1.2;
+}
+.hero{
+  width: 50%;
+}
+.beneficios{
+  grid-template-columns: repeat(4,1fr);
+  background-color: var(--color-white);
+  min-height: 150px;
+  align-items: center;
+  font-family: var(--font-manrope);
+  padding: 10px;
+  box-shadow: -4px 3px 9px rgba(0, 0, 0, 0.089);
+}
+.sections-intro{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0px;
   
-  }
-  .beneficio{
-    flex-direction: row;
-    display: flex;
-    gap: 10px;
+}
+.beneficio{
+  flex-direction: row;
+  display: flex;
+  gap: 10px;
   
 } 
-  .beneficio i{
-    font-size: 1.5em;
-  }
-  .beneficio h4{
-    font-weight: 100;
-    font-size: 12px;
+    .beneficio i{
+      font-size: 1.5em;
+}
+.beneficio h4{
+  font-weight: 100;
+  font-size: 12px;
     
 }
 
-  .promo{
-    margin: 0 auto;
-    width: 94%;
-    grid-template-columns: 1fr 2fr;
-    margin-bottom: 20px;
+.promo{
+  margin: 0 auto;
+  width: 94%;
+  grid-template-columns: 1fr 2fr;
+  margin-bottom: 20px;
    
 } .promo-copy{
     padding: 68px;

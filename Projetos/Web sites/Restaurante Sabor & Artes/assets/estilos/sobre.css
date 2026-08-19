@@ -20,86 +20,111 @@
   font-style: normal;
 }
 :root {
-  /* =========================================
-     TIPOGRAFIA
-     ========================================= */
-
+  /* Tipografia usada no site */
   --font-bodoni: "Bodoni Moda", serif;
   --font-manrope: "Manrope", sans-serif;
 
-  /* =========================================
-     FUNDO E SUPERFÍCIES
-     Base clara e acolhedora para toda a página.
-     ========================================= */
+  /* Fundos principais */
+  --color-cream: #F6F2EA;
+  --color-beige: #EAE2D5;
 
-  --color-page-background: #F6F2E9;
-  --color-surface-primary: #FFFDF8;
-  --color-surface-warm-beige: #E6DED0;
+  /* Fundos escuros */
+  --color-charcoal: #171512;
+  --color-dark-brown: #2A211D;
+  --color-brown: #332B25;
 
-  /* =========================================
-     MARCA E INTERAÇÕES
-     Verde profundo é a cor principal da marca.
-     Dourado deve ser usado apenas como destaque.
-     ========================================= */
+  /* Destaques em vermelho vinho */
+  --color-wine: #8E2F25;
+  --color-wine-hover: #A94136;
 
-  --color-brand-green: #0C2922;
-  --color-brand-green-deep: #0A231E;
-  --color-brand-green-hover: #1F453A;
+  /* Destaques dourados */
+  --color-gold: #B68A3A;
+  --color-gold-light: #D9BD7D;
 
-  --color-brand-gold: #B59563;
-  --color-brand-gold-cta: #C6AA7C;
-  --color-brand-gold-light: #DFC593;
-
-  /* =========================================
-     TEXTO
-     ========================================= */
-
-  --color-text-primary: #132D26;
-  --color-text-secondary: #78766C;
-
-  --color-text-on-dark: #F7F0E4;
-  --color-text-on-dark-muted: #BDC4B6;
-  --color-text-on-gold: #0C2922;
-
-  /* =========================================
-     BORDAS E DIVISORES
-     ========================================= */
-
-  --color-border-subtle: #DED8CA;
-  --color-border-warm: #CBBFAE;
-  --color-border-dark: #294139;
-
-  /* =========================================
-     CORES DE APOIO
-     ========================================= */
-
-  --color-icon-muted: #A59984;
+  /* Textos e bordas */
+  --color-text-muted: #6F685D;
+  --color-border: #B9AF9F;
+  --color-border-light: #D7CDBF;
   --color-white: #FFFFFF;
+
+  /* Transparências usadas sobre fundos escuros */
+  --color-white-15: rgb(255 255 255 / 0.15);
+  --color-white-20: rgb(255 255 255 / 0.20);
+  --color-white-50: rgb(255 255 255 / 0.50);
+  --color-white-60: rgb(255 255 255 / 0.60);
+  --color-white-65: rgb(255 255 255 / 0.65);
+  --color-white-70: rgb(255 255 255 / 0.70);
+  --color-white-75: rgb(255 255 255 / 0.75);
 }
 .logo{
     font-family: var(--font-bodoni);
 }
 body{
-    background-color: var(--color-page-background);
-    color: var(--color-text-primary);
-    font-family: var(--font-manrope);
+   background-color: var(--color-cream);
+   color: var(--color-text-primary);
+   font-family: var(--font-manrope);
 }
+/* =========================================
+Menu de navegação
+========================================= */
 header{
-    display: flex;
-    justify-content: space-between;
-    padding: 10px 20px;
-    border-bottom: 1px solid var(--color-border-warm);
-    background: transparent;
+   display: flex;
+   justify-content: space-between;
+   padding: 10px 20px;
+   border-bottom: 1px solid var(--color-border-warm);
+   background: transparent;
+   position: relative;
 }
 #menu{
-    display: none;
+   display: none;
+   width: 100%;
+   position: absolute;
+   left: 0;
+   top: 100%;
+   background-color: var(--color-charcoal);
+   padding: 20px;
+   border-bottom:1px solid var(--color-border);
+}
+#menu.drop{
+   display: flex;
+   flex-direction: column;
+   opacity: 1;
+   transform: translateY(0);
+   pointer-events: auto;
+}
+
+
+#menu div  a{
+   display: block;
+   text-decoration: none;
+   color: var(--color-white);
+   padding: 10px 0px;
+   border-bottom:1px solid var(--color-border);
+   -webkit-user-select: none;
+   user-select: none;
+}
+
+.btn-reservar{
+   background-color: var(--color-wine);
+   text-align: center;
+   border-bottom: none;
+   outline: none;
+   font-weight: bold;
+   margin-top: 10px;
 }
 #btn-menu{
-    background: transparent;
-    font-size: 1.5em;
-    border:1px solid var(--color-border-subtle);
-    padding: 10px 6px;
+   background: transparent;
+   font-size: 1.5em;
+   border:1px solid var(--color-border-subtle);
+   padding: 10px 6px;
 }
+
 footer{
-    
+   background-color: var(--color-dark-brown);
+}
+/* =========================================
+Banner
+========================================= */
+.banner h1{
+   font-family: var(--font-bodoni);
 }

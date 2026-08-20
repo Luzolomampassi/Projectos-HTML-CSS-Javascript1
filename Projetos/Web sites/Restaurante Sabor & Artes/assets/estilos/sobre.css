@@ -15,7 +15,7 @@
 }
 
 .bodoni-moda{
-  font-family: "Bodoni Moda", serif;
+  font-family: "Bodoni Moda",Georgia, serif;
   font-optical-sizing: auto;
   font-style: normal;
 }
@@ -40,6 +40,8 @@
   /* Destaques dourados */
   --color-gold: #B68A3A;
   --color-gold-light: #D9BD7D;
+  --color-brand-gold-cta: #C6AA7C;
+  --color-brand-gold-light: #DFC593;
 
   /* Textos e bordas */
   --color-text-muted: #6F685D;
@@ -56,13 +58,34 @@
   --color-white-70: rgb(255 255 255 / 0.70);
   --color-white-75: rgb(255 255 255 / 0.75);
 }
+
 .logo{
-    font-family: var(--font-bodoni);
+   font-family: var(--font-bodoni);
 }
 body{
    background-color: var(--color-cream);
    color: var(--color-text-primary);
    font-family: var(--font-manrope);
+   width: 100vw;
+}
+.eyebrow{
+   color: var(--color-wine);
+   font-family: var(--font-manrope);
+   font-weight: 600;
+   display: flex;
+   align-items: center;
+   gap: .7rem;
+   font-size: 10px;
+   font-weight: 700;
+   letter-spacing: .2em;
+   text-transform: uppercase;
+}
+.eyebrow::before {
+   content: "";
+   width: 2rem;
+   height: 1px;
+   background: currentColor;
+   opacity: .8;
 }
 /* =========================================
 Menu de navegação
@@ -72,7 +95,7 @@ header{
    justify-content: space-between;
    padding: 10px 20px;
    border-bottom: 1px solid var(--color-border-warm);
-   background: transparent;
+   background: none;
    position: relative;
 }
 #menu{
@@ -91,6 +114,7 @@ header{
    opacity: 1;
    transform: translateY(0);
    pointer-events: auto;
+   z-index: 20;
 }
 
 
@@ -125,6 +149,260 @@ footer{
 /* =========================================
 Banner
 ========================================= */
-.banner h1{
+.inicio{
+   position: relative;
+   overflow: hidden;
+}
+.eyebrow-inicio p{
+   color: var(--color-gold);
+}
+.eyebrow-inicio p::before{
+   content: '-----';
+   color: var(--color-gold-light);
+}
+.inicio img{
+   width: 100%;
+   min-height: 500px;
+   object-fit: cover;
+   
+}
+.inicio-content{
+   position: absolute;
+   inset: 0;
+   left: 5%;
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+}
+.inicio-content h1{
+   font-family: var(--font-bodoni);
+   color: var(--color-white);
+   font-weight: 500;
+   line-height: .9em;
+   font-size: clamp(2.6em,10vw,10em);
+}
+.inicio-content p{
+   color: var(--color-white);
+   font-family: var(--font-manrope);
+   line-height: 1.6em;
+}
+.inicio-bottom{
+   display: flex;
+   justify-content: space-between;
+   color: var(--color-white);
+   align-items: center;
+ 
+}
+.inicio-date{
+   position: relative;
+   font-family: var(--font-bodoni);
+   border-left: 1px solid var(--color-gold);
+   padding: 0 10px;
+
+}
+.inicio-date p:nth-last-of-type(2){
+   font-size: 2em;
    font-family: var(--font-bodoni);
 }
+/* =========================================
+Sobre
+========================================= */
+.sobre{
+   display: grid;
+   grid-template-columns: 16px 1fr 16px;
+   margin: auto;
+}
+.sobre article{
+   grid-column: 2;
+}
+.story-text p{
+   margin-bottom: 20px;
+   line-height: 1.5rem;
+   
+}
+.story-text p:nth-of-type(1){
+   margin-top: 20px;
+}
+.story blockquote{
+   font-style: italic;
+   margin-top: 20px;
+   font-size: 2em;
+   color: var(--color-wine);
+   font-family: var(--font-bodoni);
+   border-left: 2px solid var(--color-gold);
+   padding: 10px 20px;
+   
+}
+/* =========================================
+Valores
+========================================= */
+.valores{
+   background-color: var(--color-beige);
+}
+.valores div {
+  padding: 30px 20px;
+  line-height: 2em;
+}
+.valores div h2{
+   font-size: clamp(2.5rem, 4vw, 4.6rem);;
+   font-family: var(--font-bodoni);
+   font-weight: 100;
+}
+
+.cards-grid{
+   display: grid;
+   grid-template-columns: 1fr;
+  
+}
+.card{
+   border-top: 1px solid var(--color-border);
+   border-bottom: 1px solid var(--color-border);
+   padding: 32px 28px;
+   line-height:1.2em;
+   
+}
+.card p:nth-of-type(1){
+   color: var(--color-gold);
+   font-size: 2em;
+   font-family: var(--font-bodoni);
+}
+.card h3{
+   margin: 30px 0px 20px;
+   font-weight: 100;
+   font-family: var(--font-bodoni);
+   font-size: 1.4em;
+
+}
+
+/* =========================================
+Reservas
+========================================= */
+
+
+
+.reservas{
+   background-image: url(../assets/img/inicio1200x600.png) no-repeat center center;
+}
+.reservas h1{
+   font-family: var(--font-bodoni);
+   
+   top: 0;
+   
+}
+.reservas img{
+ 
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   filter: grayscale(50%);
+}
+
+/* =========================================
+Footer
+========================================= */
+
+footer{
+   background-color: var(--color-charcoal);
+   padding: 77px 20px 0px 20px;
+   color: var(--color-text-on-dark-muted);
+   font-size: 13px;
+   width: 100%;
+ 
+}
+footer  a , p{
+   text-decoration: none;
+   color: var(--color-text-on-dark-muted);
+   font-size: 13px;
+}
+footer h4{
+   color: var(--color-gold);
+   font-weight: 100;
+}
+.footer-brand{
+   grid-column: span 2;
+   padding-bottom: 20px;
+}
+.footer-grid{
+   display: grid;
+   grid-template-columns: repeat(2,1fr);
+   padding-bottom: 50px;
+   border-bottom: 1px solid var(--color-border-dark);
+   gap: 40px;
+
+}
+.footer-grid > div{
+   display: flex;
+   flex-direction: column;
+   gap: 11px;
+}
+.social{
+   display: flex;
+   gap: 10px;
+}
+
+.icone{
+   color: var(--color-white);
+   padding: 10px;
+   font-size: 1.5em;
+   border-radius: 50%;
+   cursor: pointer;
+   border: 1px solid var(--color-border-subtle);
+   transition: background-color .3s,transform .3s ease;
+}
+.fa-whatsapp:hover{
+   background-color: #23CC62;
+   border: 0;
+   transform: scale(1.1);
+}
+.fa-facebook:hover{
+   background-color: #0761F7;
+   border: 0;
+   transform: scale(1.1);
+}
+
+.fa-instagram {
+    background: transparent;
+    transition: background .3s ease, transform .3s ease;
+}
+
+.fa-instagram:hover {
+   background: linear-gradient(
+   45deg,
+   #feda75,
+   #fa7e1e,
+   #d62976,
+   #962fbf,
+   #4f5bd5
+   );
+   border: 0;
+   transform: scale(1.1);
+}
+.footer-bottom{
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+   height: 100%;
+}
+@media (min-width:767px) and (max-width:991px){
+
+}
+@media (min-width:1023px){
+   .footer-grid{
+   grid-template-columns: 1.2fr repeat(4,1fr);
+}
+   .footer-brand{
+   grid-column: span 1;
+    
+}
+
+
+   .footer-bottom{
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   padding: 10px;
+}
+
+}
+
+

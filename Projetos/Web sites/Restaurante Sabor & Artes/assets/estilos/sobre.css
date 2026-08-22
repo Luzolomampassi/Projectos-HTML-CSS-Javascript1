@@ -275,6 +275,33 @@ Valores
 }
 
 /* =========================================
+Sobre
+========================================= */
+.conj-imagens{
+   display: grid;
+   grid-template-columns: repeat(12,1fr);
+   grid-template-rows: repeat(2,1fr);
+   width: 100%;
+}
+.conj-imagens img{
+   object-fit: cover;
+   width: 100px;
+}
+.conj-imagens img:first-child{
+   grid-column: 1/8;
+   grid-row: 1/1;
+}
+.conj-imagens img:first-child(1){
+   grid-column: 8/-1;
+   grid-row: 1/1;
+
+}
+.conj-imagens img:last-child{
+   grid-column: 1/9;
+   grid-row: 2/2;
+
+}
+/* =========================================
 Reservas
 ========================================= */
 

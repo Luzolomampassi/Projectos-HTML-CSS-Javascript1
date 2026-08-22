@@ -9,8 +9,8 @@
     $nome = $_POST["nome"] ?? "Preencha o nome";
     $email = $_POST["email"] ?? "Preencha o email";
     $emailDestinatario = "luzolomampassi8@gmail.com";
-    $assunto = $_POST["assunto"];
-    $msg = $_POST["mensagem"];
+    $assunto = $_POST["assunto"] ?? "Preencha o assunto";
+    $msg = $_POST["mensagem"] ?? "Preencha a mensagem";
 
     $mensagemEmail = "Nome: $nome\n";
     $mensagemEmail .= "E-mail: $email\n";
@@ -27,7 +27,7 @@
     $mail->Username = $smtpUser;
     $mail->Password = $smtpPassword;
     $mail->setFrom('luzolomampassi8@gmail.com', 'Luzolo');
-    $mail->addAddress('luzolomampassi53@gmail.com');
+    $mail->addAddress($emailDestinatario);
     $mail->addReplyTo($email, $nome);
     $mail->Subject = $assunto;
     $mail->Body = $mensagemEmail;

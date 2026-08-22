@@ -1,1 +1,0 @@
-Ainda não sei PHP mas irei começar a estudar em breve

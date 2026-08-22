@@ -75,6 +75,8 @@
     align-items:center;
     gap:30px;
     padding:30px 0;
+    flex-wrap: wrap;
+    
 }
 .highlight{ 
     background-color: var(--color-icon-bg);
@@ -82,24 +84,21 @@
     color:var(--color-primary);
     border: 1px solid var(--color-surface);
     border-radius: 7px;
-    width:40px;
-    height:40px;
-
     display:flex;
     justify-content:center;
     align-items:center;
-
     background:#120f46;
     border:1px solid #3826a8;
     border-radius:12px;
     color:#8B5CF6;
   
 }
+
 .highlights-container{
     display:flex;
     align-items:center;
     gap:18px;
-    flex:1;
+    flex:1 1 50px;
 }
 .highlight-txt h2{
     color:white;

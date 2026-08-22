@@ -50,6 +50,7 @@ h1,h2,h3,h4{
     text-align: left;
     font-size: clamp(1.3em,1.4vw,4rem);
     line-height: 1.3em;
+    animation: surgir-left .5s ease;
 }
 .banner-content h1{
     margin-bottom: 20px;
@@ -62,6 +63,7 @@ h1,h2,h3,h4{
     grid-template-rows: auto;
     column-gap: 10px;
     padding: 10px;
+    animation: surgir-right .5s ease;
 }
 .card{
     background-color: var(--color-card);
@@ -106,11 +108,13 @@ h1,h2,h3,h4{
     justify-content: center;
     margin: 0 auto;
     margin-bottom: 10px;
+    animation: surgir-right .5s ease;
 }
 .filters{
     display: flex;
     justify-content: space-evenly;
     width: 100%;
+    gap: 10px;
 }
 .filters button{
     color: var(--color-text);
@@ -121,6 +125,7 @@ h1,h2,h3,h4{
     padding: 10px;
     border-radius: 10px;
     transition: background-color .3s;
+    flex: 1 1;
 }
 
 .filters button:focus{
@@ -175,12 +180,12 @@ h1,h2,h3,h4{
     display: grid;
     justify-content:center;
     row-gap: 20px;
-
+    animation: surgir-bottom .5s ease;
  
 }
 .item{
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(1,1fr);
     column-gap: 10px;
     min-height:140px;
     border: 1px solid var(--color-border);
@@ -364,6 +369,7 @@ h1,h2,h3,h4{
     border: 1px solid var(--color-border);
     border-bottom: 3px solid var(--color-border);
     box-shadow: 0px 0px 0px;
+    animation: surgir-top .5s ease;
 }
 .menu_container ul{
     display: flex;
@@ -394,10 +400,7 @@ h1,h2,h3,h4{
 
 
     }
-     .item{
-        grid-template-columns: repeat(1,1fr);
-        
-    }
+  
     .banner_icon{
        font-size: 1.5em;
     }
@@ -435,25 +438,16 @@ h1,h2,h3,h4{
         column-gap: 10px;
         row-gap: 10px;
         width: 100%;
-        animation: surgir-bottom .5s ease;
-
     }
-    .cards{
-        animation: surgir-right .5s ease;
-    }
-     nav{
-        animation: surgir-top .5s ease;
-    }
+   
     .banner-content{
         padding-left: 15px;
-        animation: surgir-left .5s ease;
+       
     }
 
 }
 @media(min-width:1023px){
-    nav{
-        animation: surgir-top .5s ease;
-    }
+   
     .banner{
         display: grid;
         grid-template-columns: repeat(2,1fr);
@@ -462,9 +456,7 @@ h1,h2,h3,h4{
         padding-left: 15px;
         animation: surgir-left .5s ease;
     }
-    .cards{
-        animation: surgir-right .5s ease;
-    }
+    
      .cards_projets{
         padding: 10px;
         grid-template-columns: repeat(4,1fr);
@@ -474,6 +466,7 @@ h1,h2,h3,h4{
         column-gap: 10px;
         row-gap: 10px;
         width: 100%;
+        
 
         animation: surgir-bottom .5s ease;
         
